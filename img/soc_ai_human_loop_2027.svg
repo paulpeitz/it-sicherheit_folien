@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-label="SOC KI Human Loop">
+  <defs>
+    <style>
+      .node{fill:#fff;stroke:#222;stroke-width:3;rx:18}
+      .human{fill:#eef8ff;stroke:#0a5ea8;stroke-width:3;rx:18}
+      .auto{fill:#fff1f1;stroke:#c5001a;stroke-width:3;rx:18}
+      .txt{font-family:Arial,sans-serif;font-size:28px;fill:#111;font-weight:700}
+      .sub{font-family:Arial,sans-serif;font-size:20px;fill:#444}
+      .arrow{stroke:#444;stroke-width:4;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <rect x="80" y="300" width="230" height="130" class="node"/>
+  <text x="195" y="360" text-anchor="middle" class="txt">Events</text>
+  <text x="195" y="394" text-anchor="middle" class="sub">SIEM, EDR, Cloud</text>
+
+  <rect x="360" y="300" width="250" height="130" class="auto"/>
+  <text x="485" y="360" text-anchor="middle" class="txt">KI-Triage</text>
+  <text x="485" y="394" text-anchor="middle" class="sub">Prioritaet, Cluster</text>
+
+  <rect x="660" y="300" width="250" height="130" class="human"/>
+  <text x="785" y="360" text-anchor="middle" class="txt">Analyst</text>
+  <text x="785" y="394" text-anchor="middle" class="sub">Validierung</text>
+
+  <rect x="960" y="300" width="250" height="130" class="auto"/>
+  <text x="1085" y="360" text-anchor="middle" class="txt">SOAR-Aktion</text>
+  <text x="1085" y="394" text-anchor="middle" class="sub">Containment</text>
+
+  <path d="M310 365 L360 365" class="arrow"/>
+  <path d="M610 365 L660 365" class="arrow"/>
+  <path d="M910 365 L960 365" class="arrow"/>
+
+  <rect x="660" y="80" width="250" height="120" class="human"/>
+  <text x="785" y="136" text-anchor="middle" class="txt">Freigabe</text>
+  <text x="785" y="166" text-anchor="middle" class="sub">kritische Aktionen</text>
+
+  <path d="M785 300 L785 200" class="arrow"/>
+  <path d="M910 140 C1040 140, 1180 220, 1180 300" class="arrow"/>
+
+  <rect x="360" y="550" width="850" height="120" class="node"/>
+  <text x="785" y="605" text-anchor="middle" class="txt">Feedback in Modelle und Playbooks</text>
+  <text x="785" y="638" text-anchor="middle" class="sub">False Positives senken, Regeln und Prompts verbessern</text>
+
+  <path d="M1085 430 L1085 550" class="arrow"/>
+  <path d="M360 610 C230 610, 230 450, 360 365" class="arrow"/>
+</svg>

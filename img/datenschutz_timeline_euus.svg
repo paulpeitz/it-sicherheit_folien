@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <style>
+      .timeline-line { stroke: #ccc; stroke-width: 3; }
+      .dot { stroke: #fff; stroke-width: 2; }
+      .dot-red { fill: #e2001a; }
+      .dot-green { fill: #27ae60; }
+      .dot-orange { fill: #f39c12; }
+      .year { font-family: Arial, sans-serif; font-size: 14px; fill: #333; text-anchor: middle; font-weight: bold; }
+      .event { font-family: Arial, sans-serif; font-size: 11.5px; fill: #333; text-anchor: middle; }
+      .event-sub { font-family: Arial, sans-serif; font-size: 10px; fill: #777; text-anchor: middle; }
+      .box { rx: 6; stroke-width: 1.5; }
+      .box-green { fill: #e8f4e8; stroke: #27ae60; }
+      .box-red { fill: #fde8ea; stroke: #e2001a; }
+      .box-orange { fill: #fef3e0; stroke: #f39c12; }
+      .box-blue { fill: #e8f0fe; stroke: #1a5276; }
+      .ruling { font-family: Arial, sans-serif; font-size: 10.5px; fill: #e2001a; text-anchor: middle; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Main timeline -->
+  <line x1="60" y1="200" x2="740" y2="200" class="timeline-line"/>
+
+  <!-- 2000: Safe Harbor -->
+  <circle cx="100" cy="200" r="8" class="dot dot-green"/>
+  <text x="100" y="230" class="year">2000</text>
+  <rect x="40" y="80" width="120" height="70" class="box box-green"/>
+  <text x="100" y="102" class="event" font-weight="bold">Safe Harbor</text>
+  <text x="100" y="118" class="event-sub">Selbstzertifizierung</text>
+  <text x="100" y="132" class="event-sub">von US-Unternehmen</text>
+  <text x="100" y="146" class="event-sub">Kein echtes Schutzniveau</text>
+  <line x1="100" y1="150" x2="100" y2="192" stroke="#27ae60" stroke-width="1.5"/>
+
+  <!-- 2015: Schrems I -->
+  <circle cx="280" cy="200" r="8" class="dot dot-red"/>
+  <text x="280" y="230" class="year">2015</text>
+  <rect x="215" y="250" width="130" height="70" class="box box-red"/>
+  <text x="280" y="272" class="ruling">Schrems I</text>
+  <text x="280" y="288" class="event-sub">EuGH kippt</text>
+  <text x="280" y="302" class="event-sub">Safe Harbor</text>
+  <text x="280" y="316" class="event-sub">US-Überwachung</text>
+  <line x1="280" y1="208" x2="280" y2="250" stroke="#e2001a" stroke-width="1.5"/>
+
+  <!-- 2016: Privacy Shield -->
+  <circle cx="380" cy="200" r="8" class="dot dot-green"/>
+  <text x="380" y="230" class="year">2016</text>
+  <rect x="315" y="80" width="130" height="70" class="box box-green"/>
+  <text x="380" y="102" class="event" font-weight="bold">Privacy Shield</text>
+  <text x="380" y="118" class="event-sub">Strengere Regeln</text>
+  <text x="380" y="132" class="event-sub">Ombudsperson</text>
+  <text x="380" y="146" class="event-sub">Nachfolger Safe Harbor</text>
+  <line x1="380" y1="150" x2="380" y2="192" stroke="#27ae60" stroke-width="1.5"/>
+
+  <!-- 2020: Schrems II -->
+  <circle cx="520" cy="200" r="8" class="dot dot-red"/>
+  <text x="520" y="230" class="year">2020</text>
+  <rect x="455" y="250" width="130" height="70" class="box box-red"/>
+  <text x="520" y="272" class="ruling">Schrems II</text>
+  <text x="520" y="288" class="event-sub">EuGH kippt</text>
+  <text x="520" y="302" class="event-sub">Privacy Shield</text>
+  <text x="520" y="316" class="event-sub">FISA § 702 Problem</text>
+  <line x1="520" y1="208" x2="520" y2="250" stroke="#e2001a" stroke-width="1.5"/>
+
+  <!-- 2023: DPF -->
+  <circle cx="660" cy="200" r="8" class="dot dot-orange"/>
+  <text x="660" y="230" class="year">2023</text>
+  <rect x="590" y="80" width="140" height="70" class="box box-orange"/>
+  <text x="660" y="102" class="event" font-weight="bold">Data Privacy</text>
+  <text x="660" y="118" class="event" font-weight="bold">Framework</text>
+  <text x="660" y="134" class="event-sub">3. Versuch</text>
+  <text x="660" y="148" class="event-sub">Schrems III erwartet</text>
+  <line x1="660" y1="150" x2="660" y2="192" stroke="#f39c12" stroke-width="1.5"/>
+
+  <!-- Bottom note -->
+  <rect x="200" y="360" width="400" height="40" rx="6" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="378" class="event" fill="#e2001a" font-weight="bold">Muster: Abkommen → EuGH-Urteil → Neues Abkommen → ?</text>
+  <text x="400" y="394" class="event-sub">Strukturelles Problem: US-Überwachungsgesetze vs. EU-Grundrechte</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <style>
+      .petal { stroke-width: 2; opacity: 0.92; }
+      .center-circle { fill: #e2001a; }
+      .center-text { font-family: Arial, sans-serif; font-size: 16px; fill: #fff; text-anchor: middle; font-weight: bold; }
+      .petal-label { font-family: Arial, sans-serif; font-size: 13px; fill: #333; text-anchor: middle; font-weight: bold; }
+      .petal-sub { font-family: Arial, sans-serif; font-size: 10.5px; fill: #555; text-anchor: middle; }
+      .connector { stroke: #e2001a; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Center circle -->
+  <circle cx="400" cy="275" r="55" class="center-circle"/>
+  <text x="400" y="270" class="center-text">Art. 5</text>
+  <text x="400" y="290" class="center-text">DSGVO</text>
+
+  <!-- Petal 1: Rechtmäßigkeit (top) -->
+  <line x1="400" y1="220" x2="400" y2="100" class="connector"/>
+  <rect x="300" y="30" width="200" height="70" rx="35" fill="#fde8ea" stroke="#e2001a" class="petal"/>
+  <text x="400" y="60" class="petal-label">Rechtmäßigkeit</text>
+  <text x="400" y="78" class="petal-sub">Transparenz &amp; Fairness</text>
+
+  <!-- Petal 2: Zweckbindung (top-right) -->
+  <line x1="445" y1="240" x2="590" y2="120" class="connector"/>
+  <rect x="530" y="65" width="200" height="70" rx="35" fill="#fde8ea" stroke="#e2001a" class="petal"/>
+  <text x="630" y="95" class="petal-label">Zweckbindung</text>
+  <text x="630" y="113" class="petal-sub">Festgelegter, legitimer Zweck</text>
+
+  <!-- Petal 3: Datenminimierung (right) -->
+  <line x1="455" y1="275" x2="590" y2="275" class="connector"/>
+  <rect x="530" y="235" width="200" height="70" rx="35" fill="#fde8ea" stroke="#e2001a" class="petal"/>
+  <text x="630" y="265" class="petal-label">Datenminimierung</text>
+  <text x="630" y="283" class="petal-sub">Nur erforderliche Daten</text>
+
+  <!-- Petal 4: Richtigkeit (bottom-right) -->
+  <line x1="445" y1="310" x2="590" y2="420" class="connector"/>
+  <rect x="530" y="395" width="200" height="70" rx="35" fill="#fde8ea" stroke="#e2001a" class="petal"/>
+  <text x="630" y="425" class="petal-label">Richtigkeit</text>
+  <text x="630" y="443" class="petal-sub">Korrekt &amp; aktuell halten</text>
+
+  <!-- Petal 5: Speicherbegrenzung (bottom) -->
+  <line x1="400" y1="330" x2="400" y2="440" class="connector"/>
+  <rect x="300" y="440" width="200" height="70" rx="35" fill="#fde8ea" stroke="#e2001a" class="petal"/>
+  <text x="400" y="470" class="petal-label">Speicherbegrenzung</text>
+  <text x="400" y="488" class="petal-sub">Nicht länger als nötig</text>
+
+  <!-- Petal 6: Integrität & Vertraulichkeit (bottom-left) -->
+  <line x1="355" y1="310" x2="210" y2="420" class="connector"/>
+  <rect x="70" y="395" width="220" height="70" rx="35" fill="#fde8ea" stroke="#e2001a" class="petal"/>
+  <text x="180" y="425" class="petal-label">Integrität &amp;</text>
+  <text x="180" y="443" class="petal-label">Vertraulichkeit</text>
+
+  <!-- Petal 7: Rechenschaftspflicht (left) -->
+  <line x1="345" y1="275" x2="240" y2="275" class="connector"/>
+  <rect x="70" y="235" width="220" height="70" rx="35" fill="#e8f4e8" stroke="#27ae60" class="petal"/>
+  <text x="180" y="263" class="petal-label">Rechenschaftspflicht</text>
+  <text x="180" y="281" class="petal-sub">Nachweis der Einhaltung</text>
+
+  <!-- Petal (not a principle but meta): top-left -->
+  <!-- skip - only 7 principles -->
+</svg>

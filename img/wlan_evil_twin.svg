@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <filter id="shadow7" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="headerGrad7" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2001a"/>
+      <stop offset="100%" stop-color="#b3001a"/>
+    </linearGradient>
+    <marker id="arr7r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e2001a"/>
+    </marker>
+    <marker id="arr7g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#27ae60"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="450" rx="12" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect width="900" height="52" rx="12" fill="url(#headerGrad7)"/>
+  <rect y="40" width="900" height="12" fill="url(#headerGrad7)"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">WLAN – Evil Twin Angriff</text>
+
+  <!-- Legitimate AP side -->
+  <rect x="30" y="65" width="400" height="30" rx="6" fill="#27ae60"/>
+  <text x="230" y="85" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">Legitimer Access Point</text>
+
+  <!-- Legit AP -->
+  <rect x="180" y="110" width="100" height="70" rx="8" fill="#27ae60" filter="url(#shadow7)"/>
+  <!-- Router icon -->
+  <rect x="200" y="120" width="60" height="20" rx="4" fill="#fff" opacity="0.3"/>
+  <circle cx="215" cy="155" r="4" fill="#fff" opacity="0.5"/>
+  <circle cx="230" cy="155" r="4" fill="#fff" opacity="0.5"/>
+  <circle cx="245" cy="155" r="4" fill="#fff" opacity="0.5"/>
+  <text x="230" y="195" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#27ae60">DHBW-WLAN</text>
+  <text x="230" y="210" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#7f8c8d">WPA2-Enterprise</text>
+
+  <!-- Signal waves legit -->
+  <path d="M 160 130 Q 140 145 160 160" fill="none" stroke="#27ae60" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 145 120 Q 120 145 145 170" fill="none" stroke="#27ae60" stroke-width="1.5" opacity="0.3"/>
+  <path d="M 300 130 Q 320 145 300 160" fill="none" stroke="#27ae60" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 315 120 Q 340 145 315 170" fill="none" stroke="#27ae60" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Connection to internet -->
+  <line x1="230" y1="110" x2="230" y2="90" stroke="#27ae60" stroke-width="2"/>
+  <rect x="195" y="68" width="70" height="20" rx="4" fill="#e8f8f0" stroke="#27ae60" stroke-width="1"/>
+  <text x="230" y="82" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#27ae60">Internet ✓</text>
+
+  <!-- Evil Twin side -->
+  <rect x="470" y="65" width="400" height="30" rx="6" fill="#e2001a"/>
+  <text x="670" y="85" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">Evil Twin (Angreifer)</text>
+
+  <!-- Evil AP -->
+  <rect x="620" y="110" width="100" height="70" rx="8" fill="#e2001a" filter="url(#shadow7)"/>
+  <rect x="640" y="120" width="60" height="20" rx="4" fill="#fff" opacity="0.3"/>
+  <circle cx="655" cy="155" r="4" fill="#fff" opacity="0.5"/>
+  <circle cx="670" cy="155" r="4" fill="#fff" opacity="0.5"/>
+  <circle cx="685" cy="155" r="4" fill="#fff" opacity="0.5"/>
+  <text x="670" y="195" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e2001a">DHBW-WLAN</text>
+  <text x="670" y="210" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#e2001a">Gleicher Name (SSID)!</text>
+
+  <!-- Signal waves evil - stronger -->
+  <path d="M 600 125 Q 575 145 600 165" fill="none" stroke="#e2001a" stroke-width="2" opacity="0.5"/>
+  <path d="M 582 115 Q 550 145 582 175" fill="none" stroke="#e2001a" stroke-width="2" opacity="0.4"/>
+  <path d="M 560 105 Q 520 145 560 185" fill="none" stroke="#e2001a" stroke-width="2" opacity="0.3"/>
+  <path d="M 740 125 Q 765 145 740 165" fill="none" stroke="#e2001a" stroke-width="2" opacity="0.5"/>
+  <path d="M 758 115 Q 790 145 758 175" fill="none" stroke="#e2001a" stroke-width="2" opacity="0.4"/>
+
+  <!-- Stronger signal label -->
+  <rect x="500" y="110" width="105" height="24" rx="4" fill="#fdf2f2" stroke="#e2001a" stroke-width="1"/>
+  <text x="552" y="127" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#e2001a">Stärkeres Signal!</text>
+
+  <!-- Attacker laptop -->
+  <rect x="740" y="120" width="80" height="50" rx="6" fill="#fdf2f2" stroke="#e2001a" stroke-width="1.5" filter="url(#shadow7)"/>
+  <rect x="752" y="128" width="56" height="32" rx="3" fill="#e2001a" opacity="0.2"/>
+  <text x="780" y="185" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#e2001a">Angreifer-Laptop</text>
+
+  <line x1="720" y1="145" x2="740" y2="145" stroke="#e2001a" stroke-width="1.5"/>
+
+  <!-- Victim -->
+  <rect x="370" y="270" width="160" height="90" rx="8" fill="#fff" stroke="#2c3e50" stroke-width="2" filter="url(#shadow7)"/>
+  <rect x="415" y="280" width="70" height="45" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <rect x="430" y="330" width="40" height="12" rx="2" fill="#aab7b8"/>
+  <text x="450" y="378" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#2c3e50">Opfer (Student)</text>
+
+  <!-- Connection to evil twin (strong, chosen) -->
+  <line x1="520" y1="290" x2="630" y2="180" stroke="#e2001a" stroke-width="3" marker-end="url(#arr7r)"/>
+  <text x="600" y="245" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#e2001a" transform="rotate(-35,600,245)">Verbindet sich</text>
+
+  <!-- Weak connection to legit (not chosen) -->
+  <line x1="380" y1="290" x2="260" y2="180" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.4"/>
+  <text x="280" y="265" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#27ae60" opacity="0.6">Schwächeres Signal</text>
+
+  <!-- Attack consequences -->
+  <rect x="40" y="390" width="820" height="45" rx="8" fill="#34495e"/>
+  <text x="60" y="410" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#fff">Folgen:</text>
+  <text x="120" y="410" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#e74c3c">MITM (alle Daten lesbar)</text>
+  <text x="330" y="410" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#e74c3c">Credential Harvesting</text>
+  <text x="530" y="410" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#e74c3c">DNS Spoofing</text>
+  <text x="680" y="410" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#e74c3c">SSL Stripping</text>
+  <text x="60" y="428" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#ecf0f1">Schutz: WPA3-Enterprise · 802.1X · Zertifikatsvalidierung · VPN · WIDS/WIPS</text>
+</svg>

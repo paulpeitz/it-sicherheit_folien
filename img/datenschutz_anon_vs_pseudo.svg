@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <style>
+      .box { rx: 8; ry: 8; stroke-width: 2; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #333; text-anchor: middle; }
+      .label-bold { font-family: Arial, sans-serif; font-size: 15px; fill: #333; text-anchor: middle; font-weight: bold; }
+      .label-white { font-family: Arial, sans-serif; font-size: 15px; fill: #fff; text-anchor: middle; font-weight: bold; }
+      .sublabel { font-family: Arial, sans-serif; font-size: 11px; fill: #555; text-anchor: middle; }
+      .arrow { stroke: #888; stroke-width: 2; fill: none; marker-end: url(#arr); }
+      .arrow-red { stroke: #e2001a; stroke-width: 2; fill: none; marker-end: url(#arr-red); }
+      .check { font-family: Arial, sans-serif; font-size: 12px; fill: #27ae60; text-anchor: start; }
+      .cross { font-family: Arial, sans-serif; font-size: 12px; fill: #e2001a; text-anchor: start; }
+      .info { font-family: Arial, sans-serif; font-size: 11px; fill: #666; text-anchor: start; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#888"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e2001a"/>
+    </marker>
+  </defs>
+
+  <!-- Source Data -->
+  <rect x="310" y="15" width="180" height="50" class="box" fill="#f0f0f0" stroke="#999"/>
+  <text x="400" y="38" class="label-bold">Personenbezogene</text>
+  <text x="400" y="55" class="label-bold">Daten</text>
+
+  <!-- Arrow down left -->
+  <line x1="350" y1="65" x2="180" y2="120" class="arrow"/>
+  <!-- Arrow down right -->
+  <line x1="450" y1="65" x2="620" y2="120" class="arrow"/>
+
+  <!-- Anonymisierung Box -->
+  <rect x="50" y="120" width="260" height="50" class="box" fill="#e2001a" stroke="#c0001a"/>
+  <text x="180" y="151" class="label-white">Anonymisierung</text>
+
+  <!-- Pseudonymisierung Box -->
+  <rect x="490" y="120" width="260" height="50" class="box" fill="#1a5276" stroke="#14425e"/>
+  <text x="620" y="151" class="label-white">Pseudonymisierung</text>
+
+  <!-- Anonymisierung Details -->
+  <rect x="50" y="185" width="260" height="260" class="box" fill="#fef9f9" stroke="#e2001a"/>
+  
+  <text x="70" y="215" class="cross">✗ Personenbezug entfernt</text>
+  <text x="70" y="237" class="cross">✗ Re-Identifikation unmöglich</text>
+  <text x="70" y="259" class="check">✓ DSGVO nicht anwendbar</text>
+  
+  <line x1="70" y1="275" x2="290" y2="275" stroke="#eee" stroke-width="1"/>
+  
+  <text x="70" y="300" class="info">Methoden:</text>
+  <text x="70" y="318" class="info">• Generalisierung</text>
+  <text x="70" y="336" class="info">• Aggregation</text>
+  <text x="70" y="354" class="info">• Differential Privacy</text>
+  <text x="70" y="372" class="info">• k-Anonymität</text>
+  
+  <line x1="70" y1="388" x2="290" y2="388" stroke="#eee" stroke-width="1"/>
+  
+  <text x="70" y="410" class="info" fill="#e2001a" font-weight="bold">Risiko:</text>
+  <text x="70" y="428" class="info">Re-Identifikation durch</text>
+  <text x="70" y="443" class="info">Kombination von Attributen</text>
+
+  <!-- Pseudonymisierung Details -->
+  <rect x="490" y="185" width="260" height="260" class="box" fill="#f0f5fa" stroke="#1a5276"/>
+  
+  <text x="510" y="215" class="check">✓ Identifikatoren ersetzt</text>
+  <text x="510" y="237" class="cross">✗ Re-Identifikation möglich</text>
+  <text x="510" y="259" class="cross">✗ DSGVO weiter anwendbar</text>
+  
+  <line x1="510" y1="275" x2="730" y2="275" stroke="#eee" stroke-width="1"/>
+  
+  <text x="510" y="300" class="info">Methoden:</text>
+  <text x="510" y="318" class="info">• Hashing (mit Salt)</text>
+  <text x="510" y="336" class="info">• Tokenisierung</text>
+  <text x="510" y="354" class="info">• Synthetische Werte</text>
+  <text x="510" y="372" class="info">• Mapping-Tabellen</text>
+  
+  <line x1="510" y1="388" x2="730" y2="388" stroke="#eee" stroke-width="1"/>
+  
+  <text x="510" y="410" class="info" fill="#1a5276" font-weight="bold">Vorteil:</text>
+  <text x="510" y="428" class="info">Reduziertes Risiko bei</text>
+  <text x="510" y="443" class="info">weiterhin nutzbaren Daten</text>
+
+  <!-- Key with arrow between -->
+  <text x="345" y="213" class="label" fill="#999">vs.</text>
+  
+  <!-- Schlüssel icon (key symbol) for pseudo side -->
+  <rect x="440" y="330" width="36" height="36" rx="18" fill="#1a5276" opacity="0.15"/>
+  <text x="458" y="355" font-family="Arial" font-size="20" text-anchor="middle" fill="#1a5276">🔑</text>
+</svg>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 709 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M40,385L720,385" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,354.123106,352.123106)">
+        <text x="-83.081px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(68,68,68);">Software Development Lifecycle →</text>
+    </g>
+    <g transform="matrix(1,0,0,1,133.382673,313.593054)">
+        <text x="-20.263px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(136,136,136);">Quellcode</text>
+    </g>
+    <g transform="matrix(1,0,0,1,302.942197,312.947058)">
+        <text x="-42.528px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(136,136,136);">Build / Dependencies</text>
+    </g>
+    <g transform="matrix(1,0,0,1,509.814453,312.947058)">
+        <text x="-27.778px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(136,136,136);">Laufende <tspan x="11.764px 17.767px " y="0px 0px ">Ap</tspan>p</text>
+    </g>
+    <g transform="matrix(1,0,0,1,652.44902,313.988562)">
+        <text x="-21.513px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(136,136,136);">Produktion</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M230,60L230,235C230,240.519 225.519,245 220,245L40,245C34.481,245 30,240.519 30,235L30,60C30,54.481 34.481,50 40,50L220,50C225.519,50 230,54.481 230,60Z" style="fill:white;stroke:rgb(28,63,110);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M230,60L230,76C230,81.519 225.519,86 220,86L40,86C34.481,86 30,81.519 30,76L30,60C30,54.481 34.481,50 40,50L220,50C225.519,50 230,54.481 230,60Z" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <rect x="30" y="70" width="200" height="16" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,104.123106,28.123106)">
+        <text x="-18.669px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">SAST</text>
+    </g>
+    <g transform="matrix(1,0,0,1,104.123106,60.123106)">
+        <text x="-81.958px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(28,63,110);">Static <tspan x="-52.319px -45.098px " y="0px 0px ">Ap</tspan>plication Security T<tspan x="52.51px 58.071px " y="0px 0px ">es</tspan>ting</text>
+    </g>
+    <g transform="matrix(1,0,0,1,22.123106,82.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">📋</text>
+        <text x="14.361px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.361px 20.364px " y="0px 0px ">An</tspan>satz: White-Box</text>
+    </g>
+    <g transform="matrix(1,0,0,1,22.123106,100.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">📌</text>
+        <text x="14.695px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.695px 19.195px 24.201px " y="0px 0px 0px ">Tes</tspan>tet: Quellcode (ohne <tspan x="111.757px 117.76px " y="0px 0px ">Au</tspan>sführung)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,22.123106,118.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">✅</text>
+        <text x="14.858px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Stärke: Frühe Erkennung, CI-fähig</text>
+    </g>
+    <g transform="matrix(1,0,0,1,22.123106,136.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">⚠</text>
+        <text x="14.858px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Schwäche: False Positives</text>
+    </g>
+    <g transform="matrix(1,0,0,1,22.123106,154.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">🔧</text>
+        <text x="14.695px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.695px 19.195px 24.201px " y="0px 0px 0px ">Too</tspan>ls: SonarQube, Semgrep, Checkmarx</text>
+    </g>
+    <g transform="matrix(1,0,0,1,22.123106,178.123106)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(39,103,73);">Findet: SQLi, XSS, Hardcoded Secrets</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M130,248L130,370" style="fill:none;fill-rule:nonzero;stroke:rgb(28,63,110);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <circle cx="130" cy="370" r="4" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M475,60L475,235C475,240.519 470.519,245 465,245L285,245C279.481,245 275,240.519 275,235L275,60C275,54.481 279.481,50 285,50L465,50C470.519,50 475,54.481 475,60Z" style="fill:white;stroke:rgb(39,103,73);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M475,60L475,76C475,81.519 470.519,86 465,86L285,86C279.481,86 275,81.519 275,76L275,60C275,54.481 279.481,50 285,50L465,50C470.519,50 475,54.481 475,60Z" style="fill:rgb(39,103,73);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <rect x="275" y="70" width="200" height="16" style="fill:rgb(39,103,73);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,349.123106,28.123106)">
+        <text x="-14.779px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">SCA</text>
+    </g>
+    <g transform="matrix(1,0,0,1,349.123106,60.123106)">
+        <text x="-74.827px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(39,103,73);">Software Composition <tspan x="33.694px 40.916px " y="0px 0px ">An</tspan>alysis</text>
+    </g>
+    <g transform="matrix(1,0,0,1,267.123106,82.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">📋</text>
+        <text x="14.361px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.361px 20.364px " y="0px 0px ">An</tspan>satz: Dependency Scan</text>
+    </g>
+    <g transform="matrix(1,0,0,1,267.123106,100.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">📌</text>
+        <text x="14.695px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.695px 19.195px 24.201px " y="0px 0px 0px ">Tes</tspan>tet: Libraries &amp; Frameworks</text>
+    </g>
+    <g transform="matrix(1,0,0,1,267.123106,118.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">✅</text>
+        <text x="14.858px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Stärke: Bekannte CVEs, Lizenzen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,267.123106,136.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">⚠</text>
+        <text x="14.858px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Schwäche: 0-Days nicht erkannt</text>
+    </g>
+    <g transform="matrix(1,0,0,1,267.123106,154.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">🔧</text>
+        <text x="14.695px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.695px 19.195px 24.201px " y="0px 0px 0px ">Too</tspan>ls: Snyk, Dependabot, <tspan x="119.597px 124.761px 127.758px " y="0px 0px 0px ">Tri</tspan>vy</text>
+    </g>
+    <g transform="matrix(1,0,0,1,267.123106,178.123106)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(39,103,73);">Findet: Log4Shell, veraltete Libs</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M375,248L375,370" style="fill:none;fill-rule:nonzero;stroke:rgb(39,103,73);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,39.123106,-42.516863)">
+        <circle cx="310" cy="370" r="4" style="fill:rgb(39,103,73);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M720,60L720,235C720,240.519 715.519,245 710,245L530,245C524.481,245 520,240.519 520,235L520,60C520,54.481 524.481,50 530,50L710,50C715.519,50 720,54.481 720,60Z" style="fill:white;stroke:rgb(232,165,32);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M720,60L720,76C720,81.519 715.519,86 710,86L530,86C524.481,86 520,81.519 520,76L520,60C520,54.481 524.481,50 530,50L710,50C715.519,50 720,54.481 720,60Z" style="fill:rgb(232,165,32);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <rect x="520" y="70" width="200" height="16" style="fill:rgb(232,165,32);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,594.123106,28.123106)">
+        <text x="-19.055px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">DAST</text>
+    </g>
+    <g transform="matrix(1,0,0,1,594.123106,60.123106)">
+        <text x="-89.185px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(232,165,32);">Dynamic <tspan x="-45.093px -37.871px " y="0px 0px ">Ap</tspan>plication Security T<tspan x="59.736px 65.298px " y="0px 0px ">es</tspan>ting</text>
+    </g>
+    <g transform="matrix(1,0,0,1,512.123106,82.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">📋</text>
+        <text x="14.361px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.361px 20.364px " y="0px 0px ">An</tspan>satz: Black-Box</text>
+    </g>
+    <g transform="matrix(1,0,0,1,512.123106,100.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">📌</text>
+        <text x="14.695px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.695px 19.195px 24.201px " y="0px 0px 0px ">Tes</tspan>tet: Laufende <tspan x="83.25px 89.253px " y="0px 0px ">Ap</tspan>plikation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,512.123106,118.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">✅</text>
+        <g transform="matrix(9,0,0,9,92.399414,0)">
+        </g>
+        <g transform="matrix(9,0,0,9,94.803223,0)">
+        </g>
+        <text x="14.858px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Stärke: Reale <tspan x="71.389px 77.392px " y="0px 0px ">An</tspan>griﬀe, kein Code nötig</text>
+    </g>
+    <g transform="matrix(1,0,0,1,512.123106,136.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">⚠</text>
+        <text x="14.858px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Schwäche: Später im Lifecycle</text>
+    </g>
+    <g transform="matrix(1,0,0,1,512.123106,154.123106)">
+        <text x="0px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(85,85,85);">🔧</text>
+        <text x="14.695px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);"><tspan x="14.695px 19.195px 24.201px " y="0px 0px 0px ">Too</tspan>ls: OW<tspan x="55.868px 61.871px 67.874px 73.714px 76.214px " y="0px 0px 0px 0px 0px ">ASP Z</tspan>AP<tspan x="92.558px 95.058px " y="0px 0px ">, </tspan>Burp Suite</text>
+    </g>
+    <g transform="matrix(1,0,0,1,512.123106,178.123106)">
+        <g transform="matrix(9,0,0,9,49.987793,0)">
+        </g>
+        <g transform="matrix(9,0,0,9,52.984863,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(232,165,32);">Findet: Conﬁg-Fehler<tspan x="90.492px 92.993px 95.159px 101.659px " y="0px 0px 0px 0px ">, Au</tspan>th-Lücken</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M620,248L620,370" style="fill:none;fill-rule:nonzero;stroke:rgb(232,165,32);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,85.690188,-42.516863)">
+        <circle cx="510" cy="370" r="4" style="fill:rgb(232,165,32);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.422681,-38.511617)">
+        <path d="M720,284C720,291.727 713.727,298 706,298L289,298C281.273,298 275,291.727 275,284C275,276.273 281.273,270 289,270L706,270C713.727,270 720,276.273 720,284Z" style="fill:white;fill-opacity:0.82;stroke:rgb(197,48,48);stroke-width:1.5px;stroke-dasharray:5,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,470.577319,250.488383)">
+        <text x="-180.53px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(197,48,48);">IAST (Interactive) – Kombination aus SAST + DAST mit <tspan x="82.195px 89.417px " y="0px 0px ">Ag</tspan>enten zur Laufzeit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M240,344C240,346.208 238.208,348 236,348L64,348C61.792,348 60,346.208 60,344C60,341.792 61.792,340 64,340L236,340C238.208,340 240,341.792 240,344Z" style="fill:rgb(28,63,110);fill-opacity:0.3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.361573,-45.876894)">
+        <path d="M430,344C430,346.208 428.208,348 426,348L234,348C231.792,348 230,346.208 230,344C230,341.792 231.792,340 234,340L426,340C428.208,340 430,341.792 430,344Z" style="fill:rgb(39,103,73);fill-opacity:0.3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-45.876894)">
+        <path d="M690,344C690,346.208 688.208,348 686,348L444,348C441.792,348 440,346.208 440,344C440,341.792 441.792,340 444,340L686,340C688.208,340 690,341.792 690,344Z" style="fill:rgb(232,165,32);fill-opacity:0.3;"/>
+    </g>
+</svg>

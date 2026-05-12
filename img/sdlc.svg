@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 769 324" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M145,68L145,88C145,92.415 141.415,96 137,96L23,96C18.585,96 15,92.415 15,88L15,68C15,63.585 18.585,60 23,60L137,60C141.415,60 145,63.585 145,68Z" style="fill:rgb(39,103,73);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,68.092329,23)">
+        <text x="-47.462px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">1 · <tspan x="-31.977px -24.033px " y="0px 0px ">An</tspan>forderungen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M145,108L145,182C145,186.415 141.415,190 137,190L23,190C18.585,190 15,186.415 15,182L15,108C15,103.585 18.585,100 23,100L137,100C141.415,100 145,103.585 145,108Z" style="fill:white;stroke:rgb(39,103,73);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,68.092329,60)">
+        <text x="-33.342px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(39,103,73);">Requirements</text>
+    </g>
+    <g transform="matrix(1,0,0,1,68.092329,78)">
+        <text x="-45.771px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Stakeholder-Interviews</text>
+    </g>
+    <g transform="matrix(1,0,0,1,68.092329,93)">
+        <g transform="matrix(9,0,0,9,6.005127,0)">
+        </g>
+        <g transform="matrix(9,0,0,9,8.505615,0)">
+        </g>
+        <text x="-49.533px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Lastenheft / Pﬂichtenheft</text>
+    </g>
+    <g transform="matrix(1,0,0,1,68.092329,108)">
+        <text x="-42.271px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Machbarkeitsanalyse</text>
+    </g>
+    <g transform="matrix(1,0,0,1,68.092329,123)">
+        <text x="-41.578px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">funktional &amp; nicht-funkt.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M148,145L168,145" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M303,68L303,88C303,92.415 299.415,96 295,96L181,96C176.585,96 173,92.415 173,88L173,68C173,63.585 176.585,60 181,60L295,60C299.415,60 303,63.585 303,68Z" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,226.092329,23)">
+        <text x="-26.283px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">2 · Design</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M303,108L303,182C303,186.415 299.415,190 295,190L181,190C176.585,190 173,186.415 173,182L173,108C173,103.585 176.585,100 181,100L295,100C299.415,100 303,103.585 303,108Z" style="fill:white;stroke:rgb(28,63,110);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,226.092329,60)">
+        <text x="-26.672px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(28,63,110);">Architektur</text>
+    </g>
+    <g transform="matrix(1,0,0,1,226.092329,78)">
+        <text x="-38.008px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">System-Architektur</text>
+    </g>
+    <g transform="matrix(1,0,0,1,226.092329,93)">
+        <text x="-25.264px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Datenmodell</text>
+    </g>
+    <g transform="matrix(1,0,0,1,226.092329,108)">
+        <text x="-39.85px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">UML<tspan x="-21.182px -18.681px " y="0px 0px "> /</tspan> Schnittstellen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,226.092329,123)">
+        <text x="-32.682px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">High- &amp; Low-Level</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M306,145L326,145" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M461,68L461,88C461,92.415 457.415,96 453,96L339,96C334.585,96 331,92.415 331,88L331,68C331,63.585 334.585,60 339,60L453,60C457.415,60 461,63.585 461,68Z" style="fill:rgb(90,138,60);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,384.092329,23)">
+        <text x="-52.258px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">3 · Implementierung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M461,108L461,182C461,186.415 457.415,190 453,190L339,190C334.585,190 331,186.415 331,182L331,108C331,103.585 334.585,100 339,100L453,100C457.415,100 461,103.585 461,108Z" style="fill:white;stroke:rgb(90,138,60);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,384.092329,60)">
+        <text x="-29.446px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(90,138,60);">Entwicklung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,384.092329,78)">
+        <text x="-51.524px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Coding / Programmierung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,384.092329,93)">
+        <text x="-20.004px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Unit-T<tspan x="3.498px 8.503px " y="0px 0px ">es</tspan>ts</text>
+    </g>
+    <g transform="matrix(1,0,0,1,384.092329,108)">
+        <text x="-29.013px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Code Reviews</text>
+    </g>
+    <g transform="matrix(1,0,0,1,384.092329,123)">
+        <text x="-30.533px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">V<tspan x="-25.494px -21.045px " y="0px 0px ">er</tspan>sionskontrolle</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M464,145L484,145" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M619,68L619,88C619,92.415 615.415,96 611,96L497,96C492.585,96 489,92.415 489,88L489,68C489,63.585 492.585,60 497,60L611,60C615.415,60 619,63.585 619,68Z" style="fill:rgb(232,165,32);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,542.092329,23)">
+        <text x="-27.094px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">4 · T<tspan x="-5.299px 0.819px " y="0px 0px ">es</tspan>ting</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M619,108L619,182C619,186.415 615.415,190 611,190L497,190C492.585,190 489,186.415 489,182L489,108C489,103.585 492.585,100 497,100L611,100C615.415,100 619,103.585 619,108Z" style="fill:white;stroke:rgb(232,165,32);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,542.092329,60)">
+        <text x="-45.288px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(232,165,32);">Qualitätssicherung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,542.092329,78)">
+        <text x="-51.021px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Integrations- / Systemtest</text>
+    </g>
+    <g transform="matrix(1,0,0,1,542.092329,93)">
+        <text x="-39.43px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Abnahmetest (UA<tspan x="30.935px 36.433px " y="0px 0px ">T)</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,542.092329,108)">
+        <text x="-26.264px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Bug <tspan x="-7.912px -2.749px 0.248px " y="0px 0px 0px ">Tra</tspan>cking</text>
+    </g>
+    <g transform="matrix(1,0,0,1,542.092329,123)">
+        <text x="-29.871px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">funktionale T<tspan x="15.199px 19.648px " y="0px 0px ">es</tspan>ts</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M622,145L642,145" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M777,68L777,88C777,92.415 773.415,96 769,96L655,96C650.585,96 647,92.415 647,88L647,68C647,63.585 650.585,60 655,60L769,60C773.415,60 777,63.585 777,68Z" style="fill:rgb(197,48,48);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,700.092329,23)">
+        <text x="-39.424px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">5 · Deployment</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M777,108L777,182C777,186.415 773.415,190 769,190L655,190C650.585,190 647,186.415 647,182L647,108C647,103.585 650.585,100 655,100L769,100C773.415,100 777,103.585 777,108Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,700.092329,60)">
+        <text x="-30.559px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(197,48,48);">Auslieferung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700.092329,78)">
+        <text x="-39.272px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Installation / Rollout</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700.092329,93)">
+        <text x="-15.757px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Go-Live</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700.092329,108)">
+        <text x="-30.267px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Dokumentation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700.092329,123)">
+        <text x="-39.355px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">Release-Management</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M495,258L495,278C495,282.415 491.415,286 487,286L313,286C308.585,286 305,282.415 305,278L305,258C305,253.585 308.585,250 313,250L487,250C491.415,250 495,253.585 495,258Z" style="fill:rgb(107,70,193);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,388.092329,213)">
+        <text x="-56.021px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">6 · W<tspan x="-30.153px -24.036px " y="0px 0px ">ar</tspan>tung &amp; Betrieb</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M495,298L495,372C495,376.415 491.415,380 487,380L313,380C308.585,380 305,376.415 305,372L305,298C305,293.585 308.585,290 313,290L487,290C491.415,290 495,293.585 495,298Z" style="fill:white;stroke:rgb(107,70,193);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,388.092329,250)">
+        <text x="-30.286px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(107,70,193);">Maintenance</text>
+    </g>
+    <g transform="matrix(1,0,0,1,388.092329,268)">
+        <text x="-42.018px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Bug-Fixes &amp; Patches</text>
+    </g>
+    <g transform="matrix(1,0,0,1,388.092329,283)">
+        <text x="-46.024px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Feature-Erweiterungen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,388.092329,298)">
+        <text x="-51.77px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Performance-Optimierung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,388.092329,313)">
+        <text x="-37.576px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">Support &amp; Monitoring</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M712,195L712,268L498,268" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M305,335L80,335L80,195" style="fill:none;fill-rule:nonzero;stroke:rgb(28,63,110);stroke-width:2px;stroke-dasharray:6,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.907671,-60)">
+        <path d="M225,301C225,307.071 220.071,312 214,312L116,312C109.929,312 105,307.071 105,301C105,294.929 109.929,290 116,290L214,290C220.071,290 225,294.929 225,301Z" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,153.092329,245)">
+        <text x="-36.51px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:white;">Nächste Iteration</text>
+    </g>
+    <g transform="matrix(0.562135,0,0,1.109218,417.279392,-198.707022)">
+        <path d="M620,420.818L620,439.182C620,445.152 610.435,450 598.653,450L201.347,450C189.565,450 180,445.152 180,439.182L180,420.818C180,414.848 189.565,410 201.347,410L598.653,410C610.435,410 620,414.848 620,420.818Z" style="fill:rgb(45,55,72);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,648.03118,273.072494)">
+        <text x="-91.326px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:10px;fill:rgb(251,191,36);">⚠</text>
+        <text x="-74.817px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(251,191,36);">Sicherheit kommt hier oft zu kurz –</text>
+    </g>
+    <g transform="matrix(1,0,0,1,648.03118,289.072494)">
+        <text x="-102.825px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;">bestenfalls als Pen-T<tspan x="-10.554px -4.993px " y="0px 0px ">es</tspan>t kurz vor dem Release</text>
+    </g>
+</svg>

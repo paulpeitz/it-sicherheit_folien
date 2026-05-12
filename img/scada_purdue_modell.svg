@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="pArr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#333">Purdue-Modell (ICS/SCADA) – Anwendung auf Natanz</text>
+
+  <!-- IT Zone Label -->
+  <rect x="20" y="48" width="860" height="150" rx="0" fill="#E3F2FD" stroke="none"/>
+  <text x="38" y="68" font-size="12" font-weight="bold" fill="#1565C0">IT-Zone</text>
+
+  <!-- OT Zone Label -->
+  <rect x="20" y="248" width="860" height="300" rx="0" fill="#FFF3E0" stroke="none"/>
+  <text x="38" y="268" font-size="12" font-weight="bold" fill="#E65100">OT-Zone</text>
+
+  <!-- DMZ -->
+  <rect x="20" y="198" width="860" height="50" rx="0" fill="#F3E5F5" stroke="none"/>
+  <text x="38" y="218" font-size="12" font-weight="bold" fill="#6A1B9A">DMZ</text>
+
+  <!-- Level 4: Enterprise -->
+  <rect x="80" y="55" width="760" height="55" rx="8" fill="#fff" stroke="#1565C0" stroke-width="2"/>
+  <text x="105" y="78" font-size="13" font-weight="bold" fill="#1565C0">Level 4</text>
+  <text x="200" y="78" font-size="13" font-weight="bold" fill="#333">Enterprise Network</text>
+  <text x="105" y="96" font-size="11" fill="#555">E-Mail, ERP, Internet</text>
+  <rect x="500" y="62" width="320" height="40" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+  <text x="660" y="82" text-anchor="middle" font-size="11" fill="#1565C0">🏢 Verwaltung Natanz – Windows PCs, Office</text>
+  <text x="660" y="96" text-anchor="middle" font-size="10" fill="#888">Stuxnet: Erstinfektion via USB (LNK-Exploit)</text>
+
+  <!-- Level 3: Operations / Site -->
+  <rect x="80" y="120" width="760" height="55" rx="8" fill="#fff" stroke="#1565C0" stroke-width="2"/>
+  <text x="105" y="143" font-size="13" font-weight="bold" fill="#1565C0">Level 3</text>
+  <text x="200" y="143" font-size="13" font-weight="bold" fill="#333">Site Operations</text>
+  <text x="105" y="161" font-size="11" fill="#555">Historian, Patch-Mgmt</text>
+  <rect x="500" y="127" width="320" height="40" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+  <text x="660" y="147" text-anchor="middle" font-size="11" fill="#1565C0">🖥️ Engineering WS – Siemens STEP 7</text>
+  <text x="660" y="161" text-anchor="middle" font-size="10" fill="#888">Stuxnet: DLL-Hijacking (s7otbxdx.dll)</text>
+
+  <!-- Level 3.5: DMZ -->
+  <rect x="80" y="202" width="760" height="40" rx="8" fill="#fff" stroke="#7B1FA2" stroke-width="2"/>
+  <text x="105" y="225" font-size="13" font-weight="bold" fill="#7B1FA2">Level 3.5</text>
+  <text x="220" y="225" font-size="13" font-weight="bold" fill="#333">Industrial DMZ</text>
+  <text x="450" y="225" font-size="11" fill="#555">Firewall, Jump-Server, Proxy – Trennung IT/OT</text>
+  <text x="780" y="225" font-size="10" fill="#c62828">⚠️ In Natanz: kein Air Gap</text>
+
+  <!-- Level 2: Supervisory Control -->
+  <rect x="80" y="258" width="760" height="55" rx="8" fill="#fff" stroke="#FF9800" stroke-width="2"/>
+  <text x="105" y="281" font-size="13" font-weight="bold" fill="#E65100">Level 2</text>
+  <text x="200" y="281" font-size="13" font-weight="bold" fill="#333">Supervisory Control</text>
+  <text x="105" y="299" font-size="11" fill="#555">HMI, SCADA-Server</text>
+  <rect x="500" y="265" width="320" height="40" rx="6" fill="#FFF3E0" stroke="#FF9800" stroke-width="1"/>
+  <text x="660" y="285" text-anchor="middle" font-size="11" fill="#E65100">📊 HMI – Siemens WinCC</text>
+  <text x="660" y="299" text-anchor="middle" font-size="10" fill="#888">Stuxnet: Replay-Attacke (Fake-Sensordaten)</text>
+
+  <!-- Level 1: Basic Control -->
+  <rect x="80" y="328" width="760" height="55" rx="8" fill="#fff" stroke="#FF9800" stroke-width="2"/>
+  <text x="105" y="351" font-size="13" font-weight="bold" fill="#E65100">Level 1</text>
+  <text x="200" y="351" font-size="13" font-weight="bold" fill="#333">Basic Control</text>
+  <text x="105" y="369" font-size="11" fill="#555">SPS/PLC, RTU</text>
+  <rect x="500" y="335" width="320" height="40" rx="6" fill="#FFF3E0" stroke="#FF9800" stroke-width="1"/>
+  <text x="660" y="355" text-anchor="middle" font-size="11" fill="#E65100">⚙️ Siemens S7-315 (SPS)</text>
+  <text x="660" y="369" text-anchor="middle" font-size="10" fill="#888">Stuxnet: OB1/OB35 Injektion, Profibus-Scan</text>
+
+  <!-- Level 0: Physical Process -->
+  <rect x="80" y="398" width="760" height="65" rx="8" fill="#fff" stroke="#e2001a" stroke-width="2.5"/>
+  <text x="105" y="421" font-size="13" font-weight="bold" fill="#c62828">Level 0</text>
+  <text x="200" y="421" font-size="13" font-weight="bold" fill="#333">Physical Process</text>
+  <text x="105" y="441" font-size="11" fill="#555">Sensoren, Aktoren</text>
+  <rect x="500" y="405" width="320" height="50" rx="6" fill="#FFEBEE" stroke="#e2001a" stroke-width="1"/>
+  <text x="660" y="425" text-anchor="middle" font-size="11" fill="#c62828">🏭 Frequenzumrichter (Vacon / Fararo Paya)</text>
+  <text x="660" y="441" text-anchor="middle" font-size="10" fill="#888">→ IR-1 Gaszentrifugen (1.064 Hz Solldrehzahl)</text>
+  <text x="660" y="453" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">Stuxnet: Overspeed (1.410 Hz) / Underspeed (2 Hz)</text>
+
+  <!-- Vertical arrows between levels -->
+  <line x1="450" y1="110" x2="450" y2="120" stroke="#666" stroke-width="1.5" marker-end="url(#pArr)"/>
+  <line x1="450" y1="175" x2="450" y2="202" stroke="#666" stroke-width="1.5" marker-end="url(#pArr)"/>
+  <line x1="450" y1="242" x2="450" y2="258" stroke="#666" stroke-width="1.5" marker-end="url(#pArr)"/>
+  <line x1="450" y1="313" x2="450" y2="328" stroke="#666" stroke-width="1.5" marker-end="url(#pArr)"/>
+  <line x1="450" y1="383" x2="450" y2="398" stroke="#666" stroke-width="1.5" marker-end="url(#pArr)"/>
+
+  <!-- Stuxnet attack path arrow (red, dashed) on the right -->
+  <path d="M840,82 L855,82 L855,430 L840,430" stroke="#e2001a" stroke-width="2.5" fill="none" stroke-dasharray="6,3" marker-end="url(#pArr)"/>
+  <text x="868" y="200" font-size="11" font-weight="bold" fill="#c62828" transform="rotate(90,868,200)">Stuxnet-Angriffspfad ↓</text>
+
+  <!-- Legend at bottom -->
+  <rect x="80" y="480" width="760" height="90" rx="8" fill="#f9f9f9" stroke="#ccc" stroke-width="1"/>
+  <text x="100" y="500" font-size="12" font-weight="bold" fill="#333">Purdue-Modell (ISA-95 / IEC 62443)</text>
+  <rect x="100" y="510" width="16" height="12" rx="2" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+  <text x="125" y="521" font-size="10" fill="#555">IT-Zone (Level 3–4): Unternehmens-IT, Windows-basiert</text>
+  <rect x="100" y="530" width="16" height="12" rx="2" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+  <text x="125" y="541" font-size="10" fill="#555">Industrial DMZ (Level 3.5): Sicherheitsgrenze zwischen IT und OT</text>
+  <rect x="100" y="550" width="16" height="12" rx="2" fill="#FFF3E0" stroke="#FF9800" stroke-width="1"/>
+  <text x="125" y="561" font-size="10" fill="#555">OT-Zone (Level 0–2): Steuerungstechnik, Echtzeitsysteme, physische Prozesse</text>
+  <text x="530" y="521" font-size="10" fill="#c62828">Stuxnet durchquerte alle Ebenen: USB → Windows → STEP 7 → SPS → Zentrifugen</text>
+</svg>

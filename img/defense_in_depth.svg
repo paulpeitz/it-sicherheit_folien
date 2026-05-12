@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 650" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1.135055,0,-56.915999)">
+        <ellipse cx="400" cy="340" rx="370" ry="270" style="fill:rgb(232,234,246);stroke:rgb(92,107,192);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,399.706055,55.062333)">
+        <text x="-117.079px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(57,73,171);">Richtlinien, Schulung &amp; <tspan x="43.401px 53.259px 64.148px " y="0px 0px 0px ">Awa</tspan>reness</text>
+    </g>
+    <g transform="matrix(1,0,0,1,400,69.168299)">
+        <text x="-149.512px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(92,107,192);">Security Policies · Compliance · <tspan x="-5.757px -0.02px 3.311px " y="0px 0px 0px ">Tra</tspan>inings · Incident Response Plan</text>
+    </g>
+    <g transform="matrix(1,0,0,1.20837,0,-60.427427)">
+        <ellipse cx="400" cy="340" rx="310" ry="225" style="fill:rgb(224,242,241);stroke:rgb(38,166,154);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,399.576172,109.059662)">
+        <text x="-70.42px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(0,121,107);">Physische Sicherheit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,400.007324,122.286224)">
+        <text x="-128.301px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(38,166,154);">Zutrittskontrolle · V<tspan x="-44.57px -42.349px " y="0px 0px ">id</tspan>eoüberwachung · USV · Brandschutz</text>
+    </g>
+    <g transform="matrix(1.063555,0,0,1.302055,-25.422101,-71.153696)">
+        <ellipse cx="400" cy="340" rx="255" ry="183" style="fill:rgb(255,243,224);stroke:rgb(255,152,0);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,399.576172,162.05699)">
+        <text x="-68.472px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(230,81,0);">Perimeter-Sicherheit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,399.697266,175.423865)">
+        <text x="-104.18px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(255,152,0);">Firewall · DMZ · IDS/IPS · VPN · DDoS-Schutz</text>
+    </g>
+    <g transform="matrix(1.042352,0,0,1.387202,-16.940686,-86.501673)">
+        <ellipse cx="400" cy="340" rx="205" ry="145" style="fill:rgb(227,242,253);stroke:rgb(30,136,229);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,400.653809,217.105966)">
+        <text x="-66.91px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(13,71,161);">Netzwerk-Sicherheit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,400.653809,232.105966)">
+        <text x="-107.727px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(30,136,229);">Segmentierung · VLAN · NAC · <tspan x="33.811px 39.919px " y="0px 0px ">TL</tspan>S · Monitoring</text>
+    </g>
+    <g transform="matrix(1.068733,0,0,1.455153,-27.493321,-89.057314)">
+        <ellipse cx="400" cy="340" rx="160" ry="110" style="fill:rgb(252,228,236);stroke:rgb(229,57,53);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,400.116699,282.888691)">
+        <text x="-51.731px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(183,28,28);">Host-Sicherheit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,399.934082,301.046305)">
+        <text x="-94.678px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(229,57,53);">Hardening · Patching · EDR · <tspan x="37.603px 43.53px 50.2px " y="0px 0px 0px ">AV </tspan>· Logging</text>
+    </g>
+    <g transform="matrix(1.156026,0,0,1.478629,-62.410469,-74.465717)">
+        <ellipse cx="400" cy="340" rx="115" ry="78" style="fill:rgb(243,229,245);stroke:rgb(142,36,170);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,400.085449,356.029426)">
+        <text x="-80.117px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(106,27,154);">Anwendungs-Sicherheit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,399.587402,371.459484)">
+        <text x="-88.088px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(142,36,170);">SSDLC · W<tspan x="-36.79px -30.12px " y="0px 0px ">AF</tspan> · Input V<tspan x="15.823px 21.384px " y="0px 0px ">al</tspan>idation · <tspan x="61.409px 68.079px " y="0px 0px ">Au</tspan>thZ</text>
+    </g>
+    <g transform="matrix(1.248954,0,0,1.231523,-99.581473,-4.277234)">
+        <ellipse cx="400" cy="365" rx="70" ry="45" style="fill:rgb(232,245,233);stroke:rgb(46,125,50);stroke-width:3px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,400,429.777382)">
+        <text x="-20.837px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:rgb(27,94,32);">Daten</text>
+    </g>
+    <g transform="matrix(1,0,0,1,400,447.777382)">
+        <text x="-36.411px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(46,125,50);">V<tspan x="-30.293px -24.731px " y="0px 0px ">er</tspan>schlüsselung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,400,461.777382)">
+        <g transform="matrix(10,0,0,10,-19.731445,0)">
+        </g>
+        <g transform="matrix(10,0,0,10,-16.953125,0)">
+        </g>
+        <text x="-46.406px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(46,125,50);">Klassiﬁzierung · DLP</text>
+    </g>
+</svg>

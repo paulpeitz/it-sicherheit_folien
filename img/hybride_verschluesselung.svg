@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <polygon points="0,1 10,5 0,9" fill="#555"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="390" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Hybride Verschlüsselung – Senden</text>
+
+  <!-- SENDER side -->
+  <rect x="15" y="42" width="370" height="345" rx="12" fill="#f5f5f5" stroke="#1565c0" stroke-width="2"/>
+  <text x="200" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">📤 Alice (Sender)</text>
+
+  <!-- Step 1: Generate Session Key -->
+  <rect x="35" y="78" width="160" height="45" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="115" y="96" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">1. Zufälligen Session Key</text>
+  <text x="115" y="112" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">erzeugen (AES-256)</text>
+
+  <!-- Session Key symbol -->
+  <rect x="215" y="85" width="80" height="30" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="255" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">🔑 SK</text>
+  <line x1="195" y1="100" x2="212" y2="100" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Encrypt message with SK -->
+  <rect x="35" y="145" width="160" height="45" rx="8" fill="#bbdefb" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="115" y="163" text-anchor="middle" font-size="10" font-weight="bold" fill="#0d47a1">2. Nachricht mit SK</text>
+  <text x="115" y="179" text-anchor="middle" font-size="10" font-weight="bold" fill="#0d47a1">verschlüsseln (AES)</text>
+
+  <!-- Message -->
+  <rect x="215" y="140" width="80" height="22" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="255" y="155" text-anchor="middle" font-size="9" fill="#0d47a1">Nachricht M</text>
+
+  <rect x="215" y="170" width="140" height="26" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="285" y="188" text-anchor="middle" font-size="9" fill="#c62828">🔒 AES(SK, M) = C</text>
+
+  <line x1="255" y1="88" x2="255" y2="78" stroke="#f9a825" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="195" y1="167" x2="212" y2="167" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Encrypt SK with Public Key -->
+  <rect x="35" y="218" width="160" height="55" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="115" y="236" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">3. SK mit Bobs</text>
+  <text x="115" y="252" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">Public Key verschlüs-</text>
+  <text x="115" y="265" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">seln (RSA/ECC)</text>
+
+  <rect x="215" y="230" width="140" height="26" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="285" y="248" text-anchor="middle" font-size="9" fill="#1b5e20">🔒 RSA(PK_Bob, SK)</text>
+  <line x1="195" y1="245" x2="212" y2="245" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Send package -->
+  <rect x="50" y="295" width="310" height="50" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205" y="315" text-anchor="middle" font-size="11" font-weight="bold" fill="#7b1fa2">4. Senden:</text>
+  <text x="205" y="335" text-anchor="middle" font-size="10" fill="#555">🔒 Verschlüss. SK + 🔒 Verschlüss. Nachricht</text>
+
+  <!-- RECEIVER side -->
+  <rect x="400" y="42" width="370" height="345" rx="12" fill="#f5f5f5" stroke="#2e7d32" stroke-width="2"/>
+  <text x="585" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">📥 Bob (Empfänger)</text>
+
+  <!-- Step 5: Decrypt SK -->
+  <rect x="420" y="100" width="170" height="55" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="505" y="118" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">5. SK mit eigenem</text>
+  <text x="505" y="134" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">Private Key entschl.</text>
+  <text x="505" y="148" text-anchor="middle" font-size="10" fill="#555">(RSA/ECC)</text>
+
+  <!-- Recovered SK -->
+  <rect x="610" y="110" width="80" height="30" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="650" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">🔑 SK</text>
+  <line x1="590" y1="127" x2="607" y2="127" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Private Key -->
+  <rect x="420" y="78" width="110" height="18" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1"/>
+  <text x="475" y="91" text-anchor="middle" font-size="9" fill="#c62828">🔐 Private Key Bob</text>
+
+  <!-- Step 6: Decrypt Message -->
+  <rect x="420" y="178" width="170" height="55" rx="8" fill="#bbdefb" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="505" y="196" text-anchor="middle" font-size="10" font-weight="bold" fill="#0d47a1">6. Nachricht mit SK</text>
+  <text x="505" y="212" text-anchor="middle" font-size="10" font-weight="bold" fill="#0d47a1">entschlüsseln (AES)</text>
+  <text x="505" y="226" text-anchor="middle" font-size="10" fill="#555">D(SK, C) = M</text>
+
+  <line x1="650" y1="140" x2="650" y2="168" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Recovered message -->
+  <rect x="610" y="190" width="130" height="26" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="675" y="208" text-anchor="middle" font-size="10" fill="#0d47a1">Nachricht M ✅</text>
+  <line x1="590" y1="205" x2="607" y2="205" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Advantage box -->
+  <rect x="420" y="260" width="340" height="65" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="590" y="282" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Vorteile der hybriden Verschlüsselung:</text>
+  <text x="435" y="298" font-size="10" fill="#555">• AES-Geschwindigkeit für die Daten</text>
+  <text x="435" y="313" font-size="10" fill="#555">• RSA/ECC nur für den kleinen Session Key</text>
+
+  <!-- Arrow from send to receive -->
+  <path d="M360,320 Q390,360 400,200" fill="none" stroke="#7b1fa2" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 680 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1.02964,0,-0.296401)">
+        <path d="M670,27.482L670,382.518C670,392.167 661.934,400 652,400L28,400C18.066,400 10,392.167 10,382.518L10,27.482C10,17.833 18.066,10 28,10L652,10C661.934,10 670,17.833 670,27.482Z" style="fill:rgb(245,245,245);stroke:rgb(187,187,187);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,340,400)">
+        <text x="-75.349px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:rgb(153,153,153);">ARM SoC (System-on-Chip)</text>
+    </g>
+    <path d="M308,36L308,372C308,378.623 302.623,384 296,384L36,384C29.377,384 24,378.623 24,372L24,36C24,29.377 29.377,24 36,24L296,24C302.623,24 308,29.377 308,36Z" style="fill:rgb(232,244,253);stroke:rgb(74,144,217);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,166,50)">
+        <text x="-49.032px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:rgb(28,63,110);">Normal W<tspan x="20.702px 29.865px " y="0px 0px ">or</tspan>ld</text>
+    </g>
+    <g transform="matrix(1,0,0,1,166,66)">
+        <text x="-66.18px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(74,144,217);">(Non-Secure State · NS=1)</text>
+    </g>
+    <path d="M294,88L294,124C294,128.415 290.415,132 286,132L46,132C41.585,132 38,128.415 38,124L38,88C38,83.585 41.585,80 46,80L286,80C290.415,80 294,83.585 294,88Z" style="fill:rgb(74,144,217);"/>
+    <g transform="matrix(1,0,0,1,166,107)">
+        <text x="-57.437px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Apps / User-Space</text>
+    </g>
+    <g transform="matrix(1,0,0,1,166,122)">
+        <text x="-91.15px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.8;">EL0 — Chrome, Games, Banking-App …</text>
+    </g>
+    <path d="M294,153L294,189C294,193.415 290.415,197 286,197L46,197C41.585,197 38,193.415 38,189L38,153C38,148.585 41.585,145 46,145L286,145C290.415,145 294,148.585 294,153Z" style="fill:rgb(28,63,110);"/>
+    <g transform="matrix(1,0,0,1,166,172)">
+        <text x="-63.562px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Android / iOS Kernel</text>
+    </g>
+    <g transform="matrix(1,0,0,1,166,187)">
+        <text x="-85.862px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.8;">EL1 — Dateisystem, <tspan x="7.878px 13.616px 16.946px " y="0px 0px 0px ">Tre</tspan>iber<tspan x="38.63px 41.409px " y="0px 0px ">, </tspan>Netzwerk</text>
+    </g>
+    <path d="M294,218L294,242C294,246.415 290.415,250 286,250L46,250C41.585,250 38,246.415 38,242L38,218C38,213.585 41.585,210 46,210L286,210C290.415,210 294,213.585 294,218Z" style="fill:rgb(45,74,138);stroke:rgb(74,144,217);stroke-width:1px;stroke-dasharray:5,3;"/>
+    <g transform="matrix(1,0,0,1,166,233)">
+        <text x="-55.354px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:white;">Hypervisor (optional)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,166,245)">
+        <text x="-101.34px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.7;">EL2 — z. B. <tspan x="-45.759px -39.089px " y="0px 0px ">An</tspan>droid V<tspan x="-2.024px 0.198px " y="0px 0px ">ir</tspan>tualization Framework</text>
+    </g>
+    <path d="M294,270L294,298C294,302.415 290.415,306 286,306L46,306C41.585,306 38,302.415 38,298L38,270C38,265.585 41.585,262 46,262L286,262C290.415,262 294,265.585 294,270Z" style="fill:white;stroke:rgb(74,144,217);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,166,285)">
+        <text x="-54.557px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(28,63,110);">Normal W<tspan x="1.23px 8.561px " y="0px 0px ">or</tspan>ld RAM</text>
+    </g>
+    <g transform="matrix(1,0,0,1,166,299)">
+        <g transform="matrix(10,0,0,10,-41.208496,0)">
+        </g>
+        <g transform="matrix(10,0,0,10,-38.537598,0)">
+        </g>
+        <text x="-86.785px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(74,144,217);">Kein Zugriﬀ auf Secure W<tspan x="27.312px 32.874px " y="0px 0px ">or</tspan>ld-Speicher</text>
+    </g>
+    <path d="M294,326L294,346C294,350.415 290.415,354 286,354L46,354C41.585,354 38,350.415 38,346L38,326C38,321.585 41.585,318 46,318L286,318C290.415,318 294,321.585 294,326Z" style="fill:white;stroke:rgb(74,144,217);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,166,337)">
+        <text x="-78.241px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(28,63,110);">Display · WiFi · Bluetooth · USB</text>
+    </g>
+    <g transform="matrix(1,0,0,1,166,350)">
+        <text x="-41.862px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(153,153,153);">„Normale&quot; Peripherie</text>
+    </g>
+    <path d="M372,32L372,376C372,380.415 368.415,384 364,384L326,384C321.585,384 318,380.415 318,376L318,32C318,27.585 321.585,24 326,24L364,24C368.415,24 372,27.585 372,32Z" style="fill:rgb(226,0,26);"/>
+    <g transform="matrix(-0,-1,1,-0,348.105469,127.53125)">
+        <text x="-62.007px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">Secure Monitor  (EL3)</text>
+    </g>
+    <g transform="matrix(-0,-1,1,-0,347.646484,273.41834)">
+        <text x="-67.241px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.85;">Hardware-Firewall · SCR_EL3</text>
+    </g>
+    <path d="M666,36L666,372C666,378.623 660.623,384 654,384L394,384C387.377,384 382,378.623 382,372L382,36C382,29.377 387.377,24 394,24L654,24C660.623,24 666,29.377 666,36Z" style="fill:rgb(253,232,232);stroke:rgb(226,0,26);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,524,50)">
+        <text x="-48.208px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:rgb(139,0,0);">Secure W<tspan x="19.878px 29.041px " y="0px 0px ">or</tspan>ld</text>
+    </g>
+    <g transform="matrix(1,0,0,1,524,66)">
+        <text x="-54.259px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(226,0,26);">(Secure State · NS=0)</text>
+    </g>
+    <path d="M652,88L652,124C652,128.415 648.415,132 644,132L404,132C399.585,132 396,128.415 396,124L396,88C396,83.585 399.585,80 404,80L644,80C648.415,80 652,83.585 652,88Z" style="fill:rgb(139,0,0);"/>
+    <g transform="matrix(1,0,0,1,524,107)">
+        <text x="-34.674px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">T<tspan x="-27.45px -22.391px " y="0px 0px ">ru</tspan>sted OS</text>
+    </g>
+    <g transform="matrix(1,0,0,1,524,122)">
+        <text x="-83.452px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.8;">EL1 — OP-TEE, <tspan x="-7.5px -1.763px 1.567px " y="0px 0px 0px ">Tru</tspan>sty<tspan x="19.165px 21.943px " y="0px 0px ">, </tspan>propriet. <tspan x="64.004px 70.112px " y="0px 0px ">TE</tspan>E</text>
+    </g>
+    <path d="M652,153L652,189C652,193.415 648.415,197 644,197L404,197C399.585,197 396,193.415 396,189L396,153C396,148.585 399.585,145 404,145L644,145C648.415,145 652,148.585 652,153Z" style="fill:rgb(192,57,43);"/>
+    <g transform="matrix(1,0,0,1,524,172)">
+        <text x="-81.977px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">T<tspan x="-74.753px -69.694px " y="0px 0px ">ru</tspan>sted <tspan x="-31.894px -22.506px " y="0px 0px ">Ap</tspan>plications (T<tspan x="61.03px 70.418px " y="0px 0px ">As</tspan>)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,524,187)">
+        <text x="-91.697px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.8;">EL0 — Biometrie, DRM, Krypto, Keystore</text>
+    </g>
+    <path d="M652,218L652,246C652,250.415 648.415,254 644,254L404,254C399.585,254 396,250.415 396,246L396,218C396,213.585 399.585,210 404,210L644,210C648.415,210 652,213.585 652,218Z" style="fill:white;stroke:rgb(226,0,26);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,524,233)">
+        <text x="-53.897px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(139,0,0);">Secure W<tspan x="0.571px 7.901px " y="0px 0px ">or</tspan>ld RAM</text>
+    </g>
+    <g transform="matrix(1,0,0,1,524,247)">
+        <text x="-84.924px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(226,0,26);">Für Normal W<tspan x="-22.883px -17.322px " y="0px 0px ">or</tspan>ld unsichtbar (TZASC)</text>
+    </g>
+    <path d="M652,274L652,310C652,314.415 648.415,318 644,318L404,318C399.585,318 396,314.415 396,310L396,274C396,269.585 399.585,266 404,266L644,266C648.415,266 652,269.585 652,274Z" style="fill:white;stroke:rgb(226,0,26);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,524,289)">
+        <text x="-46.774px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(139,0,0);">Secure Peripherie</text>
+    </g>
+    <g transform="matrix(1,0,0,1,524,304)">
+        <text x="-86.155px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(226,0,26);">Fingerabdrucksensor · Secure Storage</text>
+    </g>
+    <g transform="matrix(1,0,0,1,524,314)">
+        <text x="-50.479px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(226,0,26);">Crypto-Engine · <tspan x="22.148px 28.257px " y="0px 0px ">TR</tspan>NG</text>
+    </g>
+    <path d="M652,338L652,352C652,356.415 648.415,360 644,360L404,360C399.585,360 396,356.415 396,352L396,338C396,333.585 399.585,330 404,330L644,330C648.415,330 652,333.585 652,338Z" style="fill:rgb(139,0,0);"/>
+    <g transform="matrix(1,0,0,1,524,350)">
+        <text x="-126.501px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:12px;fill:white;">🔑</text>
+        <text x="-103.356px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">Device Keys · UID · Biometric T<tspan x="74.476px 81.149px " y="0px 0px ">em</tspan>plates</text>
+    </g>
+    <g transform="matrix(1,0,0,1,342,264)">
+        <text x="-8.169px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:20px;fill:rgb(226,0,26);">✕</text>
+    </g>
+    <g transform="matrix(1,0,0,1,342,278)">
+        <text x="-16.756px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(226,0,26);">blockiert</text>
+    </g>
+</svg>

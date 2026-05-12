@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e2001a"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#aaa"/>
+    </marker>
+  </defs>
+
+  <!-- ═══ Column labels ═══ -->
+  <text x="95"  y="18" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">CPU Pipeline</text>
+  <text x="390" y="18" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">Speicher</text>
+  <text x="555" y="18" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">CPU-Cache</text>
+
+  <!-- ═══ Step 1: Branch Prediction ═══ -->
+  <rect x="10" y="28" width="170" height="44" rx="8" fill="#1c3f6e"/>
+  <text x="95" y="51" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold">Branch Predictor</text>
+  <text x="95" y="65" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="Segoe UI, Arial, sans-serif" font-size="10">„Vermutlich: if (x &lt; array.size)"</text>
+
+  <!-- arrow right to speculative exec -->
+  <line x1="180" y1="50" x2="220" y2="50" stroke="#1c3f6e" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="200" y="44" text-anchor="middle" fill="#1c3f6e" font-family="Segoe UI, Arial, sans-serif" font-size="10">spekuliert</text>
+
+  <!-- ═══ Step 2: Speculative Execution (middle top) ═══ -->
+  <rect x="222" y="28" width="175" height="44" rx="8" fill="#2d6a4f"/>
+  <text x="309" y="48" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold">Spekulative Ausführung</text>
+  <text x="309" y="63" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="Segoe UI, Arial, sans-serif" font-size="10">array[x] wird gelesen … ohne Prüfung</text>
+
+  <!-- arrow to kernel memory -->
+  <line x1="309" y1="72" x2="309" y2="112" stroke="#e2001a" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-red)"/>
+
+  <!-- ═══ Memory boxes ═══ -->
+  <!-- User Memory -->
+  <rect x="265" y="115" width="90" height="38" rx="6" fill="#e8f5e9" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="310" y="133" text-anchor="middle" fill="#2d6a4f" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">User-Space</text>
+  <text x="310" y="146" text-anchor="middle" fill="#2d6a4f" font-family="Segoe UI, Arial, sans-serif" font-size="9">array[0..n]</text>
+
+  <!-- Kernel Memory -->
+  <rect x="370" y="115" width="90" height="38" rx="6" fill="#fdecea" stroke="#e2001a" stroke-width="2"/>
+  <text x="415" y="133" text-anchor="middle" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">Kernel-Space</text>
+  <text x="415" y="146" text-anchor="middle" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="9">geheime Daten 🔒</text>
+
+  <!-- dashed arrow: speculative read of kernel -->
+  <line x1="397" y1="50" x2="415" y2="115" stroke="#e2001a" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-red)"/>
+  <text x="432" y="88" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="10">spekulativer</text>
+  <text x="432" y="100" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="10">Lesezugriff</text>
+
+  <!-- ═══ Step 3: Cache side-effect ═══ -->
+  <!-- arrow from kernel mem to cache -->
+  <line x1="460" y1="134" x2="508" y2="134" stroke="#e2001a" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-red)"/>
+
+  <rect x="510" y="115" width="118" height="38" rx="6" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="569" y="133" text-anchor="middle" fill="#f57c00" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">CPU-Cache</text>
+  <text x="569" y="146" text-anchor="middle" fill="#f57c00" font-family="Segoe UI, Arial, sans-serif" font-size="9">Kernel-Byte landet hier</text>
+
+  <!-- ═══ Step 4: Rollback ═══ -->
+  <!-- Rollback box -->
+  <rect x="222" y="178" width="175" height="38" rx="8" fill="#546e7a"/>
+  <text x="309" y="198" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold">Rollback</text>
+  <text x="309" y="211" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="Segoe UI, Arial, sans-serif" font-size="10">CPU verwirft das Ergebnis … aber</text>
+
+  <!-- arrow from spec exec down to rollback -->
+  <line x1="309" y1="153" x2="309" y2="177" stroke="#546e7a" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- arrow: cache NOT rolled back -->
+  <line x1="569" y1="153" x2="569" y2="197" stroke="#f57c00" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="580" y="178" fill="#f57c00" font-family="Segoe UI, Arial, sans-serif" font-size="10">Cache bleibt!</text>
+
+  <!-- ═══ Step 5: Flush+Reload ═══ -->
+  <rect x="450" y="220" width="178" height="44" rx="8" fill="#e2001a"/>
+  <text x="539" y="241" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold">Flush + Reload</text>
+  <text x="539" y="256" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="10">Angreifer misst Zugriffszeit → leitet Byte ab</text>
+
+  <line x1="539" y1="215" x2="539" y2="219" stroke="#e2001a" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ═══ Legend ═══ -->
+  <rect x="10" y="265" width="620" height="38" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <line x1="22" y1="284" x2="50" y2="284" stroke="#1c3f6e" stroke-width="2"/>
+  <text x="55" y="288" fill="#333" font-family="Segoe UI, Arial, sans-serif" font-size="11">normaler Ablauf</text>
+  <line x1="140" y1="284" x2="168" y2="284" stroke="#e2001a" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="173" y="288" fill="#333" font-family="Segoe UI, Arial, sans-serif" font-size="11">spekulativer (unerlaubter) Zugriff</text>
+  <line x1="370" y1="284" x2="398" y2="284" stroke="#f57c00" stroke-width="2"/>
+  <text x="403" y="288" fill="#333" font-family="Segoe UI, Arial, sans-serif" font-size="11">Cache-Seiteneffekt (bleibt erhalten)</text>
+</svg>

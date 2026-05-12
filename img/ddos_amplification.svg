@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <filter id="shadow9" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="headerGrad9" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2001a"/>
+      <stop offset="100%" stop-color="#b3001a"/>
+    </linearGradient>
+    <marker id="arr9r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e2001a"/>
+    </marker>
+    <marker id="arr9b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arr9o" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f39c12"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="450" rx="12" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect width="900" height="52" rx="12" fill="url(#headerGrad9)"/>
+  <rect y="40" width="900" height="12" fill="url(#headerGrad9)"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">DDoS Amplification Attack (DNS/NTP)</text>
+
+  <!-- Step numbers -->
+  <!-- Step 1: Attacker sends spoofed request -->
+  <circle cx="60" cy="95" r="16" fill="#e2001a"/>
+  <text x="60" y="101" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">1</text>
+  <text x="85" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#2c3e50">Angreifer sendet kleine Anfrage mit gefälschter Quell-IP (Opfer-IP)</text>
+
+  <!-- Attacker -->
+  <rect x="40" y="130" width="120" height="80" rx="8" fill="#fdf2f2" stroke="#e2001a" stroke-width="2" filter="url(#shadow9)"/>
+  <rect x="65" y="140" width="70" height="40" rx="3" fill="#e2001a" opacity="0.15"/>
+  <text x="100" y="163" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#e2001a">Spoofed IP:</text>
+  <text x="100" y="178" text-anchor="middle" font-family="Segoe UI,monospace" font-size="10" fill="#e2001a">1.2.3.4</text>
+  <text x="100" y="225" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e2001a">Angreifer</text>
+  <text x="100" y="240" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#e2001a">10.0.0.99</text>
+
+  <!-- Reflectors / Amplifiers -->
+  <rect x="320" y="100" width="250" height="240" rx="10" fill="#fff" stroke="#f39c12" stroke-width="2" filter="url(#shadow9)"/>
+  <rect x="320" y="100" width="250" height="35" rx="10" fill="#f39c12"/>
+  <rect x="320" y="120" width="250" height="15" fill="#f39c12"/>
+  <text x="445" y="123" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Reflektoren / Verstärker</text>
+
+  <!-- DNS Server 1 -->
+  <rect x="340" y="148" width="100" height="45" rx="6" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="390" y="168" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#c27d0e">DNS-Server 1</text>
+  <text x="390" y="184" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#c27d0e">ANY-Query → 50× Antwort</text>
+
+  <!-- DNS Server 2 -->
+  <rect x="450" y="148" width="100" height="45" rx="6" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="500" y="168" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#c27d0e">DNS-Server 2</text>
+  <text x="500" y="184" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#c27d0e">ANY-Query → 50× Antwort</text>
+
+  <!-- NTP Server -->
+  <rect x="340" y="205" width="100" height="45" rx="6" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="390" y="225" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#c27d0e">NTP-Server</text>
+  <text x="390" y="241" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#c27d0e">monlist → 556× Antwort</text>
+
+  <!-- More servers -->
+  <rect x="450" y="205" width="100" height="45" rx="6" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="500" y="225" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#c27d0e">SSDP/CLDAP</text>
+  <text x="500" y="241" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#c27d0e">Hoher Verstärkungsfaktor</text>
+
+  <!-- Amplification factor box -->
+  <rect x="340" y="265" width="210" height="50" rx="6" fill="#fdf2f2" stroke="#e2001a" stroke-width="1"/>
+  <text x="445" y="285" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#e2001a">Verstärkungsfaktor</text>
+  <text x="445" y="305" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#e2001a">DNS: 28–54× | NTP: 556× | CLDAP: 56–70×</text>
+
+  <!-- Victim -->
+  <rect x="700" y="140" width="160" height="100" rx="8" fill="#fff" stroke="#2c3e50" stroke-width="2" filter="url(#shadow9)"/>
+  <rect x="735" y="155" width="90" height="40" rx="4" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <line x1="745" y1="170" x2="815" y2="170" stroke="#bdc3c7" stroke-width="1"/>
+  <line x1="745" y1="180" x2="815" y2="180" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="780" y="215" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#2c3e50">Opfer-Server</text>
+  <text x="780" y="230" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#7f8c8d">IP: 1.2.3.4</text>
+
+  <!-- Overload indicator -->
+  <rect x="720" y="250" width="120" height="30" rx="5" fill="#e2001a"/>
+  <text x="780" y="270" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">ÜBERLASTET!</text>
+
+  <!-- Arrow: Attacker → Reflectors (small) -->
+  <line x1="160" y1="170" x2="315" y2="170" stroke="#e2001a" stroke-width="2" marker-end="url(#arr9r)"/>
+  <text x="240" y="162" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#e2001a">Kleine Anfrage</text>
+  <text x="240" y="178" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#e2001a">(~60 Bytes, Quell-IP: 1.2.3.4)</text>
+
+  <!-- Step 2 -->
+  <circle cx="620" cy="95" r="16" fill="#f39c12"/>
+  <text x="620" y="101" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">2</text>
+  <text x="645" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#2c3e50">Reflektoren antworten mit großer Antwort an Opfer-IP</text>
+
+  <!-- Arrows: Reflectors → Victim (large, multiple) -->
+  <line x1="570" y1="160" x2="695" y2="170" stroke="#f39c12" stroke-width="4" marker-end="url(#arr9o)"/>
+  <line x1="570" y1="185" x2="695" y2="185" stroke="#f39c12" stroke-width="4" marker-end="url(#arr9o)"/>
+  <line x1="570" y1="210" x2="695" y2="200" stroke="#f39c12" stroke-width="4" marker-end="url(#arr9o)"/>
+  <text x="635" y="230" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#f39c12">Riesige Antworten</text>
+  <text x="635" y="245" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#f39c12">(~3-4 KB pro Antwort)</text>
+
+  <!-- Bottom bar: Countermeasures -->
+  <rect x="30" y="350" width="840" height="34" rx="6" fill="#34495e"/>
+  <text x="60" y="372" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#fff">Gegenmaßnahmen:</text>
+  <text x="210" y="372" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#ecf0f1">BCP 38 (Anti-Spoofing)</text>
+  <text x="400" y="372" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#ecf0f1">Response Rate Limiting</text>
+  <text x="590" y="372" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#ecf0f1">Anycast + DDoS-Mitigation</text>
+
+  <!-- Info box -->
+  <rect x="30" y="395" width="840" height="40" rx="6" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="450" y="412" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#2c3e50">Beispiel: 1 Gbit/s Angreifer-Bandbreite → 28-54 Gbit/s beim Opfer (DNS Amplification)</text>
+  <text x="450" y="428" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">Rekord-DDoS 2023: 3,47 Tbit/s (Google/Cloudflare) – größter bisher gemessener Angriff</text>
+</svg>

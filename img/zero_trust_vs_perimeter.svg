@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <filter id="shadow8" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="headerGrad8" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2001a"/>
+      <stop offset="100%" stop-color="#b3001a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="500" rx="12" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect width="900" height="52" rx="12" fill="url(#headerGrad8)"/>
+  <rect y="40" width="900" height="12" fill="url(#headerGrad8)"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Zero Trust vs. Perimeter-Sicherheit</text>
+
+  <!-- LEFT: Perimeter (Castle and Moat) -->
+  <rect x="30" y="65" width="410" height="30" rx="6" fill="#e74c3c"/>
+  <text x="235" y="85" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">Perimeter-Modell (Castle &amp; Moat)</text>
+
+  <!-- Moat -->
+  <rect x="50" y="110" width="370" height="260" rx="12" fill="#d6eaf8" stroke="#3498db" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="235" y="130" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2471a3">Perimeter (Firewall)</text>
+
+  <!-- Internal network - trusted zone -->
+  <rect x="75" y="145" width="320" height="200" rx="8" fill="#e8f8f0" stroke="#27ae60" stroke-width="1.5" filter="url(#shadow8)"/>
+  <text x="235" y="165" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#27ae60">Vertrauenswürdige Zone</text>
+  <text x="235" y="180" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#27ae60">„Drinnen = Sicher"</text>
+
+  <!-- Internal resources -->
+  <rect x="95" y="195" width="80" height="55" rx="6" fill="#fff" stroke="#bdc3c7" stroke-width="1"/>
+  <rect x="110" y="203" width="50" height="18" rx="3" fill="#d5dbdb"/>
+  <text x="135" y="244" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">Server</text>
+
+  <rect x="195" y="195" width="80" height="55" rx="6" fill="#fff" stroke="#bdc3c7" stroke-width="1"/>
+  <circle cx="235" cy="215" r="12" fill="#3498db" opacity="0.2"/>
+  <text x="235" y="244" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">Datenbank</text>
+
+  <rect x="295" y="195" width="80" height="55" rx="6" fill="#fff" stroke="#bdc3c7" stroke-width="1"/>
+  <rect x="310" y="203" width="50" height="18" rx="3" fill="#d5dbdb"/>
+  <text x="335" y="244" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">App</text>
+
+  <!-- Free movement inside -->
+  <path d="M 175 220 L 195 220" stroke="#27ae60" stroke-width="1.5"/>
+  <path d="M 275 220 L 295 220" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="235" y="278" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#27ae60">Freie Bewegung innerhalb!</text>
+
+  <!-- Problem callout -->
+  <rect x="80" y="295" width="310" height="40" rx="5" fill="#fdf2f2" stroke="#e2001a" stroke-width="1"/>
+  <text x="90" y="313" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#e2001a">Problem: Angreifer drinnen =</text>
+  <text x="90" y="328" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#e2001a">Zugriff auf alles (Lateral Movement)</text>
+
+  <!-- Firewall gate -->
+  <rect x="35" y="200" width="30" height="50" rx="4" fill="#3498db"/>
+  <text x="50" y="230" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#fff">🔒</text>
+
+  <!-- RIGHT: Zero Trust -->
+  <rect x="460" y="65" width="410" height="30" rx="6" fill="#27ae60"/>
+  <text x="665" y="85" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">Zero Trust Architecture</text>
+
+  <!-- No perimeter - open field -->
+  <rect x="480" y="110" width="370" height="260" rx="12" fill="#f5f5f5" stroke="#bdc3c7" stroke-width="1.5"/>
+  <text x="665" y="130" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#7f8c8d">Netzwerk (kein implizites Vertrauen)</text>
+
+  <!-- Resources with individual protection -->
+  <rect x="500" y="150" width="90" height="70" rx="6" fill="#fff" stroke="#27ae60" stroke-width="2" filter="url(#shadow8)"/>
+  <rect x="517" y="158" width="56" height="20" rx="3" fill="#d5dbdb"/>
+  <text x="545" y="210" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">Server</text>
+  <!-- Lock icon on resource -->
+  <circle cx="575" cy="158" r="8" fill="#27ae60"/>
+  <text x="575" y="162" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#fff">✓</text>
+
+  <rect x="620" y="150" width="90" height="70" rx="6" fill="#fff" stroke="#27ae60" stroke-width="2" filter="url(#shadow8)"/>
+  <circle cx="665" cy="175" r="12" fill="#3498db" opacity="0.2"/>
+  <text x="665" y="210" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">Datenbank</text>
+  <circle cx="695" cy="158" r="8" fill="#27ae60"/>
+  <text x="695" y="162" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#fff">✓</text>
+
+  <rect x="740" y="150" width="90" height="70" rx="6" fill="#fff" stroke="#27ae60" stroke-width="2" filter="url(#shadow8)"/>
+  <rect x="757" y="158" width="56" height="20" rx="3" fill="#d5dbdb"/>
+  <text x="785" y="210" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">App</text>
+  <circle cx="815" cy="158" r="8" fill="#27ae60"/>
+  <text x="815" y="162" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#fff">✓</text>
+
+  <!-- Policy Engine -->
+  <rect x="580" y="245" width="170" height="45" rx="8" fill="#8e44ad" filter="url(#shadow8)"/>
+  <text x="665" y="267" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#fff">Policy Engine</text>
+  <text x="665" y="282" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#e8daef">Verify → Then Trust</text>
+
+  <!-- Verification arrows -->
+  <line x1="545" y1="220" x2="590" y2="248" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="665" y1="220" x2="665" y2="245" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="785" y1="220" x2="740" y2="248" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Verification factors -->
+  <rect x="495" y="305" width="340" height="55" rx="6" fill="#fff" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="505" y="322" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#8e44ad">Jeder Zugriff wird geprüft:</text>
+  <text x="505" y="340" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">• Identität (MFA) • Gerätezustand • Standort</text>
+  <text x="505" y="355" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#555">• Risikobewertung • Least Privilege • Mikrosegmentierung</text>
+
+  <!-- Principles bottom bar -->
+  <rect x="30" y="400" width="840" height="34" rx="6" fill="#34495e"/>
+  <text x="60" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#fff">Zero Trust Prinzipien:</text>
+  <text x="250" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#ecf0f1">Never Trust, Always Verify</text>
+  <text x="470" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#ecf0f1">Least Privilege Access</text>
+  <text x="660" y="422" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#ecf0f1">Assume Breach</text>
+
+  <!-- Reference -->
+  <rect x="30" y="445" width="840" height="35" rx="6" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="450" y="467" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">Referenz: NIST SP 800-207 (Zero Trust Architecture) · Google BeyondCorp · Microsoft Zero Trust Framework</text>
+</svg>

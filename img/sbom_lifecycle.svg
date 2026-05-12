@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 420 267" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-129.81742,-62.588435)">
+        <ellipse cx="332.993" cy="177.854" rx="118.725" ry="111.142" style="fill:none;stroke:rgb(28,63,110);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-91.253482,-90.876894)">
+        <path d="M245,107L245,153C245,159.623 239.623,165 233,165L147,165C140.377,165 135,159.623 135,153L135,107C135,100.377 140.377,95 147,95L233,95C239.623,95 245,100.377 245,107Z" style="fill:white;stroke:rgb(39,103,73);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;"/>
+        <path d="M245,107L245,109C245,115.623 239.623,121 233,121L147,121C140.377,121 135,115.623 135,109L135,107C135,100.377 140.377,95 147,95L233,95C239.623,95 245,100.377 245,107Z" style="fill:rgb(39,103,73);"/>
+        <rect x="135" y="108" width="110" height="13" style="fill:rgb(39,103,73);"/>
+        <g transform="matrix(1,0,0,1,190,114)">
+            <text x="-34.682px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">1 · Generate</text>
+        </g>
+        <g transform="matrix(1,0,0,1,190,138)">
+            <text x="-30.507px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">SBOM im Build</text>
+        </g>
+        <g transform="matrix(1,0,0,1,190,153)">
+            <text x="-21.344px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">syft, cdxgen</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-123.967799,-75.804165)">
+        <path d="M505,107L505,153C505,159.623 499.623,165 493,165L407,165C400.377,165 395,159.623 395,153L395,107C395,100.377 400.377,95 407,95L493,95C499.623,95 505,100.377 505,107Z" style="fill:white;stroke:rgb(28,63,110);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;"/>
+        <path d="M505,107L505,109C505,115.623 499.623,121 493,121L407,121C400.377,121 395,115.623 395,109L395,107C395,100.377 400.377,95 407,95L493,95C499.623,95 505,100.377 505,107Z" style="fill:rgb(28,63,110);"/>
+        <rect x="395" y="108" width="110" height="13" style="fill:rgb(28,63,110);"/>
+        <g transform="matrix(1,0,0,1,450,114)">
+            <text x="-31.122px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">2 · <tspan x="-14.229px -5.563px " y="0px 0px ">An</tspan>alyze</text>
+        </g>
+        <g transform="matrix(1,0,0,1,450,138)">
+            <text x="-28.013px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">CVE-Abgleich</text>
+        </g>
+        <g transform="matrix(1,0,0,1,450,153)">
+            <text x="-39.418px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">NVD, GitHub <tspan x="8.742px 14.078px " y="0px 0px ">Ad</tspan>visory</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-123.967799,-66.271499)">
+        <path d="M505,227L505,273C505,279.623 499.623,285 493,285L407,285C400.377,285 395,279.623 395,273L395,227C395,220.377 400.377,215 407,215L493,215C499.623,215 505,220.377 505,227Z" style="fill:white;stroke:rgb(232,165,32);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;"/>
+        <path d="M505,227L505,229C505,235.623 499.623,241 493,241L407,241C400.377,241 395,235.623 395,229L395,227C395,220.377 400.377,215 407,215L493,215C499.623,215 505,220.377 505,227Z" style="fill:rgb(232,165,32);"/>
+        <rect x="395" y="228" width="110" height="13" style="fill:rgb(232,165,32);"/>
+        <g transform="matrix(1,0,0,1,450,234)">
+            <text x="-30.662px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">3 · Monitor</text>
+        </g>
+        <g transform="matrix(1,0,0,1,450,258)">
+            <text x="-47.786px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Laufende Überwachung</text>
+        </g>
+        <g transform="matrix(1,0,0,1,450,273)">
+            <text x="-34.246px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">auch nach Release</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-96.886406,-66.271499)">
+        <path d="M245,227L245,273C245,279.623 239.623,285 233,285L147,285C140.377,285 135,279.623 135,273L135,227C135,220.377 140.377,215 147,215L233,215C239.623,215 245,220.377 245,227Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;"/>
+        <path d="M245,227L245,229C245,235.623 239.623,241 233,241L147,241C140.377,241 135,235.623 135,229L135,227C135,220.377 140.377,215 147,215L233,215C239.623,215 245,220.377 245,227Z" style="fill:rgb(197,48,48);"/>
+        <rect x="135" y="228" width="110" height="13" style="fill:rgb(197,48,48);"/>
+        <g transform="matrix(1,0,0,1,190,234)">
+            <text x="-39.015px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">4 · Remediate</text>
+        </g>
+        <g transform="matrix(1,0,0,1,190,258)">
+            <text x="-38.021px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Patchen / Ersetzen</text>
+        </g>
+        <g transform="matrix(1,0,0,1,190,273)">
+            <text x="-39.58px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">neue SBOM erzeugen</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-116.824542,-82.15514)">
+        <circle cx="320" cy="190" r="32" style="fill:rgb(45,55,72);"/>
+        <g transform="matrix(1,0,0,1,320,186)">
+            <text x="-16.5px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">SBOM</text>
+        </g>
+        <g transform="matrix(1,0,0,1,320,200)">
+            <text x="-15.562px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:8px;fill:rgb(204,204,204);">Lifecycle</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-140,-65.404908)">
+        <path d="M560,321C560,327.071 555.071,332 549,332L151,332C144.929,332 140,327.071 140,321C140,314.929 144.929,310 151,310L549,310C555.071,310 560,314.929 560,321Z" style="fill:rgb(45,55,72);"/>
+        <g transform="matrix(1,0,0,1,350,325)">
+            <text x="-150.005px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:white;">Formate: CycloneDX (OW<tspan x="-28.877px -21.655px " y="0px 0px ">AS</tspan>P) · SPDX (Linux Foundation / ISO)</text>
+        </g>
+    </g>
+</svg>

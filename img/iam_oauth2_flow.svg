@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 400">
+  <defs>
+    <marker id="arrOA" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <marker id="arrOAg" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#276749"/>
+    </marker>
+  </defs>
+
+  <text x="370" y="24" text-anchor="middle" fill="#2d3748" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold">OAuth 2.0 – Authorization Code Flow</text>
+
+  <!-- Actors -->
+  <rect x="15" y="42" width="120" height="34" rx="8" fill="#1c3f6e"/>
+  <text x="75" y="58" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Resource Owner</text>
+  <text x="75" y="70" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Segoe UI, Arial, sans-serif" font-size="8">(User)</text>
+
+  <rect x="210" y="42" width="120" height="34" rx="8" fill="#e8a520"/>
+  <text x="270" y="64" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Client (App)</text>
+
+  <rect x="410" y="42" width="130" height="34" rx="8" fill="#276749"/>
+  <text x="475" y="58" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Authorization</text>
+  <text x="475" y="70" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Segoe UI, Arial, sans-serif" font-size="8">Server (IdP)</text>
+
+  <rect x="605" y="42" width="120" height="34" rx="8" fill="#c53030"/>
+  <text x="665" y="58" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Resource</text>
+  <text x="665" y="70" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Segoe UI, Arial, sans-serif" font-size="8">Server (API)</text>
+
+  <!-- Lifelines -->
+  <line x1="75" y1="78" x2="75" y2="380" stroke="#1c3f6e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="270" y1="78" x2="270" y2="380" stroke="#e8a520" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="475" y1="78" x2="475" y2="380" stroke="#276749" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="665" y1="78" x2="665" y2="380" stroke="#c53030" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Step 1 -->
+  <line x1="78" y1="105" x2="267" y2="105" stroke="#444" stroke-width="1.5" marker-end="url(#arrOA)"/>
+  <rect x="100" y="90" width="150" height="16" rx="3" fill="white"/>
+  <text x="175" y="102" text-anchor="middle" fill="#1c3f6e" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">1. Zugriff anfordern</text>
+
+  <!-- Step 2 -->
+  <line x1="273" y1="135" x2="472" y2="135" stroke="#444" stroke-width="1.5" marker-end="url(#arrOA)"/>
+  <rect x="295" y="120" width="155" height="16" rx="3" fill="white"/>
+  <text x="372" y="132" text-anchor="middle" fill="#e8a520" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">2. Redirect zum IdP</text>
+
+  <!-- Step 3 -->
+  <line x1="472" y1="165" x2="78" y2="165" stroke="#276749" stroke-width="1.5"/>
+  <polygon points="80,161.5 68,165 80,168.5" fill="#276749"/>
+  <rect x="160" y="150" width="200" height="16" rx="3" fill="white"/>
+  <text x="260" y="162" text-anchor="middle" fill="#276749" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">3. Login + Consent-Screen</text>
+
+  <!-- Step 4 -->
+  <line x1="78" y1="195" x2="472" y2="195" stroke="#444" stroke-width="1.5" marker-end="url(#arrOA)"/>
+  <rect x="170" y="180" width="195" height="16" rx="3" fill="white"/>
+  <text x="267" y="192" text-anchor="middle" fill="#444" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">4. User authentifiziert sich</text>
+
+  <!-- Step 5 -->
+  <line x1="472" y1="228" x2="273" y2="228" stroke="#276749" stroke-width="1.5"/>
+  <polygon points="275,224.5 263,228 275,231.5" fill="#276749"/>
+  <rect x="290" y="213" width="170" height="16" rx="3" fill="white"/>
+  <text x="375" y="225" text-anchor="middle" fill="#276749" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">5. Authorization Code</text>
+
+  <!-- Step 6 -->
+  <line x1="273" y1="260" x2="472" y2="260" stroke="#e8a520" stroke-width="1.5" marker-end="url(#arrOA)"/>
+  <rect x="285" y="245" width="175" height="16" rx="3" fill="white"/>
+  <text x="372" y="257" text-anchor="middle" fill="#e8a520" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">6. Code + Client Secret</text>
+
+  <!-- Step 7 -->
+  <line x1="472" y1="290" x2="273" y2="290" stroke="#276749" stroke-width="1.5"/>
+  <polygon points="275,286.5 263,290 275,293.5" fill="#276749"/>
+  <rect x="300" y="275" width="150" height="16" rx="3" fill="white"/>
+  <text x="375" y="287" text-anchor="middle" fill="#276749" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">7. Access Token (JWT)</text>
+
+  <!-- Step 8 -->
+  <line x1="273" y1="320" x2="662" y2="320" stroke="#e8a520" stroke-width="1.5" marker-end="url(#arrOA)"/>
+  <rect x="370" y="305" width="200" height="16" rx="3" fill="white"/>
+  <text x="470" y="317" text-anchor="middle" fill="#e8a520" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">8. API-Request + Access Token</text>
+
+  <!-- Step 9 -->
+  <line x1="662" y1="350" x2="273" y2="350" stroke="#c53030" stroke-width="1.5"/>
+  <polygon points="275,346.5 263,350 275,353.5" fill="#c53030"/>
+  <rect x="390" y="335" width="160" height="16" rx="3" fill="white"/>
+  <text x="470" y="347" text-anchor="middle" fill="#c53030" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold">9. Geschützte Daten</text>
+
+  <!-- Bottom bar -->
+  <rect x="80" y="372" width="580" height="22" rx="11" fill="#2d3748"/>
+  <text x="370" y="387" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Die App sieht nie das Passwort des Nutzers – nur den temporären Access Token</text>
+</svg>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620">
+  <defs>
+    <filter id="shadow1" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="headerGrad1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2001a"/>
+      <stop offset="100%" stop-color="#b30015"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="620" rx="12" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect width="960" height="52" rx="12" fill="url(#headerGrad1)"/>
+  <rect y="40" width="960" height="12" fill="url(#headerGrad1)"/>
+  <text x="480" y="34" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">ISO/OSI-Schichtenmodell – Angriffe pro Layer</text>
+
+  <!-- Layer colors -->
+  <!-- L7 Application - dark red -->
+  <rect x="40" y="72" width="260" height="60" rx="8" fill="#c0392b" filter="url(#shadow1)"/>
+  <text x="60" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Layer 7</text>
+  <text x="60" y="118" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#fde8e8">Application</text>
+  <text x="240" y="108" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#fde8e8">HTTP, DNS, SMTP</text>
+
+  <!-- L6 Presentation - red-orange -->
+  <rect x="40" y="140" width="260" height="60" rx="8" fill="#d35400" filter="url(#shadow1)"/>
+  <text x="60" y="168" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Layer 6</text>
+  <text x="60" y="186" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#fdebd0">Presentation</text>
+  <text x="240" y="176" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#fdebd0">JSON, XML, TLS</text>
+
+  <!-- L5 Session - orange -->
+  <rect x="40" y="208" width="260" height="60" rx="8" fill="#e67e22" filter="url(#shadow1)"/>
+  <text x="60" y="236" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Layer 5</text>
+  <text x="60" y="254" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#fef5e7">Session</text>
+  <text x="240" y="244" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#fef5e7">RPC, NetBIOS</text>
+
+  <!-- L4 Transport - yellow -->
+  <rect x="40" y="276" width="260" height="60" rx="8" fill="#f39c12" filter="url(#shadow1)"/>
+  <text x="60" y="304" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Layer 4</text>
+  <text x="60" y="322" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#fef9e7">Transport</text>
+  <text x="240" y="312" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#fef9e7">TCP, UDP</text>
+
+  <!-- L3 Network - green -->
+  <rect x="40" y="344" width="260" height="60" rx="8" fill="#27ae60" filter="url(#shadow1)"/>
+  <text x="60" y="372" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Layer 3</text>
+  <text x="60" y="390" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#e8f8f0">Network</text>
+  <text x="240" y="380" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#e8f8f0">IP, ICMP, BGP</text>
+
+  <!-- L2 Data Link - blue -->
+  <rect x="40" y="412" width="260" height="60" rx="8" fill="#2980b9" filter="url(#shadow1)"/>
+  <text x="60" y="440" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Layer 2</text>
+  <text x="60" y="458" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#d6eaf8">Data Link</text>
+  <text x="240" y="448" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#d6eaf8">Ethernet, ARP</text>
+
+  <!-- L1 Physical - dark blue -->
+  <rect x="40" y="480" width="260" height="60" rx="8" fill="#2c3e50" filter="url(#shadow1)"/>
+  <text x="60" y="508" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Layer 1</text>
+  <text x="60" y="526" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#d5dbdb">Physical</text>
+  <text x="240" y="516" text-anchor="end" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#d5dbdb">Kupfer, Fiber, WiFi</text>
+
+  <!-- Arrows and attack labels -->
+  <!-- L7 attacks -->
+  <line x1="306" y1="102" x2="340" y2="102" stroke="#c0392b" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <rect x="345" y="74" width="280" height="56" rx="6" fill="#fff" stroke="#c0392b" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="360" y="94" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#c0392b">DNS Spoofing / Amplification</text>
+  <text x="360" y="112" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">HTTP Flood, Slowloris, DDoS</text>
+
+  <!-- L6 attacks -->
+  <line x1="306" y1="170" x2="340" y2="170" stroke="#d35400" stroke-width="2"/>
+  <rect x="345" y="142" width="280" height="56" rx="6" fill="#fff" stroke="#d35400" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="360" y="162" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#d35400">Deserialization Attacks</text>
+  <text x="360" y="180" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">XML/JSON Injection, Parser Exploits</text>
+
+  <!-- L5 attacks -->
+  <line x1="306" y1="238" x2="340" y2="238" stroke="#e67e22" stroke-width="2"/>
+  <rect x="345" y="210" width="280" height="56" rx="6" fill="#fff" stroke="#e67e22" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="360" y="230" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#e67e22">Session Hijacking</text>
+  <text x="360" y="248" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">Token-Diebstahl, Session Fixation</text>
+
+  <!-- L4 attacks -->
+  <line x1="306" y1="306" x2="340" y2="306" stroke="#f39c12" stroke-width="2"/>
+  <rect x="345" y="278" width="280" height="56" rx="6" fill="#fff" stroke="#f39c12" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="360" y="298" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#c27d0e">SYN Flood</text>
+  <text x="360" y="316" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">TCP-Ressourcen-Erschöpfung</text>
+
+  <!-- L3 attacks -->
+  <line x1="306" y1="374" x2="340" y2="374" stroke="#27ae60" stroke-width="2"/>
+  <rect x="345" y="346" width="280" height="56" rx="6" fill="#fff" stroke="#27ae60" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="360" y="366" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#1e8449">IP Spoofing / BGP Hijacking</text>
+  <text x="360" y="384" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">Quell-IP-Fälschung, Routen-Manipulation</text>
+
+  <!-- L2 attacks -->
+  <line x1="306" y1="442" x2="340" y2="442" stroke="#2980b9" stroke-width="2"/>
+  <rect x="345" y="414" width="280" height="56" rx="6" fill="#fff" stroke="#2980b9" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="360" y="434" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#2471a3">ARP Spoofing / DHCP Spoofing</text>
+  <text x="360" y="452" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">MAC-Manipulation, Rogue DHCP</text>
+
+  <!-- L1 attacks -->
+  <line x1="306" y1="510" x2="340" y2="510" stroke="#2c3e50" stroke-width="2"/>
+  <rect x="345" y="482" width="280" height="56" rx="6" fill="#fff" stroke="#2c3e50" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="360" y="502" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#2c3e50">Eavesdropping / Jamming</text>
+  <text x="360" y="520" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#555">Tapping, Störsender, TEMPEST</text>
+
+  <!-- Defense column header -->
+  <rect x="650" y="72" width="280" height="34" rx="6" fill="#34495e"/>
+  <text x="790" y="94" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Schutzmechanismen</text>
+
+  <!-- Defense items -->
+  <rect x="650" y="114" width="280" height="32" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="790" y="135" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">WAF, Rate Limiting, DNSSEC</text>
+
+  <rect x="650" y="154" width="280" height="32" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="790" y="175" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">Sichere Parser, Schema-Validierung</text>
+
+  <rect x="650" y="194" width="280" height="32" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="790" y="215" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">TLS, Token-Rotation, MFA</text>
+
+  <rect x="650" y="234" width="280" height="32" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="790" y="255" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">SYN Cookies, Rate Limiting</text>
+
+  <rect x="650" y="274" width="280" height="32" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="790" y="295" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">BCP 38, RPKI, uRPF</text>
+
+  <rect x="650" y="314" width="280" height="32" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="790" y="335" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">DAI, DHCP Snooping, 802.1X</text>
+
+  <rect x="650" y="354" width="280" height="32" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="790" y="375" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#2c3e50">Zutrittskontrolle, Verschlüsselung</text>
+
+  <!-- Bottom bar -->
+  <rect x="40" y="560" width="880" height="40" rx="8" fill="#34495e"/>
+  <text x="480" y="585" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#fff">Defense in Depth: Schutzmaßnahmen auf jeder Schicht kombinieren</text>
+</svg>

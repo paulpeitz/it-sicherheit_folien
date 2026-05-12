@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="360" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e2001a"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Step 1: Forscher findet Schwachstelle -->
+  <g filter="url(#shadow)">
+    <rect x="10" y="30" width="130" height="56" rx="8" fill="#e2001a"/>
+    <text x="75" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">❶ Entdeckung</text>
+    <text x="75" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Forscher findet</text>
+    <text x="75" y="81" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Schwachstelle</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="140" y1="58" x2="165" y2="58" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Vertrauliche Meldung -->
+  <g filter="url(#shadow)">
+    <rect x="170" y="30" width="130" height="56" rx="8" fill="#1c3f6e"/>
+    <text x="235" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">❷ Meldung</text>
+    <text x="235" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Vertraulich an</text>
+    <text x="235" y="81" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Hersteller / CERT</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="300" y1="58" x2="325" y2="58" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Validierung -->
+  <g filter="url(#shadow)">
+    <rect x="330" y="30" width="130" height="56" rx="8" fill="#1c3f6e"/>
+    <text x="395" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">❸ Validierung</text>
+    <text x="395" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Hersteller bestätigt</text>
+    <text x="395" y="81" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">&amp; CVE-ID vergeben</text>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <line x1="460" y1="58" x2="485" y2="58" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 4: Patch-Entwicklung -->
+  <g filter="url(#shadow)">
+    <rect x="490" y="30" width="130" height="56" rx="8" fill="#1c3f6e"/>
+    <text x="555" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">❹ Patch</text>
+    <text x="555" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Hersteller entwickelt</text>
+    <text x="555" y="81" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Fix / Update</text>
+  </g>
+
+  <!-- Arrow 4 down -->
+  <line x1="555" y1="86" x2="555" y2="130" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 5: Veröffentlichung -->
+  <g filter="url(#shadow)">
+    <rect x="420" y="135" width="270" height="56" rx="8" fill="#2e7d32"/>
+    <text x="555" y="159" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">❺ Koordinierte Veröffentlichung</text>
+    <text x="555" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Advisory + Patch + CVE gleichzeitig veröffentlicht</text>
+  </g>
+
+  <!-- Timeline bar -->
+  <rect x="30" y="225" width="660" height="4" rx="2" fill="#ddd"/>
+  <rect x="30" y="225" width="400" height="4" rx="2" fill="#e2001a" fill-opacity="0.5"/>
+
+  <!-- Timeline labels -->
+  <text x="30" y="250" font-family="Arial, sans-serif" font-size="10" fill="#e2001a" font-weight="bold">Tag 0</text>
+  <text x="25" y="265" font-family="Arial, sans-serif" font-size="9" fill="#666">Entdeckung</text>
+
+  <text x="430" y="250" font-family="Arial, sans-serif" font-size="10" fill="#e2001a" font-weight="bold">bis zu 90 Tage</text>
+  <text x="430" y="265" font-family="Arial, sans-serif" font-size="9" fill="#666">Disclosure-Frist</text>
+
+  <text x="610" y="250" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32" font-weight="bold">Disclosure</text>
+  <text x="610" y="265" font-family="Arial, sans-serif" font-size="9" fill="#666">Veröffentlichung</text>
+
+  <!-- Annotation: what if no patch? -->
+  <rect x="30" y="290" width="310" height="50" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="185" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ef6c00">⚠ Kein Patch nach Frist?</text>
+  <text x="185" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ef6c00">Forscher kann Schwachstelle öffentlich machen</text>
+
+  <!-- Annotation: Google Project Zero -->
+  <rect x="370" y="290" width="310" height="50" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="525" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1565c0">📋 Google Project Zero</text>
+  <text x="525" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1565c0">90-Tage-Frist als De-facto-Standard</text>
+</svg>

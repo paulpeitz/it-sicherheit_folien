@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 550">
+  <defs>
+    <style>
+      .decision { fill: #fde8ea; stroke: #e2001a; stroke-width: 2; }
+      .result-yes { fill: #e8f4e8; stroke: #27ae60; stroke-width: 2; rx: 8; }
+      .result-no { fill: #fef3e0; stroke: #f39c12; stroke-width: 2; rx: 8; }
+      .result-stop { fill: #fde8ea; stroke: #e2001a; stroke-width: 2; rx: 8; }
+      .start-box { fill: #1a5276; rx: 8; stroke: none; }
+      .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; text-anchor: middle; }
+      .label-bold { font-family: Arial, sans-serif; font-size: 13px; fill: #333; text-anchor: middle; font-weight: bold; }
+      .label-white { font-family: Arial, sans-serif; font-size: 13px; fill: #fff; text-anchor: middle; font-weight: bold; }
+      .label-small { font-family: Arial, sans-serif; font-size: 11px; fill: #555; text-anchor: middle; }
+      .yes-label { font-family: Arial, sans-serif; font-size: 11px; fill: #27ae60; font-weight: bold; }
+      .no-label { font-family: Arial, sans-serif; font-size: 11px; fill: #e2001a; font-weight: bold; }
+      .arrow { stroke: #888; stroke-width: 1.5; fill: none; marker-end: url(#arr2); }
+    </style>
+    <marker id="arr2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Start -->
+  <rect x="250" y="10" width="250" height="40" class="start-box"/>
+  <text x="375" y="36" class="label-white">Datenübermittlung in Drittland?</text>
+
+  <!-- Decision 1: Angemessenheitsbeschluss -->
+  <polygon points="375,75 530,135 375,195 220,135" class="decision"/>
+  <text x="375" y="128" class="label-bold">Angemessenheits-</text>
+  <text x="375" y="145" class="label-bold">beschluss?</text>
+
+  <!-- Yes from D1 -->
+  <line x1="530" y1="135" x2="640" y2="135" class="arrow"/>
+  <text x="570" y="128" class="yes-label">Ja</text>
+  <rect x="640" y="110" width="100" height="50" class="result-yes"/>
+  <text x="690" y="132" class="label-bold" fill="#27ae60">Zulässig</text>
+  <text x="690" y="148" class="label-small">z.B. CH, JP, UK</text>
+
+  <!-- No from D1 -->
+  <line x1="375" y1="195" x2="375" y2="230" class="arrow"/>
+  <text x="390" y="218" class="no-label">Nein</text>
+
+  <!-- Decision 2: SCCs / BCRs -->
+  <polygon points="375,230 530,290 375,350 220,290" class="decision"/>
+  <text x="375" y="283" class="label-bold">SCCs oder</text>
+  <text x="375" y="300" class="label-bold">BCRs?</text>
+
+  <!-- Yes from D2 -->
+  <line x1="530" y1="290" x2="640" y2="290" class="arrow"/>
+  <text x="570" y="283" class="yes-label">Ja</text>
+  <rect x="640" y="260" width="100" height="60" class="result-yes"/>
+  <text x="690" y="283" class="label-bold" fill="#27ae60">Zulässig</text>
+  <text x="690" y="299" class="label-small">+ Transfer Impact</text>
+  <text x="690" y="312" class="label-small">Assessment</text>
+
+  <!-- No from D2 -->
+  <line x1="375" y1="350" x2="375" y2="385" class="arrow"/>
+  <text x="390" y="372" class="no-label">Nein</text>
+
+  <!-- Decision 3: Ausnahme -->
+  <polygon points="375,385 520,440 375,495 230,440" class="decision"/>
+  <text x="375" y="433" class="label-bold">Ausnahme</text>
+  <text x="375" y="450" class="label-bold">Art. 49?</text>
+
+  <!-- Yes from D3 -->
+  <line x1="520" y1="440" x2="640" y2="440" class="arrow"/>
+  <text x="570" y="433" class="yes-label">Ja</text>
+  <rect x="640" y="415" width="100" height="50" class="result-no"/>
+  <text x="690" y="436" class="label-bold" fill="#f39c12">Bedingt</text>
+  <text x="690" y="452" class="label-small">Einwilligung,</text>
+  <text x="690" y="464" class="label-small">Vertrag etc.</text>
+
+  <!-- No from D3 -->
+  <line x1="230" y1="440" x2="110" y2="440" class="arrow"/>
+  <text x="195" y="433" class="no-label">Nein</text>
+  <rect x="10" y="415" width="100" height="50" class="result-stop"/>
+  <text x="60" y="436" class="label-bold" fill="#e2001a">Nicht</text>
+  <text x="60" y="452" class="label-bold" fill="#e2001a">zulässig</text>
+
+  <!-- Annotations -->
+  <text x="58" y="490" class="label-small" fill="#999">SCCs = Standard Contractual Clauses</text>
+  <text x="58" y="505" class="label-small" fill="#999">BCRs = Binding Corporate Rules</text>
+</svg>

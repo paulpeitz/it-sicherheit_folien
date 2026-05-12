@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e2001a"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Step 1: Identifikation -->
+  <rect x="20" y="80" width="140" height="90" rx="10" fill="#e2001a" filter="url(#shadow)"/>
+  <text x="90" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Risiko-</text>
+  <text x="90" y="137" text-anchor="middle" font-size="14" font-weight="bold" fill="white">identifikation</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="160" y1="125" x2="190" y2="125" stroke="#e2001a" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Analyse -->
+  <rect x="195" y="80" width="140" height="90" rx="10" fill="#c4161c" filter="url(#shadow)"/>
+  <text x="265" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Risiko-</text>
+  <text x="265" y="137" text-anchor="middle" font-size="14" font-weight="bold" fill="white">analyse</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="335" y1="125" x2="365" y2="125" stroke="#e2001a" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Bewertung -->
+  <rect x="370" y="80" width="140" height="90" rx="10" fill="#888" filter="url(#shadow)"/>
+  <text x="440" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Risiko-</text>
+  <text x="440" y="137" text-anchor="middle" font-size="14" font-weight="bold" fill="white">bewertung</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="510" y1="125" x2="540" y2="125" stroke="#e2001a" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Behandlung -->
+  <rect x="545" y="80" width="140" height="90" rx="10" fill="#555" filter="url(#shadow)"/>
+  <text x="615" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Risiko-</text>
+  <text x="615" y="137" text-anchor="middle" font-size="14" font-weight="bold" fill="white">behandlung</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="685" y1="125" x2="715" y2="125" stroke="#e2001a" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Monitoring -->
+  <rect x="720" y="80" width="110" height="90" rx="10" fill="#333" filter="url(#shadow)"/>
+  <text x="775" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Monitoring</text>
+  <text x="775" y="137" text-anchor="middle" font-size="14" font-weight="bold" fill="white">&amp; Review</text>
+
+  <!-- Sub-labels -->
+  <text x="90" y="200" text-anchor="middle" font-size="11" fill="#666">Assets, Bedrohungen,</text>
+  <text x="90" y="215" text-anchor="middle" font-size="11" fill="#666">Schwachstellen</text>
+
+  <text x="265" y="200" text-anchor="middle" font-size="11" fill="#666">Qualitativ oder</text>
+  <text x="265" y="215" text-anchor="middle" font-size="11" fill="#666">quantitativ</text>
+
+  <text x="440" y="200" text-anchor="middle" font-size="11" fill="#666">Risikomatrix,</text>
+  <text x="440" y="215" text-anchor="middle" font-size="11" fill="#666">Akzeptanzkriterien</text>
+
+  <text x="615" y="200" text-anchor="middle" font-size="11" fill="#666">Vermeiden, Reduzieren,</text>
+  <text x="615" y="215" text-anchor="middle" font-size="11" fill="#666">Transferieren, Akzeptieren</text>
+
+  <text x="775" y="200" text-anchor="middle" font-size="11" fill="#666">KPIs, Audits,</text>
+  <text x="775" y="215" text-anchor="middle" font-size="11" fill="#666">Neubeurteilung</text>
+
+  <!-- Feedback arrow (bottom, from Monitoring back to Identifikation) -->
+  <path d="M775,170 L775,270 L90,270 L90,175" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowGray)"/>
+  <text x="430" y="292" text-anchor="middle" font-size="12" fill="#888" font-style="italic">Kontinuierliche Überprüfung &amp; Anpassung</text>
+</svg>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 470">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e2001a"/>
+    </marker>
+  </defs>
+
+  <!-- === Left column: Angreifer === -->
+  <text x="130" y="24" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" letter-spacing="2">ANGREIFER</text>
+
+  <!-- === Right column: CPU / Opfer === -->
+  <text x="480" y="24" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" letter-spacing="2">CPU / OPFER</text>
+
+  <!-- ══ Schritt 1: Training ══ -->
+  <text x="18" y="70" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" opacity="0.18">1</text>
+  <rect x="38" y="45" width="250" height="80" rx="12" fill="#e2001a"/>
+  <text x="163" y="73" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">Branch Predictor trainieren</text>
+  <text x="163" y="93" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">Bedingung viele Male mit TRUE</text>
+  <text x="163" y="110" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">aufrufen → Predictor lernt Muster</text>
+
+  <!-- Pfeil 1 → Branch Predictor -->
+  <line x1="288" y1="85" x2="358" y2="85" stroke="#e2001a" stroke-width="2" marker-end="url(#arr-red)"/>
+
+  <!-- Branch Predictor Box -->
+  <rect x="362" y="50" width="240" height="70" rx="12" fill="#1c3f6e"/>
+  <text x="482" y="77" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">Branch Predictor</text>
+  <text x="482" y="97" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">erwartet jetzt: TRUE ✓</text>
+
+  <!-- Pfeil nach unten von Branch Predictor -->
+  <line x1="482" y1="120" x2="482" y2="172" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="405" y="133" width="154" height="21" rx="10" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+  <text x="482" y="148" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="11">spekuliert Pfad</text>
+
+  <!-- ══ Schritt 2: Spekulative Ausführung ══ -->
+  <text x="18" y="210" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" opacity="0.18">2</text>
+  <rect x="38" y="180" width="250" height="80" rx="12" fill="#c53030"/>
+  <text x="163" y="208" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">Opfer-Code anstoßen</text>
+  <text x="163" y="228" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">mit manipuliertem Input, sodass</text>
+  <text x="163" y="245" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">CPU den falschen Pfad wählt</text>
+
+  <!-- Pfeil 2 → Spekulative Ausführung -->
+  <line x1="288" y1="220" x2="358" y2="220" stroke="#e2001a" stroke-width="2" marker-end="url(#arr-red)"/>
+
+  <!-- Spekulative Ausführung Box -->
+  <rect x="362" y="180" width="240" height="80" rx="12" fill="#2d3748"/>
+  <text x="482" y="208" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">Spekulative Ausführung</text>
+  <text x="482" y="228" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">CPU liest Opfer-Speicher</text>
+  <text x="482" y="245" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">bevor Zugriffsprüfung greift</text>
+
+  <!-- Pfeil nach unten: Seiteneffekt im Cache -->
+  <line x1="482" y1="260" x2="482" y2="312" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="393" y="273" width="178" height="21" rx="10" fill="#fff3cd" stroke="#e2001a" stroke-width="1"/>
+  <text x="482" y="288" text-anchor="middle" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">⚠ Seiteneffekt im Cache</text>
+
+  <!-- Rollback-Hinweis -->
+  <rect x="620" y="198" width="70" height="44" rx="8" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="655" y="216" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="10">Rollback</text>
+  <text x="655" y="230" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="10">Register ✓</text>
+  <line x1="602" y1="220" x2="618" y2="220" stroke="#888" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Cache-Zeile bleibt -->
+  <rect x="620" y="268" width="70" height="30" rx="8" fill="none" stroke="#e2001a" stroke-width="1.2"/>
+  <text x="655" y="280" text-anchor="middle" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Cache ✗</text>
+  <text x="655" y="290" text-anchor="middle" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="9">bleibt!</text>
+  <line x1="602" y1="283" x2="618" y2="283" stroke="#e2001a" stroke-width="1.2"/>
+
+  <!-- ══ Schritt 3: Flush+Reload ══ -->
+  <text x="18" y="350" fill="#e2001a" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" opacity="0.18">3</text>
+  <rect x="38" y="320" width="250" height="80" rx="12" fill="#e2001a"/>
+  <text x="163" y="348" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">Flush + Reload</text>
+  <text x="163" y="368" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">Angreifer misst Zugriffszeiten</text>
+  <text x="163" y="385" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">auf alle Cache-Zeilen</text>
+
+  <!-- Pfeil 3 → Cache -->
+  <line x1="288" y1="360" x2="358" y2="360" stroke="#e2001a" stroke-width="2" marker-end="url(#arr-red)"/>
+
+  <!-- CPU-Cache Box -->
+  <rect x="362" y="320" width="240" height="80" rx="12" fill="#276749"/>
+  <text x="482" y="348" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">CPU-Cache auslesen</text>
+  <text x="482" y="368" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">schnell = im Cache = spekulativ geladen</text>
+  <text x="482" y="385" text-anchor="middle" fill="rgba(255,255,255,0.82)" font-family="Segoe UI, Arial, sans-serif" font-size="11">→ Opfer-Byte rekonstruiert</text>
+
+  <!-- Ergebnis-Box -->
+  <rect x="170" y="425" width="360" height="38" rx="12" fill="#1c3f6e"/>
+  <text x="350" y="450" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold">Geheimes Byte für Byte extrahiert — prozessübergreifend</text>
+
+  <!-- Pfeil von Schritt 3 nach Ergebnis -->
+  <line x1="350" y1="400" x2="350" y2="423" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+</svg>

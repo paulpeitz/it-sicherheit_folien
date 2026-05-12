@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <polygon points="0,1 10,5 0,9" fill="#555"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="390" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">AES – Rundenstruktur (128-Bit / 10 Runden)</text>
+
+  <!-- Input -->
+  <rect x="30" y="48" width="130" height="40" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="95" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#0d47a1">Klartext (128 Bit)</text>
+
+  <!-- Initial AddRoundKey -->
+  <rect x="195" y="48" width="130" height="40" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="260" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">AddRoundKey</text>
+  <text x="260" y="80" text-anchor="middle" font-size="9" fill="#888">(Initialer Schlüssel K₀)</text>
+  <line x1="160" y1="68" x2="192" y2="68" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow down to rounds -->
+  <line x1="260" y1="88" x2="260" y2="112" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Rounds 1-9 Box -->
+  <rect x="40" y="115" width="700" height="170" rx="12" fill="#f5f5f5" stroke="#1565c0" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="390" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">Runden 1 – 9 (wiederholen)</text>
+
+  <!-- SubBytes -->
+  <rect x="65" y="155" width="125" height="65" rx="8" fill="#ffcdd2" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="127" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">SubBytes</text>
+  <text x="127" y="195" text-anchor="middle" font-size="9" fill="#555">S-Box Substitution</text>
+  <text x="127" y="208" text-anchor="middle" font-size="9" fill="#888">(Konfusion)</text>
+
+  <!-- ShiftRows -->
+  <rect x="225" y="155" width="125" height="65" rx="8" fill="#ffe0b2" stroke="#e65100" stroke-width="2" filter="url(#shadow)"/>
+  <text x="287" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">ShiftRows</text>
+  <text x="287" y="195" text-anchor="middle" font-size="9" fill="#555">Zyklische Verschiebung</text>
+  <text x="287" y="208" text-anchor="middle" font-size="9" fill="#888">(Diffusion)</text>
+
+  <!-- MixColumns -->
+  <rect x="385" y="155" width="125" height="65" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="447" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">MixColumns</text>
+  <text x="447" y="195" text-anchor="middle" font-size="9" fill="#555">Matrix-Multiplikation</text>
+  <text x="447" y="208" text-anchor="middle" font-size="9" fill="#888">(Diffusion)</text>
+
+  <!-- AddRoundKey -->
+  <rect x="545" y="155" width="125" height="65" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="607" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">AddRoundKey</text>
+  <text x="607" y="195" text-anchor="middle" font-size="9" fill="#555">XOR mit Rundenschl.</text>
+  <text x="607" y="208" text-anchor="middle" font-size="9" fill="#888">(Kᵢ)</text>
+
+  <!-- Arrows between round steps -->
+  <line x1="190" y1="187" x2="222" y2="187" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="350" y1="187" x2="382" y2="187" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="510" y1="187" x2="542" y2="187" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: back loop for rounds -->
+  <path d="M670,187 Q700,187 700,245 Q700,260 660,260 L80,260 Q60,260 60,245 L60,220" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="390" y="255" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="bold">× 9 Runden</text>
+
+  <!-- Final Round (Round 10) -->
+  <rect x="40" y="295" width="700" height="65" rx="12" fill="#fff" stroke="#e2001a" stroke-width="2"/>
+  <text x="80" y="318" font-size="13" font-weight="bold" fill="#e2001a">Runde 10 (letzte):</text>
+
+  <!-- Final SubBytes -->
+  <rect x="215" y="305" width="110" height="40" rx="8" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+  <text x="270" y="330" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">SubBytes</text>
+
+  <!-- Final ShiftRows -->
+  <rect x="350" y="305" width="110" height="40" rx="8" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
+  <text x="405" y="330" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">ShiftRows</text>
+
+  <!-- Final AddRoundKey -->
+  <rect x="485" y="305" width="120" height="40" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="545" y="330" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">AddRoundKey</text>
+
+  <!-- No MixColumns -->
+  <text x="640" y="332" font-size="10" fill="#c62828" font-style="italic">← Kein MixColumns!</text>
+
+  <!-- Arrows final round -->
+  <line x1="325" y1="325" x2="347" y2="325" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="325" x2="482" y2="325" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Output -->
+  <rect x="315" y="375" width="150" height="38" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="390" y="399" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b5e20">Geheimtext (128 Bit)</text>
+  <line x1="390" y1="360" x2="390" y2="372" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

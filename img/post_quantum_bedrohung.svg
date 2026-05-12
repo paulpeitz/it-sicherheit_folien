@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 769 389" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <path d="M370,62L370,213C370,219.623 364.623,225 358,225L32,225C25.377,225 20,219.623 20,213L20,62C20,55.377 25.377,50 32,50L358,50C364.623,50 370,55.377 370,62Z" style="fill:white;stroke:rgb(21,101,192);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <path d="M370,62L370,73C370,79.623 364.623,85 358,85L32,85C25.377,85 20,79.623 20,73L20,62C20,55.377 25.377,50 32,50L358,50C364.623,50 370,55.377 370,62Z" style="fill:rgb(21,101,192);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <rect x="20" y="72" width="350" height="13" style="fill:rgb(21,101,192);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,179.123106,27.123106)">
+        <text x="-59.907px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">Heutige V<tspan x="3.886px 11.672px " y="0px 0px ">er</tspan>fahren</text>
+    </g>
+    <g transform="matrix(1,0,0,1,24.123106,62.123106)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(13,71,161);">Asymmetrisch (Public Key):</text>
+    </g>
+    <g transform="matrix(1,0,0,1,24.123106,79.123106)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• RSA<tspan x="28.918px 31.974px " y="0px 0px "> →</tspan> Faktorisierungsproblem</text>
+    </g>
+    <g transform="matrix(1,0,0,1,24.123106,96.123106)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• ECC → Diskreter Logarithmus (ECDLP)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,24.123106,113.123106)">
+        <g transform="matrix(11,0,0,11,17.294922,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,20.253231,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,23.211541,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• Diﬃe-Hellman → DLP</text>
+    </g>
+    <g transform="matrix(1,0,0,1,24.123106,136.123106)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(13,71,161);">Symmetrisch:</text>
+    </g>
+    <g transform="matrix(1,0,0,1,24.123106,153.123106)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• <tspan x="6.3px 13.637px " y="0px 0px ">AE</tspan>S-128/256 → Brute Force</text>
+    </g>
+    <g transform="matrix(1,0,0,1,24.123106,170.123106)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• SHA-256 → Kollisionssuche</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <path d="M780,62L780,213C780,219.623 774.623,225 768,225L442,225C435.377,225 430,219.623 430,213L430,62C430,55.377 435.377,50 442,50L768,50C774.623,50 780,55.377 780,62Z" style="fill:white;stroke:rgb(198,40,40);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <path d="M780,62L780,73C780,79.623 774.623,85 768,85L442,85C435.377,85 430,79.623 430,73L430,62C430,55.377 435.377,50 442,50L768,50C774.623,50 780,55.377 780,62Z" style="fill:rgb(198,40,40);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <rect x="430" y="72" width="350" height="13" style="fill:rgb(198,40,40);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,589.123106,27.123106)">
+        <text x="-71.839px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:14px;fill:white;">⚡</text>
+        <text x="-48.727px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">Quantencomputer</text>
+    </g>
+    <g transform="matrix(1,0,0,1,434.123106,62.123106)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(198,40,40);">Shor&apos;s <tspan x="39.75px 48.416px " y="0px 0px ">Al</tspan>gorithmus:</text>
+    </g>
+    <g transform="matrix(1,0,0,1,434.123106,79.123106)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• Faktorisierung in Polynomialzeit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,434.123106,96.123106)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• RSA, ECC, DH →</text>
+        <text x="97.974px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:11px;fill:rgb(85,85,85);">❌</text>
+        <text x="116.134px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">GEBROCHEN</text>
+    </g>
+    <g transform="matrix(1,0,0,1,434.123106,113.123106)">
+        <g transform="matrix(11,0,0,11,127.982422,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,130.92041,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• Digitale Signaturen betroﬀen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,434.123106,136.123106)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(198,40,40);">Grover&apos;s <tspan x="51.768px 60.434px " y="0px 0px ">Al</tspan>gorithmus:</text>
+    </g>
+    <g transform="matrix(1,0,0,1,434.123106,153.123106)">
+        <g transform="matrix(11,0,0,11,53.984863,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,56.922852,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• Halbiert eﬀektive Schlüssellänge</text>
+    </g>
+    <g transform="matrix(1,0,0,1,434.123106,170.123106)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">• <tspan x="6.3px 13.637px " y="0px 0px ">AE</tspan>S-128 → 64 Bit</text>
+        <text x="98.624px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:11px;fill:rgb(85,85,85);">❌</text>
+        <text x="116.784px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">| <tspan x="122.09px 129.427px " y="0px 0px ">AE</tspan>S-256 → 128 Bit</text>
+        <text x="220.532px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:11px;fill:rgb(85,85,85);">✅</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <path d="M372,137L426,137" style="fill:none;fill-rule:nonzero;stroke:rgb(198,40,40);stroke-width:2.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,383.123106,82.123106)">
+        <text x="-12.357px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:18px;fill:rgb(198,40,40);">💥</text>
+    </g>
+    <g transform="matrix(1.146928,0,0,1,-73.668524,-45.876894)">
+        <path d="M620,250L620,280C620,285.519 616.093,290 611.281,290L188.719,290C183.907,290 180,285.519 180,280L180,250C180,244.481 183.907,240 188.719,240L611.281,240C616.093,240 620,244.481 620,250Z" style="fill:rgb(255,243,224);stroke:rgb(230,81,0);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,384.123106,214.123106)">
+        <text x="-101.712px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:13px;fill:rgb(230,81,0);">⚠</text>
+        <text x="-80.25px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(230,81,0);">„Harvest Now<tspan x="4.516px 8.128px " y="0px 0px ">, </tspan>Decrypt Later&quot;</text>
+    </g>
+    <g transform="matrix(1,0,0,1,384.123106,232.123106)">
+        <text x="-242.913px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Angreifer speichern heute verschlüsselte Daten → entschlüsseln sie, sobald Quantencomputer verfügbar sind</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <path d="M780,317L780,418C780,424.623 774.623,430 768,430L32,430C25.377,430 20,424.623 20,418L20,317C20,310.377 25.377,305 32,305L768,305C774.623,305 780,310.377 780,317Z" style="fill:white;stroke:rgb(46,125,50);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <path d="M780,317L780,328C780,334.623 774.623,340 768,340L32,340C25.377,340 20,334.623 20,328L20,317C20,310.377 25.377,305 32,305L768,305C774.623,305 780,310.377 780,317Z" style="fill:rgb(46,125,50);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.876894,-45.876894)">
+        <rect x="20" y="327" width="760" height="13" style="fill:rgb(46,125,50);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,384.123106,282.123106)">
+        <text x="-193.963px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:14px;fill:white;">✅</text>
+        <text x="-170.851px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">Post-Quantum Kryptographie (PQC) – Lösungsansätze</text>
+    </g>
+    <g transform="matrix(1,0,0,1.102473,-15.876894,-81.742365)">
+        <path d="M205,357.256L205,407.744C205,411.749 201.415,415 197,415L48,415C43.585,415 40,411.749 40,407.744L40,357.256C40,353.251 43.585,350 48,350L197,350C201.415,350 205,353.251 205,357.256Z" style="fill:rgb(232,245,233);stroke:rgb(46,125,50);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,106.123106,324.123106)">
+        <text x="-32.705px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(27,94,32);">Gitterbasiert</text>
+    </g>
+    <g transform="matrix(1,0,0,1,106.123106,341.123106)">
+        <text x="-33.504px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">ML-KEM (Kyber)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,106.123106,356.123106)">
+        <text x="-38.254px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">ML-DSA<tspan x="-4.746px -2.246px " y="0px 0px "> (</tspan>Dilithium)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,106.123106,368.123106)">
+        <text x="-36.834px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:8px;fill:rgb(136,136,136);">NIST<tspan x="-18.756px -16.533px " y="0px 0px "> F</tspan>IPS 203 / 204</text>
+    </g>
+    <g transform="matrix(1,0,0,1.102473,-15.876894,-81.742365)">
+        <path d="M390,357.256L390,407.744C390,411.749 386.415,415 382,415L233,415C228.585,415 225,411.749 225,407.744L225,357.256C225,353.251 228.585,350 233,350L382,350C386.415,350 390,353.251 390,357.256Z" style="fill:rgb(227,242,253);stroke:rgb(21,101,192);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,291.123106,324.123106)">
+        <text x="-31.485px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(13,71,161);">Hashbasiert</text>
+    </g>
+    <g transform="matrix(1,0,0,1,291.123106,341.123106)">
+        <text x="-46.136px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">SLH-DSA<tspan x="-7.622px -5.122px " y="0px 0px "> (</tspan>SPHINCS+)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,291.123106,356.123106)">
+        <text x="-24.506px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">XMSS, LMS</text>
+    </g>
+    <g transform="matrix(1,0,0,1,291.123106,368.123106)">
+        <text x="-26.826px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:8px;fill:rgb(136,136,136);">NIST<tspan x="-8.748px -6.525px " y="0px 0px "> F</tspan>IPS 205</text>
+    </g>
+    <g transform="matrix(1,0,0,1.102473,-15.876894,-81.742365)">
+        <path d="M575,357.256L575,407.744C575,411.749 571.415,415 567,415L418,415C413.585,415 410,411.749 410,407.744L410,357.256C410,353.251 413.585,350 418,350L567,350C571.415,350 575,353.251 575,357.256Z" style="fill:rgb(255,243,224);stroke:rgb(230,81,0);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,476.123106,324.123106)">
+        <text x="-31.786px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(230,81,0);">Codebasiert</text>
+    </g>
+    <g transform="matrix(1,0,0,1,476.123106,341.123106)">
+        <text x="-34.007px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Classic McEliece</text>
+    </g>
+    <g transform="matrix(1,0,0,1,476.123106,356.123106)">
+        <text x="-42.68px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">HQC (NIST<tspan x="3.155px 5.656px " y="0px 0px "> R</tspan>unde 4)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,476.123106,368.123106)">
+        <text x="-45.014px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:8px;fill:rgb(136,136,136);">Große Schlüssel (~1 MB)</text>
+    </g>
+    <g transform="matrix(1,0,0,1.102473,-15.876894,-81.742365)">
+        <path d="M760,357.256L760,407.744C760,411.749 756.415,415 752,415L603,415C598.585,415 595,411.749 595,407.744L595,357.256C595,353.251 598.585,350 603,350L752,350C756.415,350 760,353.251 760,357.256Z" style="fill:rgb(243,229,245);stroke:rgb(123,31,162);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,661.123106,324.123106)">
+        <text x="-42.891px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(123,31,162);">Hybride <tspan x="0.712px 8.656px " y="0px 0px ">An</tspan>sätze</text>
+    </g>
+    <g transform="matrix(1,0,0,1,661.123106,341.123106)">
+        <text x="-55.894px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Klassisch + PQC kombiniert</text>
+    </g>
+    <g transform="matrix(1,0,0,1,661.123106,356.123106)">
+        <text x="-38.145px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">X25519 + ML-KEM</text>
+    </g>
+    <g transform="matrix(1,0,0,1,661.123106,368.123106)">
+        <text x="-45.348px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:8px;fill:rgb(136,136,136);">Bereits in Chrome/Firefox</text>
+    </g>
+</svg>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 667 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M220,63L220,87C220,91.415 216.415,95 212,95L38,95C33.585,95 30,91.415 30,87L30,63C30,58.585 33.585,55 38,55L212,55C216.415,55 220,58.585 220,63Z" style="fill:rgb(39,103,73);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,98.092329,25)">
+        <text x="-71.862px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">1 · Joiner (Onboarding)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M220,108L220,192C220,196.415 216.415,200 212,200L38,200C33.585,200 30,196.415 30,192L30,108C30,103.585 33.585,100 38,100L212,100C216.415,100 220,103.585 220,108Z" style="fill:white;stroke:rgb(39,103,73);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,98.092329,67)">
+        <text x="-41.399px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(39,103,73);">Identität erstellen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,98.092329,87)">
+        <text x="-56.272px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Account-Erstellung (AD/IdP)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,98.092329,103)">
+        <text x="-44.018px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Birthright-Provisioning</text>
+    </g>
+    <g transform="matrix(1,0,0,1,98.092329,119)">
+        <text x="-48.278px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Initiale Rollenzuweisung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,98.092329,137)">
+        <text x="-53.283px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:8px;fill:rgb(136,136,136);">MF<tspan x="-42.326px -36.99px " y="0px 0px ">A-</tspan>Setup, Gerätezuweisung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M223,140L258,140" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M455,63L455,87C455,91.415 451.415,95 447,95L273,95C268.585,95 265,91.415 265,87L265,63C265,58.585 268.585,55 273,55L447,55C451.415,55 455,58.585 455,63Z" style="fill:rgb(232,165,32);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,333.092329,25)">
+        <text x="-58.506px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">2 · Mover (Change)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M455,108L455,192C455,196.415 451.415,200 447,200L273,200C268.585,200 265,196.415 265,192L265,108C265,103.585 268.585,100 273,100L447,100C451.415,100 455,103.585 455,108Z" style="fill:white;stroke:rgb(232,165,32);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,333.092329,67)">
+        <text x="-41.128px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(232,165,32);">Rechte anpassen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,333.092329,87)">
+        <text x="-65.791px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Abteilungswechsel / Beförderung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,333.092329,103)">
+        <text x="-45.279px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Alte Rechte entziehen!</text>
+    </g>
+    <g transform="matrix(1,0,0,1,333.092329,119)">
+        <text x="-44.776px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Neue Rollen zuweisen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,333.092329,137)">
+        <text x="-50.246px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:8px;fill:rgb(197,48,48);">Privilege Creep vermeiden</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M458,140L493,140" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M690,63L690,87C690,91.415 686.415,95 682,95L508,95C503.585,95 500,91.415 500,87L500,63C500,58.585 503.585,55 508,55L682,55C686.415,55 690,58.585 690,63Z" style="fill:rgb(197,48,48);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,568.092329,25)">
+        <g transform="matrix(13,0,0,13,5.23999,0)">
+        </g>
+        <g transform="matrix(13,0,0,13,9.4104,0)">
+        </g>
+        <text x="-73.515px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">3 · Leaver (Oﬀboarding)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M690,108L690,192C690,196.415 686.415,200 682,200L508,200C503.585,200 500,196.415 500,192L500,108C500,103.585 503.585,100 508,100L682,100C686.415,100 690,103.585 690,108Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,568.092329,67)">
+        <g transform="matrix(10,0,0,10,-15.158691,0)">
+        </g>
+        <g transform="matrix(10,0,0,10,-11.950684,0)">
+        </g>
+        <text x="-40.154px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(197,48,48);">Zugriﬀ entziehen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,568.092329,87)">
+        <text x="-54.279px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Account sofort deaktivieren</text>
+    </g>
+    <g transform="matrix(1,0,0,1,568.092329,103)">
+        <text x="-58.032px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">T<tspan x="-53.532px -48.527px " y="0px 0px ">ok</tspan>en / Sessions invalidieren</text>
+    </g>
+    <g transform="matrix(1,0,0,1,568.092329,119)">
+        <text x="-42.519px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Geräte zurückfordern</text>
+    </g>
+    <g transform="matrix(1,0,0,1,568.092329,137)">
+        <text x="-59.861px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:8px;fill:rgb(197,48,48);">Orphaned <tspan x="-20.154px -14.377px " y="0px 0px ">Ac</tspan>counts verhindern</text>
+    </g>
+    <g transform="matrix(1,0,0,0.846881,-26.907671,-23.610637)">
+        <path d="M595,205C595,260 360,280 125,260C100,255 85,240 85,220" style="fill:none;fill-rule:nonzero;stroke:rgb(28,63,110);stroke-width:2px;stroke-dasharray:6,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.907671,-55)">
+        <path d="M81,222L85,208L89,222L81,222Z" style="fill:rgb(28,63,110);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-63.230818,-78.398308)">
+        <path d="M450,257C450,263.071 445.071,268 439,268L281,268C274.929,268 270,263.071 270,257C270,250.929 274.929,246 281,246L439,246C445.071,246 450,250.929 450,257Z" style="fill:rgb(28,63,110);"/>
+        <g transform="matrix(1,0,0,1,360,261)">
+            <text x="-64.116px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:white;">Regelmäßige <tspan x="-5.933px 0.567px " y="0px 0px ">Ac</tspan>cess Reviews</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-26.874712,-69.707541)">
+        <path d="M600,301C600,307.071 595.071,312 589,312L131,312C124.929,312 120,307.071 120,301C120,294.929 124.929,290 131,290L589,290C595.071,290 600,294.929 600,301Z" style="fill:rgb(45,55,72);"/>
+        <g transform="matrix(1,0,0,1,360,305)">
+            <text x="-151.88px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:white;">Automatisierung via SCIM · HR-Systeme → IdP<tspan x="70.757px 73.535px " y="0px 0px "> S</tspan>ynchronisation</text>
+        </g>
+    </g>
+</svg>

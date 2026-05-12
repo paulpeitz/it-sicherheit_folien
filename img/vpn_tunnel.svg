@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440">
+  <defs>
+    <filter id="shadow5" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="headerGrad5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2001a"/>
+      <stop offset="100%" stop-color="#b3001a"/>
+    </linearGradient>
+    <linearGradient id="tunnelGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3498db" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#3498db" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#3498db" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="440" rx="12" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect width="900" height="52" rx="12" fill="url(#headerGrad5)"/>
+  <rect y="40" width="900" height="12" fill="url(#headerGrad5)"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">VPN-Topologien: Site-to-Site &amp; Remote Access</text>
+
+  <!-- TOP: Site-to-Site -->
+  <rect x="30" y="65" width="840" height="30" rx="6" fill="#2c3e50"/>
+  <text x="450" y="85" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">Site-to-Site VPN</text>
+
+  <!-- Left office -->
+  <rect x="40" y="110" width="170" height="90" rx="8" fill="#fff" stroke="#2c3e50" stroke-width="1.5" filter="url(#shadow5)"/>
+  <text x="125" y="133" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#2c3e50">Standort A</text>
+  <!-- Simple PC icons -->
+  <rect x="60" y="145" width="30" height="22" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <rect x="68" y="169" width="14" height="8" rx="1" fill="#aab7b8"/>
+  <rect x="100" y="145" width="30" height="22" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <rect x="108" y="169" width="14" height="8" rx="1" fill="#aab7b8"/>
+  <rect x="140" y="145" width="30" height="22" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <rect x="148" y="169" width="14" height="8" rx="1" fill="#aab7b8"/>
+  <text x="125" y="192" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#7f8c8d">LAN 10.0.1.0/24</text>
+
+  <!-- Left Gateway -->
+  <rect x="230" y="120" width="80" height="60" rx="8" fill="#3498db" filter="url(#shadow5)"/>
+  <text x="270" y="147" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#fff">VPN</text>
+  <text x="270" y="163" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#fff">Gateway</text>
+
+  <!-- VPN Tunnel -->
+  <rect x="325" y="115" width="250" height="70" rx="35" fill="url(#tunnelGrad)" stroke="#3498db" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="340" y1="150" x2="560" y2="150" stroke="#3498db" stroke-width="2"/>
+  <text x="450" y="145" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#2471a3">Verschlüsselter Tunnel (IPsec)</text>
+  <text x="450" y="162" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#3498db">über Internet</text>
+
+  <!-- Right Gateway -->
+  <rect x="590" y="120" width="80" height="60" rx="8" fill="#3498db" filter="url(#shadow5)"/>
+  <text x="630" y="147" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#fff">VPN</text>
+  <text x="630" y="163" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#fff">Gateway</text>
+
+  <!-- Right office -->
+  <rect x="690" y="110" width="170" height="90" rx="8" fill="#fff" stroke="#2c3e50" stroke-width="1.5" filter="url(#shadow5)"/>
+  <text x="775" y="133" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#2c3e50">Standort B</text>
+  <rect x="710" y="145" width="30" height="22" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <rect x="750" y="145" width="30" height="22" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <rect x="790" y="145" width="30" height="22" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <text x="775" y="192" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#7f8c8d">LAN 10.0.2.0/24</text>
+
+  <!-- Connection lines S2S -->
+  <line x1="210" y1="150" x2="230" y2="150" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="670" y1="150" x2="690" y2="150" stroke="#2c3e50" stroke-width="2"/>
+
+  <!-- BOTTOM: Remote Access -->
+  <rect x="30" y="225" width="840" height="30" rx="6" fill="#2c3e50"/>
+  <text x="450" y="245" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">Remote Access VPN</text>
+
+  <!-- Remote user 1 -->
+  <rect x="40" y="275" width="120" height="70" rx="8" fill="#fff" stroke="#2c3e50" stroke-width="1.5" filter="url(#shadow5)"/>
+  <rect x="65" y="285" width="30" height="22" rx="3" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <rect x="100" y="285" width="30" height="22" rx="10" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <text x="100" y="325" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#2c3e50">Homeoffice</text>
+
+  <!-- Remote user 2 -->
+  <rect x="40" y="360" width="120" height="50" rx="8" fill="#fff" stroke="#2c3e50" stroke-width="1.5" filter="url(#shadow5)"/>
+  <rect x="70" y="370" width="50" height="30" rx="10" fill="#d5dbdb" stroke="#aab7b8" stroke-width="1"/>
+  <text x="100" y="406" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600" fill="#2c3e50">Mobil / Reise</text>
+
+  <!-- Internet cloud -->
+  <ellipse cx="350" cy="340" rx="100" ry="45" fill="#fff" stroke="#bdc3c7" stroke-width="2" filter="url(#shadow5)"/>
+  <text x="350" y="335" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#7f8c8d">Internet</text>
+  <text x="350" y="355" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" fill="#bdc3c7">(unsicher)</text>
+
+  <!-- Tunnel lines from users to internet -->
+  <line x1="160" y1="310" x2="255" y2="325" stroke="#3498db" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="160" y1="380" x2="255" y2="355" stroke="#3498db" stroke-width="2" stroke-dasharray="6,3"/>
+
+  <!-- VPN Concentrator -->
+  <rect x="490" y="305" width="100" height="70" rx="8" fill="#3498db" filter="url(#shadow5)"/>
+  <text x="540" y="333" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#fff">VPN</text>
+  <text x="540" y="350" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600" fill="#fff">Concentrator</text>
+  <text x="540" y="366" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#d6eaf8">WireGuard/OpenVPN</text>
+
+  <!-- Tunnel from internet to concentrator -->
+  <line x1="450" y1="340" x2="490" y2="340" stroke="#3498db" stroke-width="2" stroke-dasharray="6,3"/>
+
+  <!-- Company network -->
+  <rect x="620" y="270" width="240" height="140" rx="8" fill="#fff" stroke="#2c3e50" stroke-width="1.5" filter="url(#shadow5)"/>
+  <text x="740" y="293" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#2c3e50">Firmennetzwerk</text>
+  <!-- Server icons -->
+  <rect x="645" y="305" width="45" height="35" rx="4" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <line x1="655" y1="315" x2="680" y2="315" stroke="#bdc3c7" stroke-width="1"/>
+  <line x1="655" y1="325" x2="680" y2="325" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="668" y="355" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#7f8c8d">Server</text>
+
+  <rect x="710" y="305" width="45" height="35" rx="4" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <circle cx="732" cy="320" r="8" fill="#3498db" opacity="0.3"/>
+  <text x="732" y="355" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#7f8c8d">DB</text>
+
+  <rect x="775" y="305" width="45" height="35" rx="4" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="797" y="326" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="9" fill="#7f8c8d">App</text>
+
+  <text x="740" y="395" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" fill="#7f8c8d">LAN 10.0.1.0/24</text>
+
+  <!-- Connection from concentrator to network -->
+  <line x1="590" y1="340" x2="620" y2="340" stroke="#2c3e50" stroke-width="2"/>
+</svg>

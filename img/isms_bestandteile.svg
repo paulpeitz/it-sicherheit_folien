@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Center circle -->
+  <circle cx="400" cy="275" r="72" fill="#e2001a" filter="url(#shadow)"/>
+  <text x="400" y="270" text-anchor="middle" font-size="26" font-weight="bold" fill="white">ISMS</text>
+  <text x="400" y="296" text-anchor="middle" font-size="13" fill="white">Managementsystem</text>
+
+  <!-- Connection lines -->
+  <line x1="400" y1="203" x2="400" y2="90" stroke="#ccc" stroke-width="2"/>
+  <line x1="456" y1="216" x2="580" y2="100" stroke="#ccc" stroke-width="2"/>
+  <line x1="472" y1="275" x2="630" y2="275" stroke="#ccc" stroke-width="2"/>
+  <line x1="456" y1="334" x2="580" y2="450" stroke="#ccc" stroke-width="2"/>
+  <line x1="400" y1="347" x2="400" y2="460" stroke="#ccc" stroke-width="2"/>
+  <line x1="344" y1="334" x2="220" y2="450" stroke="#ccc" stroke-width="2"/>
+  <line x1="328" y1="275" x2="170" y2="275" stroke="#ccc" stroke-width="2"/>
+  <line x1="344" y1="216" x2="220" y2="100" stroke="#ccc" stroke-width="2"/>
+
+  <!-- Outer circles with labels -->
+  <!-- Top -->
+  <circle cx="400" cy="65" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="400" y="59" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Sicherheits-</text>
+  <text x="400" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">leitlinie</text>
+
+  <!-- Top-right -->
+  <circle cx="605" cy="80" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="605" y="74" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Rollen &amp;</text>
+  <text x="605" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Verantwortung</text>
+
+  <!-- Right -->
+  <circle cx="660" cy="275" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="660" y="269" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Risiko-</text>
+  <text x="660" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">management</text>
+
+  <!-- Bottom-right -->
+  <circle cx="605" cy="470" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="605" y="464" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Dokumentation</text>
+  <text x="605" y="480" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">&amp; Prozesse</text>
+
+  <!-- Bottom -->
+  <circle cx="400" cy="485" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="400" y="479" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Awareness</text>
+  <text x="400" y="495" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">&amp; Schulung</text>
+
+  <!-- Bottom-left -->
+  <circle cx="195" cy="470" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="195" y="464" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Technische &amp;</text>
+  <text x="195" y="480" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">org. Maßnahmen</text>
+
+  <!-- Left -->
+  <circle cx="140" cy="275" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="140" y="269" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Monitoring</text>
+  <text x="140" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">&amp; Audits</text>
+
+  <!-- Top-left -->
+  <circle cx="195" cy="80" r="48" fill="#f5f5f5" stroke="#e2001a" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="195" y="74" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Kontinuierliche</text>
+  <text x="195" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Verbesserung</text>
+</svg>

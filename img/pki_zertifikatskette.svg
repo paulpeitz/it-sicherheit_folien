@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <polygon points="0,1 10,5 0,9" fill="#555"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="360" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">PKI – Zertifikatskette (Chain of Trust)</text>
+
+  <!-- Root CA -->
+  <rect x="220" y="50" width="280" height="70" rx="12" fill="#e2001a" filter="url(#shadow)"/>
+  <text x="360" y="76" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">🏛️ Root CA</text>
+  <text x="360" y="95" text-anchor="middle" font-size="11" fill="#ffe0e0">Selbstsigniertes Zertifikat</text>
+  <text x="360" y="110" text-anchor="middle" font-size="10" fill="#ffcdd2">Im Browser/OS Vertrauensspeicher vorinstalliert</text>
+
+  <!-- Arrow Root → Intermediate -->
+  <line x1="360" y1="120" x2="360" y2="148" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="308" y="128" width="104" height="18" rx="4" fill="#fff8e1" stroke="#f9a825" stroke-width="1"/>
+  <text x="360" y="141" text-anchor="middle" font-size="9" fill="#e65100" font-weight="bold">signiert ✍️</text>
+
+  <!-- Intermediate CA -->
+  <rect x="220" y="150" width="280" height="70" rx="12" fill="#1565c0" filter="url(#shadow)"/>
+  <text x="360" y="176" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">🏢 Intermediate CA</text>
+  <text x="360" y="195" text-anchor="middle" font-size="11" fill="#bbdefb">Von Root CA signiert</text>
+  <text x="360" y="210" text-anchor="middle" font-size="10" fill="#90caf9">z.B. Let's Encrypt R10, DigiCert SHA2</text>
+
+  <!-- Arrow Intermediate → Server -->
+  <line x1="360" y1="220" x2="360" y2="248" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="308" y="228" width="104" height="18" rx="4" fill="#fff8e1" stroke="#f9a825" stroke-width="1"/>
+  <text x="360" y="241" text-anchor="middle" font-size="9" fill="#e65100" font-weight="bold">signiert ✍️</text>
+
+  <!-- Server Cert -->
+  <rect x="220" y="250" width="280" height="70" rx="12" fill="#2e7d32" filter="url(#shadow)"/>
+  <text x="360" y="276" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">🌐 Server-Zertifikat</text>
+  <text x="360" y="295" text-anchor="middle" font-size="11" fill="#c8e6c9">Von Intermediate CA signiert</text>
+  <text x="360" y="310" text-anchor="middle" font-size="10" fill="#a5d6a7">z.B. www.example.com (X.509)</text>
+
+  <!-- Browser Trust Store -->
+  <rect x="30" y="55" width="160" height="60" rx="10" fill="#fff" stroke="#e2001a" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="#e2001a">🔒 Trust Store</text>
+  <text x="110" y="95" text-anchor="middle" font-size="9" fill="#555">Browser / OS</text>
+  <text x="110" y="108" text-anchor="middle" font-size="9" fill="#888">~150 Root CAs</text>
+  <line x1="190" y1="85" x2="217" y2="85" stroke="#e2001a" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <!-- Zertifikat-Inhalt -->
+  <rect x="530" y="155" width="175" height="120" rx="10" fill="#fff" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="617" y="175" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">X.509 Zertifikat enthält:</text>
+  <text x="545" y="195" font-size="10" fill="#555">• Subject (Domain)</text>
+  <text x="545" y="210" font-size="10" fill="#555">• Issuer (CA)</text>
+  <text x="545" y="225" font-size="10" fill="#555">• Public Key</text>
+  <text x="545" y="240" font-size="10" fill="#555">• Gültigkeitszeitraum</text>
+  <text x="545" y="255" font-size="10" fill="#555">• Digitale Signatur der CA</text>
+  <line x1="500" y1="220" x2="527" y2="220" stroke="#1565c0" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Verification flow -->
+  <rect x="100" y="345" width="520" height="65" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="368" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">Verifikation durch den Browser:</text>
+  <text x="115" y="388" font-size="10" fill="#555">1. Server sendet Zertifikat + Intermediate-Zert.</text>
+  <text x="115" y="403" font-size="10" fill="#555">2. Browser prüft Signaturkette bis zum Root CA im Trust Store → 🔒 Vertrauen!</text>
+
+  <line x1="360" y1="320" x2="360" y2="342" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

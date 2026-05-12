@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrowR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <polygon points="0,1 10,5 0,9" fill="#1565c0"/>
+    </marker>
+    <marker id="arrowL" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <polygon points="10,1 0,5 10,9" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowBi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <polygon points="0,1 10,5 0,9" fill="#7b1fa2"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="350" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">TLS 1.3 Handshake (1-RTT)</text>
+
+  <!-- Client Column -->
+  <rect x="50" y="45" width="130" height="40" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="115" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">🖥️ Client</text>
+
+  <!-- Server Column -->
+  <rect x="520" y="45" width="130" height="40" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="585" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">🌐 Server</text>
+
+  <!-- Timeline lines -->
+  <line x1="115" y1="85" x2="115" y2="440" stroke="#1565c0" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="585" y1="85" x2="585" y2="440" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Step 1: ClientHello -->
+  <line x1="118" y1="115" x2="582" y2="115" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowR)"/>
+  <rect x="190" y="97" width="320" height="35" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="350" y="113" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d47a1">ClientHello</text>
+  <text x="350" y="126" text-anchor="middle" font-size="9" fill="#555">Cipher Suites, Key Share (ECDHE), Random</text>
+
+  <!-- Step 2: ServerHello + Cert + Finished -->
+  <line x1="582" y1="170" x2="118" y2="170" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowL)"/>
+  <rect x="175" y="142" width="350" height="55" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="350" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b5e20">ServerHello + Extensions</text>
+  <text x="350" y="173" text-anchor="middle" font-size="9" fill="#555">Key Share, {Certificate}, {CertificateVerify}</text>
+  <text x="350" y="188" text-anchor="middle" font-size="9" fill="#555">{Finished} — ab hier alles verschlüsselt 🔒</text>
+
+  <!-- 1-RTT bracket -->
+  <line x1="650" y1="100" x2="670" y2="100" stroke="#e2001a" stroke-width="2"/>
+  <line x1="670" y1="100" x2="670" y2="200" stroke="#e2001a" stroke-width="2"/>
+  <line x1="650" y1="200" x2="670" y2="200" stroke="#e2001a" stroke-width="2"/>
+  <text x="680" y="155" font-size="12" font-weight="bold" fill="#e2001a" transform="rotate(90,680,155)">1 RTT</text>
+
+  <!-- Step 3: Client Finished -->
+  <line x1="118" y1="235" x2="582" y2="235" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowR)"/>
+  <rect x="220" y="218" width="260" height="33" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="350" y="234" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d47a1">{Finished}</text>
+  <text x="350" y="246" text-anchor="middle" font-size="9" fill="#555">Verschlüsselt 🔒</text>
+
+  <!-- Step 4: Encrypted Data -->
+  <rect x="130" y="275" width="440" height="35" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="350" y="297" text-anchor="middle" font-size="12" font-weight="bold" fill="#7b1fa2">🔒 Verschlüsselte Anwendungsdaten (HTTP/2, HTTP/3)</text>
+  <line x1="118" y1="292" x2="128" y2="292" stroke="#7b1fa2" stroke-width="1.5"/>
+  <line x1="572" y1="292" x2="582" y2="292" stroke="#7b1fa2" stroke-width="1.5"/>
+
+  <!-- Key info boxes -->
+  <rect x="40" y="330" width="295" height="105" rx="10" fill="#fff" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="187" y="350" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">Cipher Suites in TLS 1.3</text>
+  <text x="55" y="370" font-size="10" fill="#555">• TLS_AES_256_GCM_SHA384</text>
+  <text x="55" y="385" font-size="10" fill="#555">• TLS_AES_128_GCM_SHA256</text>
+  <text x="55" y="400" font-size="10" fill="#555">• TLS_CHACHA20_POLY1305_SHA256</text>
+  <text x="55" y="420" font-size="10" font-weight="bold" fill="#2e7d32">Nur AEAD + PFS erlaubt! ✅</text>
+
+  <!-- Improvements box -->
+  <rect x="365" y="330" width="295" height="105" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="512" y="350" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">Verbesserungen vs. TLS 1.2</text>
+  <text x="380" y="370" font-size="10" fill="#555">• 1-RTT statt 2-RTT → schneller</text>
+  <text x="380" y="385" font-size="10" fill="#555">• Forward Secrecy ist Pflicht</text>
+  <text x="380" y="400" font-size="10" fill="#555">• Unsichere Algorithmen entfernt</text>
+  <text x="380" y="415" font-size="10" fill="#555">• Handshake-Nachrichten verschlüsselt</text>
+  <text x="380" y="430" font-size="10" fill="#555">• 0-RTT Resumption möglich</text>
+</svg>

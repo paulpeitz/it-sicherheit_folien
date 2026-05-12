@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 717 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M240,58L240,82C240,86.415 236.415,90 232,90L28,90C23.585,90 20,86.415 20,82L20,58C20,53.585 23.585,50 28,50L232,50C236.415,50 240,53.585 240,58Z" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,113.092329,25)">
+        <text x="-24.445px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">W<tspan x="-11.354px -7.465px " y="0px 0px ">is</tspan>sen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M240,103L240,237C240,241.415 236.415,245 232,245L28,245C23.585,245 20,241.415 20,237L20,103C20,98.585 23.585,95 28,95L232,95C236.415,95 240,98.585 240,103Z" style="fill:white;stroke:rgb(28,63,110);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,113.092329,68)">
+        <text x="-58.083px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(28,63,110);">Etwas, das Sie wissen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,113.092329,92)">
+        <text x="-33.064px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Passwort / PIN</text>
+    </g>
+    <g transform="matrix(1,0,0,1,113.092329,110)">
+        <text x="-36.13px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Sicherheitsfrage</text>
+    </g>
+    <g transform="matrix(1,0,0,1,113.092329,128)">
+        <text x="-26.404px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Passphrase</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M40,195L220,195" style="fill:none;fill-rule:nonzero;stroke:rgb(238,238,238);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,113.092329,165)">
+        <text x="-50.513px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(197,48,48);">Risiko: Phishing, Leaks</text>
+    </g>
+    <g transform="matrix(1,0,0,1,113.092329,182)">
+        <text x="-43.512px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(197,48,48);">Brute Force, Erraten</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M485,58L485,82C485,86.415 481.415,90 477,90L273,90C268.585,90 265,86.415 265,82L265,58C265,53.585 268.585,50 273,50L477,50C481.415,50 485,53.585 485,58Z" style="fill:rgb(39,103,73);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,25)">
+        <text x="-20.617px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">Besitz</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M485,103L485,237C485,241.415 481.415,245 477,245L273,245C268.585,245 265,241.415 265,237L265,103C265,98.585 268.585,95 273,95L477,95C481.415,95 485,98.585 485,103Z" style="fill:white;stroke:rgb(39,103,73);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,68)">
+        <text x="-55.937px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(39,103,73);">Etwas, das Sie haben</text>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,92)">
+        <text x="-55.762px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Smartphone (T<tspan x="10.752px 18.53px " y="0px 0px ">OT</tspan>P-App)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,110)">
+        <text x="-59.197px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Y<tspan x="-53.079px -47.517px " y="0px 0px ">ub</tspan>iKey / Hardware-T<tspan x="37.512px 43.074px " y="0px 0px ">ok</tspan>en</text>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,128)">
+        <g transform="matrix(10,0,0,10,28.059082,0)">
+        </g>
+        <g transform="matrix(10,0,0,10,30.837402,0)">
+        </g>
+        <text x="-46.399px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Smartcard / Zertiﬁkat</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M285,195L465,195" style="fill:none;fill-rule:nonzero;stroke:rgb(238,238,238);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,165)">
+        <text x="-54.015px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(197,48,48);">Risiko: V<tspan x="-16.003px -10.997px " y="0px 0px ">er</tspan>lust, Diebstahl</text>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,182)">
+        <text x="-30.749px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(197,48,48);">SIM-Swapping</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M730,58L730,82C730,86.415 726.415,90 722,90L518,90C513.585,90 510,86.415 510,82L510,58C510,53.585 513.585,50 518,50L722,50C726.415,50 730,53.585 730,58Z" style="fill:rgb(232,165,32);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,603.092329,25)">
+        <text x="-50.172px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">Sein (Inhärenz)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M730,103L730,237C730,241.415 726.415,245 722,245L518,245C513.585,245 510,241.415 510,237L510,103C510,98.585 513.585,95 518,95L722,95C726.415,95 730,98.585 730,103Z" style="fill:white;stroke:rgb(232,165,32);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,603.092329,68)">
+        <text x="-51.047px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(232,165,32);">Etwas, das Sie sind</text>
+    </g>
+    <g transform="matrix(1,0,0,1,603.092329,92)">
+        <text x="-31.96px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Fingerabdruck</text>
+    </g>
+    <g transform="matrix(1,0,0,1,603.092329,110)">
+        <text x="-43.081px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Gesichtserkennung</text>
+    </g>
+    <g transform="matrix(1,0,0,1,603.092329,128)">
+        <text x="-38.347px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Iris / Retina-Scan</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M530,195L710,195" style="fill:none;fill-rule:nonzero;stroke:rgb(238,238,238);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,603.092329,165)">
+        <g transform="matrix(9,0,0,9,29.254395,0)">
+        </g>
+        <g transform="matrix(9,0,0,9,32.251465,0)">
+        </g>
+        <text x="-47.755px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(197,48,48);">Risiko: Unwiderruﬂich</text>
+    </g>
+    <g transform="matrix(1,0,0,1,603.092329,182)">
+        <g transform="matrix(9,0,0,9,-26.25293,0)">
+        </g>
+        <g transform="matrix(9,0,0,9,-23.255859,0)">
+        </g>
+        <text x="-48.749px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:9px;fill:rgb(197,48,48);">Spooﬁng, Datenschutz</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-50)">
+        <path d="M690,284C690,292.831 682.831,300 674,300L76,300C67.169,300 60,292.831 60,284C60,275.169 67.169,268 76,268L674,268C682.831,268 690,275.169 690,284Z" style="fill:rgb(45,55,72);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,358.092329,239)">
+        <text x="-245.294px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">MF<tspan x="-228.63px -220.409px -217.075px " y="0px 0px 0px ">A =</tspan> Kombination aus ≥ 2 verschiedenen Faktoren → exponentiell höhere Sicherheit</text>
+    </g>
+</svg>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 707 318" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-16.907671,-38.746111)">
+        <path d="M180,58L180,102C180,106.415 176.415,110 172,110L28,110C23.585,110 20,106.415 20,102L20,58C20,53.585 23.585,50 28,50L172,50C176.415,50 180,53.585 180,58Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,83.092329,33.253889)">
+        <text x="-26.59px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(197,48,48);">Quellcode</text>
+    </g>
+    <g transform="matrix(1,0,0,1,83.092329,51.253889)">
+        <text x="-47.008px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Compromised Commits</text>
+    </g>
+    <g transform="matrix(1,0,0,1,83.092329,63.253889)">
+        <text x="-47.938px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Account <tspan x="-13.08px -8.58px -3.575px " y="0px 0px 0px ">Tak</tspan>eover (Dev)</text>
+    </g>
+    <g transform="matrix(0.992717,-0.00526,-0.00526,0.996201,-15.097108,-37.438482)">
+        <path d="M180,95L270,160" style="fill:none;fill-rule:nonzero;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-9.015349,-26.907671)">
+        <path d="M420,38L420,82C420,86.415 416.415,90 412,90L248,90C243.585,90 240,86.415 240,82L240,38C240,33.585 243.585,30 248,30L412,30C416.415,30 420,33.585 420,38Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,330,52)">
+            <text x="-69.368px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(197,48,48);">Open-Source-Bibliotheken</text>
+        </g>
+        <g transform="matrix(1,0,0,1,330,70)">
+            <text x="-78.801px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">T<tspan x="-73.8px -69.3px " y="0px 0px ">yp</tspan>osquatting · Dependency Confusion</text>
+        </g>
+        <g transform="matrix(1,0,0,1,330,82)">
+            <text x="-64.773px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Malicious Packages (npm, PyPI)</text>
+        </g>
+    </g>
+    <g transform="matrix(0.993477,-0.019568,-0.019568,0.941295,-5.967638,-16.853632)">
+        <path d="M340,92L360,152" style="fill:none;fill-rule:nonzero;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-38.746111)">
+        <path d="M660,58L660,102C660,106.415 656.415,110 652,110L498,110C493.585,110 490,106.415 490,102L490,58C490,53.585 493.585,50 498,50L652,50C656.415,50 660,53.585 660,58Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,558.092329,33.253889)">
+        <text x="-48.278px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(197,48,48);">Build-Infrastruktur</text>
+    </g>
+    <g transform="matrix(1,0,0,1,558.092329,51.253889)">
+        <text x="-59.515px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">CI/CD-Pipeline kompromittiert</text>
+    </g>
+    <g transform="matrix(1,0,0,1,558.092329,63.253889)">
+        <text x="-55.026px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Backdoor beim Kompilieren</text>
+    </g>
+    <g transform="matrix(0.953934,0.365618,-0.494479,1.003502,64.464193,-213.733424)">
+        <path d="M505,100L480,160" style="fill:none;fill-rule:nonzero;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-38.746111)">
+        <path d="M720,188L720,232C720,236.415 716.415,240 712,240L538,240C533.585,240 530,236.415 530,232L530,188C530,183.585 533.585,180 538,180L712,180C716.415,180 720,183.585 720,188Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,608.092329,163.253889)">
+        <text x="-66.328px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(197,48,48);">Container &amp; Base Images</text>
+    </g>
+    <g transform="matrix(1,0,0,1,608.092329,181.253889)">
+        <g transform="matrix(9,0,0,9,-6.745605,0)">
+        </g>
+        <g transform="matrix(9,0,0,9,-4.245117,0)">
+        </g>
+        <text x="-51.776px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">V<tspan x="-46.27px -41.265px " y="0px 0px ">er</tspan>altete/inﬁzierte Images</text>
+    </g>
+    <g transform="matrix(1,0,0,1,608.092329,193.253889)">
+        <text x="-58.278px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Ungeprüfte Docker Hub Pulls</text>
+    </g>
+    <g transform="matrix(1.211134,0.060324,0.060324,1.017235,-140.873441,-74.164903)">
+        <path d="M530,200L488,188" style="fill:none;fill-rule:nonzero;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-38.746111)">
+        <path d="M190,188L190,232C190,236.415 186.415,240 182,240L28,240C23.585,240 20,236.415 20,232L20,188C20,183.585 23.585,180 28,180L182,180C186.415,180 190,183.585 190,188Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,88.092329,163.253889)">
+        <text x="-42.375px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(197,48,48);">IDE &amp; Dev-T<tspan x="19.763px 26.482px " y="0px 0px ">oo</tspan>ls</text>
+    </g>
+    <g transform="matrix(1,0,0,1,88.092329,181.253889)">
+        <text x="-42.018px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Malicious Extensions</text>
+    </g>
+    <g transform="matrix(1,0,0,1,88.092329,193.253889)">
+        <text x="-47.769px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Kompromittierte Plugins</text>
+    </g>
+    <g transform="matrix(1.094631,-0.015772,-0.015772,1.002629,-31.73315,-28.615031)">
+        <path d="M190,200L262,188" style="fill:none;fill-rule:nonzero;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-2.747982,-53.137933)">
+        <path d="M400,268L400,312C400,316.415 396.415,320 392,320L228,320C223.585,320 220,316.415 220,312L220,268C220,263.585 223.585,260 228,260L392,260C396.415,260 400,263.585 400,268Z" style="fill:white;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,310,282)">
+            <text x="-59.584px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(197,48,48);">Distribution &amp; Updates</text>
+        </g>
+        <g transform="matrix(1,0,0,1,310,300)">
+            <text x="-62.273px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Kompromittierte Update-Server</text>
+        </g>
+        <g transform="matrix(1,0,0,1,310,312)">
+            <text x="-61.776px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Manipulierter Signatur-Prozess</text>
+        </g>
+    </g>
+    <g transform="matrix(0.980404,0.050951,0.050951,0.867528,-17.956748,-36.018511)">
+        <path d="M340,260L360,208" style="fill:none;fill-rule:nonzero;stroke:rgb(197,48,48);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-8.319013,-55.459224)">
+        <path d="M630,359C630,366.727 623.727,373 616,373L134,373C126.273,373 120,366.727 120,359C120,351.273 126.273,345 134,345L616,345C623.727,345 630,351.273 630,359Z" style="fill:rgb(39,103,73);"/>
+        <g transform="matrix(1,0,0,1,375,363)">
+            <text x="-217.795px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:white;">Schutz: SBOM · SCA<tspan x="-109.428px -106.372px " y="0px 0px "> ·</tspan> Dependency Pinning · Signierte <tspan x="68.629px 76.573px " y="0px 0px ">Ar</tspan>tefakte · Least Privilege CI</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-16.907671,-38.746111)">
+        <path d="M485,165L485,195C485,200.519 480.519,205 475,205L275,205C269.481,205 265,200.519 265,195L265,165C265,159.481 269.481,155 275,155L475,155C480.519,155 485,159.481 485,165Z" style="fill:rgb(28,63,110);"/>
+        <g transform="matrix(1,0,0,1,375,185)">
+            <text x="-61.404px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:13px;fill:white;">🏗</text>
+            <text x="-39.943px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Ihre <tspan x="-12.971px -3.583px " y="0px 0px ">An</tspan>wendung</text>
+        </g>
+    </g>
+</svg>

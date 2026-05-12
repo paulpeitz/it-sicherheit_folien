@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Quadrants -->
+  <!-- Plan (top-left) -->
+  <path d="M350,250 L350,45 A205,205 0 0,0 145,250 Z" fill="#e2001a" opacity="0.9"/>
+  <!-- Do (top-right) -->
+  <path d="M350,250 L555,250 A205,205 0 0,0 350,45 Z" fill="#c4161c" opacity="0.85"/>
+  <!-- Check (bottom-right) -->
+  <path d="M350,250 L350,455 A205,205 0 0,0 555,250 Z" fill="#888" opacity="0.7"/>
+  <!-- Act (bottom-left) -->
+  <path d="M350,250 L145,250 A205,205 0 0,0 350,455 Z" fill="#555" opacity="0.75"/>
+
+  <!-- Inner circle (white) -->
+  <circle cx="350" cy="250" r="70" fill="white"/>
+  <text x="350" y="245" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Kontinuierliche</text>
+  <text x="350" y="268" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Verbesserung</text>
+
+  <!-- Labels in quadrants -->
+  <text x="245" y="160" text-anchor="middle" font-size="28" font-weight="bold" fill="white">Plan</text>
+  <text x="245" y="188" text-anchor="middle" font-size="14" fill="white">Ziele definieren,</text>
+  <text x="245" y="205" text-anchor="middle" font-size="14" fill="white">Risiken analysieren</text>
+
+  <text x="458" y="160" text-anchor="middle" font-size="28" font-weight="bold" fill="white">Do</text>
+  <text x="458" y="188" text-anchor="middle" font-size="14" fill="white">Maßnahmen</text>
+  <text x="458" y="205" text-anchor="middle" font-size="14" fill="white">umsetzen</text>
+
+  <text x="458" y="340" text-anchor="middle" font-size="28" font-weight="bold" fill="white">Check</text>
+  <text x="458" y="368" text-anchor="middle" font-size="14" fill="white">Wirksamkeit</text>
+  <text x="458" y="385" text-anchor="middle" font-size="14" fill="white">überprüfen</text>
+
+  <text x="245" y="340" text-anchor="middle" font-size="28" font-weight="bold" fill="white">Act</text>
+  <text x="245" y="368" text-anchor="middle" font-size="14" fill="white">Korrigieren &amp;</text>
+  <text x="245" y="385" text-anchor="middle" font-size="14" fill="white">verbessern</text>
+
+  <!-- Circular arrows (outer ring) -->
+  <!-- Top arrow (Plan → Do) -->
+  <path d="M390,52 A210,210 0 0,1 540,120" fill="none" stroke="#555" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <!-- Right arrow (Do → Check) -->
+  <path d="M555,290 A210,210 0 0,1 540,390" fill="none" stroke="#555" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <!-- Bottom arrow (Check → Act) -->
+  <path d="M310,455 A210,210 0 0,1 165,390" fill="none" stroke="#555" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <!-- Left arrow (Act → Plan) -->
+  <path d="M148,210 A210,210 0 0,1 165,115" fill="none" stroke="#555" stroke-width="3" marker-end="url(#arrowhead)"/>
+</svg>

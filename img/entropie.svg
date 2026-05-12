@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Arial, Helvetica, sans-serif">
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Passwort-Entropie in Bit: E = log₂(R^L)</text>
+
+  <!-- Table -->
+  <g transform="translate(30, 55)">
+    <!-- Header row background -->
+    <rect x="0" y="0" width="840" height="40" rx="6" ry="6" fill="#e2001a"/>
+
+    <!-- Header texts -->
+    <text x="130" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Zeichenvorrat</text>
+    <text x="310" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">R</text>
+    <text x="390" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">L = 6</text>
+    <text x="470" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">L = 8</text>
+    <text x="550" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">L = 10</text>
+    <text x="630" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">L = 12</text>
+    <text x="710" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">L = 16</text>
+    <text x="790" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">L = 20</text>
+
+    <!-- Row 1: Ziffern -->
+    <rect x="0" y="44" width="840" height="38" fill="#fef2f2"/>
+    <text x="130" y="68" text-anchor="middle" font-size="13" fill="#333">Ziffern (0–9)</text>
+    <text x="310" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">10</text>
+    <text x="390" y="68" text-anchor="middle" font-size="13" fill="#b91c1c">20</text>
+    <text x="470" y="68" text-anchor="middle" font-size="13" fill="#b91c1c">27</text>
+    <text x="550" y="68" text-anchor="middle" font-size="13" fill="#b91c1c">33</text>
+    <text x="630" y="68" text-anchor="middle" font-size="13" fill="#b91c1c">40</text>
+    <text x="710" y="68" text-anchor="middle" font-size="13" fill="#dc2626">53</text>
+    <text x="790" y="68" text-anchor="middle" font-size="13" fill="#dc2626">66</text>
+
+    <!-- Row 2: Kleinbuchstaben -->
+    <rect x="0" y="84" width="840" height="38" fill="#fff"/>
+    <text x="130" y="108" text-anchor="middle" font-size="13" fill="#333">Kleinbuchstaben (a–z)</text>
+    <text x="310" y="108" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">26</text>
+    <text x="390" y="108" text-anchor="middle" font-size="13" fill="#b91c1c">28</text>
+    <text x="470" y="108" text-anchor="middle" font-size="13" fill="#b91c1c">38</text>
+    <text x="550" y="108" text-anchor="middle" font-size="13" fill="#ea580c">47</text>
+    <text x="630" y="108" text-anchor="middle" font-size="13" fill="#ea580c">56</text>
+    <text x="710" y="108" text-anchor="middle" font-size="13" fill="#16a34a">75</text>
+    <text x="790" y="108" text-anchor="middle" font-size="13" fill="#16a34a">94</text>
+
+    <!-- Row 3: Klein + Großbuchstaben -->
+    <rect x="0" y="124" width="840" height="38" fill="#fef2f2"/>
+    <text x="130" y="148" text-anchor="middle" font-size="13" fill="#333">Klein- + Großbuchstaben</text>
+    <text x="310" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">52</text>
+    <text x="390" y="148" text-anchor="middle" font-size="13" fill="#b91c1c">34</text>
+    <text x="470" y="148" text-anchor="middle" font-size="13" fill="#ea580c">46</text>
+    <text x="550" y="148" text-anchor="middle" font-size="13" fill="#ea580c">57</text>
+    <text x="630" y="148" text-anchor="middle" font-size="13" fill="#16a34a">68</text>
+    <text x="710" y="148" text-anchor="middle" font-size="13" fill="#16a34a">91</text>
+    <text x="790" y="148" text-anchor="middle" font-size="13" fill="#16a34a">114</text>
+
+    <!-- Row 4: Alphanumerisch -->
+    <rect x="0" y="164" width="840" height="38" fill="#fff"/>
+    <text x="130" y="188" text-anchor="middle" font-size="13" fill="#333">Alphanumerisch (a–z, A–Z, 0–9)</text>
+    <text x="310" y="188" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">62</text>
+    <text x="390" y="188" text-anchor="middle" font-size="13" fill="#b91c1c">36</text>
+    <text x="470" y="188" text-anchor="middle" font-size="13" fill="#ea580c">48</text>
+    <text x="550" y="188" text-anchor="middle" font-size="13" fill="#ea580c">60</text>
+    <text x="630" y="188" text-anchor="middle" font-size="13" fill="#16a34a">72</text>
+    <text x="710" y="188" text-anchor="middle" font-size="13" fill="#16a34a">95</text>
+    <text x="790" y="188" text-anchor="middle" font-size="13" fill="#16a34a">119</text>
+
+    <!-- Row 5: Alle druckbaren Zeichen -->
+    <rect x="0" y="204" width="840" height="38" rx="0" ry="0" fill="#fef2f2"/>
+    <text x="130" y="228" text-anchor="middle" font-size="13" fill="#333">Alle druckbaren Zeichen</text>
+    <text x="310" y="228" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">94</text>
+    <text x="390" y="228" text-anchor="middle" font-size="13" fill="#ea580c">39</text>
+    <text x="470" y="228" text-anchor="middle" font-size="13" fill="#ea580c">52</text>
+    <text x="550" y="228" text-anchor="middle" font-size="13" fill="#16a34a">66</text>
+    <text x="630" y="228" text-anchor="middle" font-size="13" fill="#16a34a">79</text>
+    <text x="710" y="228" text-anchor="middle" font-size="13" fill="#16a34a">105</text>
+    <text x="790" y="228" text-anchor="middle" font-size="13" fill="#16a34a">131</text>
+
+    <!-- Table border -->
+    <rect x="0" y="0" width="840" height="242" rx="6" ry="6" fill="none" stroke="#ccc" stroke-width="1.5"/>
+
+    <!-- Column separators -->
+    <line x1="260" y1="0" x2="260" y2="242" stroke="#ddd" stroke-width="1"/>
+    <line x1="350" y1="0" x2="350" y2="242" stroke="#ddd" stroke-width="1"/>
+    <line x1="430" y1="0" x2="430" y2="242" stroke="#ddd" stroke-width="1"/>
+    <line x1="510" y1="0" x2="510" y2="242" stroke="#ddd" stroke-width="1"/>
+    <line x1="590" y1="0" x2="590" y2="242" stroke="#ddd" stroke-width="1"/>
+    <line x1="670" y1="0" x2="670" y2="242" stroke="#ddd" stroke-width="1"/>
+    <line x1="750" y1="0" x2="750" y2="242" stroke="#ddd" stroke-width="1"/>
+
+    <!-- Row separators -->
+    <line x1="0" y1="40" x2="840" y2="40" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="82" x2="840" y2="82" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="122" x2="840" y2="122" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="162" x2="840" y2="162" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="202" x2="840" y2="202" stroke="#ddd" stroke-width="1"/>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 325)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Bewertung der Entropie:</text>
+
+    <rect x="0" y="12" width="16" height="16" rx="3" fill="#b91c1c"/>
+    <text x="22" y="25" font-size="12" fill="#333">Schwach (&lt; 40 Bit)</text>
+
+    <rect x="200" y="12" width="16" height="16" rx="3" fill="#ea580c"/>
+    <text x="222" y="25" font-size="12" fill="#333">Mäßig (40 – 63 Bit)</text>
+
+    <rect x="430" y="12" width="16" height="16" rx="3" fill="#16a34a"/>
+    <text x="452" y="25" font-size="12" fill="#333">Stark (≥ 64 Bit)</text>
+  </g>
+
+  <!-- Annotation -->
+  <text x="30" y="385" font-size="12" fill="#777">R = Größe des Zeichenvorrats | L = Passwortlänge | Entropie E = L × log₂(R), gerundet auf ganze Bit</text>
+</svg>

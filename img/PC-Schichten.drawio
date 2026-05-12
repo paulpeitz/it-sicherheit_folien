@@ -1,0 +1,22 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Seite-1" id="c_CUEMN-oAY_7QAt-Fsx">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EHAq5cGwkzHeIDY7ejdL-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=16;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Hardware" vertex="1">
+          <mxGeometry height="60" width="320" x="440" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="EHAq5cGwkzHeIDY7ejdL-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=16;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="BIOS / UEFI" vertex="1">
+          <mxGeometry height="60" width="320" x="440" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="EHAq5cGwkzHeIDY7ejdL-3" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontFamily=Verdana;fontSize=16;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="OS" vertex="1">
+          <mxGeometry height="60" width="320" x="440" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="EHAq5cGwkzHeIDY7ejdL-5" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontFamily=Verdana;fontSize=16;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Applikationen" vertex="1">
+          <mxGeometry height="60" width="320" x="440" y="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

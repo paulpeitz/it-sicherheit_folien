@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .box { rx: 10; ry: 10; stroke-width: 2; }
+      .eu-box { fill: #fde8ea; stroke: #e2001a; }
+      .de-box { fill: #e8f0fe; stroke: #1a5276; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #333; text-anchor: middle; }
+      .label-bold { font-family: Arial, sans-serif; font-size: 15px; fill: #333; text-anchor: middle; font-weight: bold; }
+      .sublabel { font-family: Arial, sans-serif; font-size: 11px; fill: #666; text-anchor: middle; }
+      .header { font-family: Arial, sans-serif; font-size: 18px; fill: #fff; text-anchor: middle; font-weight: bold; }
+      .arrow { stroke: #888; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+      .dashed { stroke-dasharray: 6,3; }
+      .bracket { stroke: #aaa; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- EU-Ebene Header -->
+  <rect x="30" y="20" width="740" height="36" rx="5" fill="#e2001a"/>
+  <text x="400" y="44" class="header">EU-Ebene</text>
+
+  <!-- DSGVO -->
+  <rect x="60" y="80" width="200" height="90" class="box eu-box"/>
+  <text x="160" y="110" class="label-bold">DSGVO</text>
+  <text x="160" y="128" class="sublabel">Verordnung (EU) 2016/679</text>
+  <text x="160" y="145" class="sublabel">Allgemeiner Datenschutz</text>
+  <text x="160" y="160" class="sublabel">Direkt anwendbar</text>
+
+  <!-- ePrivacy-Richtlinie -->
+  <rect x="300" y="80" width="200" height="90" class="box eu-box"/>
+  <text x="400" y="110" class="label-bold">ePrivacy-Richtlinie</text>
+  <text x="400" y="128" class="sublabel">Richtlinie 2002/58/EG</text>
+  <text x="400" y="145" class="sublabel">Elektronische Kommunikation</text>
+  <text x="400" y="160" class="sublabel">Umsetzung durch Mitgliedstaaten</text>
+
+  <!-- AI Act -->
+  <rect x="540" y="80" width="200" height="90" class="box eu-box"/>
+  <text x="640" y="110" class="label-bold">AI Act</text>
+  <text x="640" y="128" class="sublabel">Verordnung (EU) 2024/1689</text>
+  <text x="640" y="145" class="sublabel">KI-Regulierung</text>
+  <text x="640" y="160" class="sublabel">Datenschutz-Schnittstellen</text>
+
+  <!-- DE-Ebene Header -->
+  <rect x="30" y="210" width="740" height="36" rx="5" fill="#1a5276"/>
+  <text x="400" y="234" class="header">Nationale Ebene (Deutschland)</text>
+
+  <!-- BDSG -->
+  <rect x="60" y="270" width="200" height="90" class="box de-box"/>
+  <text x="160" y="300" class="label-bold">BDSG</text>
+  <text x="160" y="318" class="sublabel">Bundesdatenschutzgesetz</text>
+  <text x="160" y="335" class="sublabel">Ergänzung / Konkretisierung</text>
+  <text x="160" y="352" class="sublabel">der DSGVO</text>
+
+  <!-- TTDSG -->
+  <rect x="300" y="270" width="200" height="90" class="box de-box"/>
+  <text x="400" y="300" class="label-bold">TDDDG</text>
+  <text x="400" y="318" class="sublabel">Telekommunikation-Digitale-</text>
+  <text x="400" y="335" class="sublabel">Dienste-Datenschutz-Gesetz</text>
+  <text x="400" y="352" class="sublabel">Cookies, Tracking, Endgeräte</text>
+
+  <!-- Landesdatenschutzgesetze -->
+  <rect x="540" y="270" width="200" height="90" class="box de-box"/>
+  <text x="640" y="300" class="label-bold">LDSG</text>
+  <text x="640" y="318" class="sublabel">Landesdatenschutzgesetze</text>
+  <text x="640" y="335" class="sublabel">Öffentliche Stellen</text>
+  <text x="640" y="352" class="sublabel">der Bundesländer</text>
+
+  <!-- Arrows EU → DE -->
+  <line x1="160" y1="170" x2="160" y2="270" class="arrow"/>
+  <line x1="400" y1="170" x2="400" y2="270" class="arrow"/>
+  <line x1="640" y1="170" x2="640" y2="210" class="arrow dashed"/>
+
+  <!-- Bottom: Zusammenspiel -->
+  <rect x="100" y="400" width="600" height="70" rx="10" fill="#f5f5f5" stroke="#ccc" stroke-width="1.5"/>
+  <text x="400" y="425" class="label-bold" fill="#e2001a">Zusammenwirken in der Praxis</text>
+  <text x="400" y="448" class="sublabel">DSGVO definiert Grundregeln → BDSG konkretisiert → TDDDG regelt Endgeräte-Zugriff</text>
+  <text x="400" y="463" class="sublabel">Jede Datenverarbeitung muss alle anwendbaren Ebenen berücksichtigen</text>
+
+  <!-- Arrows to bottom -->
+  <line x1="160" y1="360" x2="300" y2="400" class="arrow dashed"/>
+  <line x1="400" y1="360" x2="400" y2="400" class="arrow dashed"/>
+  <line x1="640" y1="360" x2="500" y2="400" class="arrow dashed"/>
+</svg>

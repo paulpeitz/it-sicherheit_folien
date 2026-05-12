@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="340" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Phase 1: Vorbereitung -->
+  <g filter="url(#shadow)">
+    <rect x="15" y="40" width="100" height="70" rx="10" fill="#1c3f6e"/>
+    <text x="65" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">1.</text>
+    <text x="65" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Vorbereitung</text>
+  </g>
+
+  <!-- Phase 2: Erkennung & Analyse -->
+  <g filter="url(#shadow)">
+    <rect x="140" y="40" width="100" height="70" rx="10" fill="#e2001a"/>
+    <text x="190" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">2.</text>
+    <text x="190" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Erkennung</text>
+    <text x="190" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">&amp; Analyse</text>
+  </g>
+
+  <!-- Phase 3: Eindämmung -->
+  <g filter="url(#shadow)">
+    <rect x="265" y="40" width="100" height="70" rx="10" fill="#e2001a"/>
+    <text x="315" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">3.</text>
+    <text x="315" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Eindämmung</text>
+  </g>
+
+  <!-- Phase 4: Beseitigung -->
+  <g filter="url(#shadow)">
+    <rect x="390" y="40" width="100" height="70" rx="10" fill="#e2001a"/>
+    <text x="440" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">4.</text>
+    <text x="440" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Beseitigung</text>
+  </g>
+
+  <!-- Phase 5: Wiederherstellung -->
+  <g filter="url(#shadow)">
+    <rect x="515" y="40" width="100" height="70" rx="10" fill="#1c3f6e"/>
+    <text x="565" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">5.</text>
+    <text x="565" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Wieder-</text>
+    <text x="565" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">herstellung</text>
+  </g>
+
+  <!-- Phase 6: Lessons Learned -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="40" width="65" height="70" rx="10" fill="#2e7d32"/>
+    <text x="672" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">6.</text>
+    <text x="672" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Lessons</text>
+    <text x="672" y="93" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Learned</text>
+  </g>
+
+  <!-- Arrows between phases -->
+  <line x1="115" y1="75" x2="135" y2="75" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="240" y1="75" x2="260" y2="75" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="365" y1="75" x2="385" y2="75" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="75" x2="510" y2="75" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="615" y1="75" x2="635" y2="75" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Feedback arrow from Lessons Learned back to Vorbereitung -->
+  <path d="M 672 110 C 672 155, 65 155, 65 115" stroke="#2e7d32" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+
+  <!-- Detail boxes below each phase -->
+  <g>
+    <rect x="5" y="170" width="118" height="108" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+    <text x="64" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• IR-Plan erstellen</text>
+    <text x="64" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Team benennen</text>
+    <text x="64" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Tools bereithalten</text>
+    <text x="64" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Logging aktivieren</text>
+    <text x="64" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Übungen</text>
+  </g>
+
+  <g>
+    <rect x="130" y="170" width="118" height="108" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+    <text x="189" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• SIEM-Alerts</text>
+    <text x="189" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Anomalien</text>
+    <text x="189" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Schweregrad</text>
+    <text x="189" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• IoC-Sammlung</text>
+    <text x="189" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Scope bestimmen</text>
+  </g>
+
+  <g>
+    <rect x="255" y="170" width="118" height="108" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+    <text x="314" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• System isolieren</text>
+    <text x="314" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Netz segmentieren</text>
+    <text x="314" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Beweise sichern</text>
+    <text x="314" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Zugriffe sperren</text>
+    <text x="314" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Dokumentieren</text>
+  </g>
+
+  <g>
+    <rect x="380" y="170" width="118" height="108" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+    <text x="439" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Malware entfernen</text>
+    <text x="439" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Patches einspielen</text>
+    <text x="439" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Accounts sperren</text>
+    <text x="439" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Ursache beheben</text>
+    <text x="439" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Systeme härten</text>
+  </g>
+
+  <g>
+    <rect x="505" y="170" width="118" height="108" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+    <text x="564" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Systeme hochfahren</text>
+    <text x="564" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Tests durchführen</text>
+    <text x="564" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Monitoring starten</text>
+    <text x="564" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Backup prüfen</text>
+    <text x="564" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Nutzer informieren</text>
+  </g>
+
+  <g>
+    <rect x="630" y="170" width="82" height="108" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+    <text x="671" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Post-Mortem</text>
+    <text x="671" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Bericht</text>
+    <text x="671" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Verbesserungen</text>
+    <text x="671" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">• Plan updaten</text>
+  </g>
+
+  <!-- Reference -->
+  <text x="360" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999" font-style="italic">basierend auf NIST SP 800-61</text>
+</svg>

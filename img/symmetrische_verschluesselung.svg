@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <polygon points="0,1 10,5 0,9" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <polygon points="0,1 10,5 0,9" fill="#c62828"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="410" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Symmetrische Verschlüsselung – Gemeinsamer Schlüssel K</text>
+
+  <!-- Alice -->
+  <rect x="20" y="100" width="100" height="60" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">👤 Alice</text>
+  <text x="70" y="143" text-anchor="middle" font-size="11" fill="#555">Sender</text>
+
+  <!-- Klartext 1 -->
+  <rect x="155" y="105" width="90" height="50" rx="8" fill="#fff" stroke="#888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="200" y="127" text-anchor="middle" font-size="11" fill="#555">Klartext</text>
+  <text x="200" y="143" text-anchor="middle" font-size="10" font-style="italic" fill="#888">„HALLO"</text>
+
+  <!-- Verschlüsselung -->
+  <rect x="280" y="85" width="110" height="90" rx="10" fill="#bbdefb" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#0d47a1">Verschlüs-</text>
+  <text x="335" y="131" text-anchor="middle" font-size="12" font-weight="bold" fill="#0d47a1">selung</text>
+  <text x="335" y="152" text-anchor="middle" font-size="11" fill="#555">E(K, P) = C</text>
+
+  <!-- Geheimtext -->
+  <rect x="425" y="105" width="90" height="50" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="470" y="127" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">Geheimtext</text>
+  <text x="470" y="143" text-anchor="middle" font-size="10" font-style="italic" fill="#888">„X4&amp;#q"</text>
+
+  <!-- Unsicherer Kanal -->
+  <rect x="422" y="65" width="96" height="22" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
+  <text x="470" y="80" text-anchor="middle" font-size="9" fill="#e65100">🌐 Unsicherer Kanal</text>
+
+  <!-- Entschlüsselung -->
+  <rect x="550" y="85" width="110" height="90" rx="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="605" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b5e20">Entschlüs-</text>
+  <text x="605" y="131" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b5e20">selung</text>
+  <text x="605" y="152" text-anchor="middle" font-size="11" fill="#555">D(K, C) = P</text>
+
+  <!-- Klartext 2 -->
+  <rect x="695" y="105" width="90" height="50" rx="8" fill="#fff" stroke="#888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="740" y="127" text-anchor="middle" font-size="11" fill="#555">Klartext</text>
+  <text x="740" y="143" text-anchor="middle" font-size="10" font-style="italic" fill="#888">„HALLO"</text>
+
+  <!-- Bob -->
+  <rect x="700" y="170" width="100" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">👤 Bob</text>
+  <text x="750" y="213" text-anchor="middle" font-size="11" fill="#555">Empfänger</text>
+
+  <!-- Schlüssel K -->
+  <rect x="310" y="225" width="200" height="45" rx="10" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="410" y="245" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">🔑 Gemeinsamer Schlüssel K</text>
+  <text x="410" y="261" text-anchor="middle" font-size="10" fill="#888">Identischer Schlüssel bei beiden Parteien</text>
+
+  <!-- Arrows: flow -->
+  <line x1="120" y1="130" x2="152" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="245" y1="130" x2="277" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="390" y1="130" x2="422" y2="130" stroke="#c62828" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <line x1="515" y1="130" x2="547" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="695" y1="155" x2="750" y2="170" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrows: key to encrypt/decrypt -->
+  <line x1="360" y1="225" x2="340" y2="178" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <line x1="460" y1="225" x2="590" y2="178" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+  <!-- Problem label -->
+  <rect x="280" y="282" width="260" height="28" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="1"/>
+  <text x="410" y="300" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">⚠ Problem: Wie tauscht man K sicher aus?</text>
+</svg>

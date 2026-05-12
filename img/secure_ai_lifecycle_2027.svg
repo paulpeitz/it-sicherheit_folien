@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="700" viewBox="0 0 1500 700" role="img" aria-label="Secure AI Lifecycle">
+  <defs>
+    <style>
+      .phase{fill:#fff;stroke:#222;stroke-width:3;rx:18}
+      .txt{font-family:Arial,sans-serif;font-size:28px;fill:#111;font-weight:700}
+      .sub{font-family:Arial,sans-serif;font-size:21px;fill:#444}
+      .arrow{stroke:#444;stroke-width:4;fill:none;marker-end:url(#m)}
+      .ctrl{fill:#ffe9e9;stroke:#c5001a;stroke-width:3;rx:12}
+      .ct{font-family:Arial,sans-serif;font-size:20px;fill:#7a0010;font-weight:700}
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <rect x="70" y="250" width="210" height="130" class="phase"/>
+  <text x="175" y="312" text-anchor="middle" class="txt">Daten</text>
+  <text x="175" y="346" text-anchor="middle" class="sub">Qualitaet, Herkunft</text>
+
+  <rect x="320" y="250" width="210" height="130" class="phase"/>
+  <text x="425" y="312" text-anchor="middle" class="txt">Training</text>
+  <text x="425" y="346" text-anchor="middle" class="sub">Poisoning-Pruefung</text>
+
+  <rect x="570" y="250" width="210" height="130" class="phase"/>
+  <text x="675" y="312" text-anchor="middle" class="txt">Evaluation</text>
+  <text x="675" y="346" text-anchor="middle" class="sub">Red Team, Benchmarks</text>
+
+  <rect x="820" y="250" width="210" height="130" class="phase"/>
+  <text x="925" y="312" text-anchor="middle" class="txt">Deployment</text>
+  <text x="925" y="346" text-anchor="middle" class="sub">Policies, Gateways</text>
+
+  <rect x="1070" y="250" width="210" height="130" class="phase"/>
+  <text x="1175" y="312" text-anchor="middle" class="txt">Betrieb</text>
+  <text x="1175" y="346" text-anchor="middle" class="sub">Monitoring, Incident</text>
+
+  <rect x="1320" y="250" width="120" height="130" class="phase"/>
+  <text x="1380" y="312" text-anchor="middle" class="txt">Lernen</text>
+  <text x="1380" y="346" text-anchor="middle" class="sub">Feedback</text>
+
+  <path d="M280 315 L320 315" class="arrow"/>
+  <path d="M530 315 L570 315" class="arrow"/>
+  <path d="M780 315 L820 315" class="arrow"/>
+  <path d="M1030 315 L1070 315" class="arrow"/>
+  <path d="M1280 315 L1320 315" class="arrow"/>
+  <path d="M1380 380 C1380 520, 175 520, 175 390" class="arrow"/>
+
+  <rect x="95" y="90" width="255" height="72" class="ctrl"/>
+  <text x="223" y="135" text-anchor="middle" class="ct">SBOM / Model Card</text>
+
+  <rect x="430" y="90" width="255" height="72" class="ctrl"/>
+  <text x="558" y="135" text-anchor="middle" class="ct">Least Privilege</text>
+
+  <rect x="765" y="90" width="255" height="72" class="ctrl"/>
+  <text x="893" y="135" text-anchor="middle" class="ct">Prompt Guardrails</text>
+
+  <rect x="1100" y="90" width="255" height="72" class="ctrl"/>
+  <text x="1228" y="135" text-anchor="middle" class="ct">Kostenlimits / DoS</text>
+
+  <rect x="360" y="500" width="320" height="72" class="ctrl"/>
+  <text x="520" y="545" text-anchor="middle" class="ct">Menschliche Freigaben</text>
+
+  <rect x="760" y="500" width="340" height="72" class="ctrl"/>
+  <text x="930" y="545" text-anchor="middle" class="ct">Audit Logs / Nachvollziehbarkeit</text>
+</svg>

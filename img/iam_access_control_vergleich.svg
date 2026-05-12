@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 370">
+  <text x="375" y="28" text-anchor="middle" fill="#2d3748" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold">Zugriffskontrollmodelle im Vergleich</text>
+
+  <!-- Column Headers -->
+  <rect x="20" y="48" width="100" height="30" rx="6" fill="#2d3748"/>
+  <text x="70" y="68" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Modell</text>
+
+  <rect x="130" y="48" width="145" height="30" rx="6" fill="#2d3748"/>
+  <text x="202" y="68" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Wer entscheidet?</text>
+
+  <rect x="285" y="48" width="145" height="30" rx="6" fill="#2d3748"/>
+  <text x="357" y="68" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Granularität</text>
+
+  <rect x="440" y="48" width="150" height="30" rx="6" fill="#2d3748"/>
+  <text x="515" y="68" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Einsatzgebiet</text>
+
+  <rect x="600" y="48" width="130" height="30" rx="6" fill="#2d3748"/>
+  <text x="665" y="68" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Sicherheit</text>
+
+  <!-- Row 1: DAC -->
+  <rect x="20" y="86" width="100" height="58" rx="6" fill="#1c3f6e"/>
+  <text x="70" y="112" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">DAC</text>
+  <text x="70" y="130" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Segoe UI, Arial, sans-serif" font-size="8">Discretionary</text>
+
+  <rect x="130" y="86" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="202" y="110" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Eigentümer</text>
+  <text x="202" y="128" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-style="italic">chmod, ACL</text>
+
+  <rect x="285" y="86" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="357" y="118" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Datei-/Objektebene</text>
+
+  <rect x="440" y="86" width="150" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="515" y="110" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Linux, Windows</text>
+  <text x="515" y="128" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Desktop-Systeme</text>
+
+  <rect x="600" y="86" width="130" height="58" rx="4" fill="#fff3cd" stroke="#e8a520" stroke-width="1"/>
+  <text x="665" y="118" text-anchor="middle" fill="#e8a520" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">Niedrig</text>
+
+  <!-- Row 2: MAC -->
+  <rect x="20" y="152" width="100" height="58" rx="6" fill="#c53030"/>
+  <text x="70" y="178" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">MAC</text>
+  <text x="70" y="196" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Segoe UI, Arial, sans-serif" font-size="8">Mandatory</text>
+
+  <rect x="130" y="152" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="202" y="176" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Zentrale Policy</text>
+  <text x="202" y="194" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-style="italic">SELinux, AppArmor</text>
+
+  <rect x="285" y="152" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="357" y="176" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Labels / Clearance</text>
+  <text x="357" y="194" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Levels</text>
+
+  <rect x="440" y="152" width="150" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="515" y="176" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Militär, Behörden</text>
+  <text x="515" y="194" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Hochsicherheit</text>
+
+  <rect x="600" y="152" width="130" height="58" rx="4" fill="#d4edda" stroke="#276749" stroke-width="1"/>
+  <text x="665" y="184" text-anchor="middle" fill="#276749" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">Sehr Hoch</text>
+
+  <!-- Row 3: RBAC -->
+  <rect x="20" y="218" width="100" height="58" rx="6" fill="#276749"/>
+  <text x="70" y="244" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">RBAC</text>
+  <text x="70" y="262" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Segoe UI, Arial, sans-serif" font-size="8">Role-Based</text>
+
+  <rect x="130" y="218" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="202" y="242" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Administrator</text>
+  <text x="202" y="260" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-style="italic">AD-Gruppen, IAM-Rollen</text>
+
+  <rect x="285" y="218" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="357" y="250" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Rollenebene</text>
+
+  <rect x="440" y="218" width="150" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="515" y="242" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Unternehmen, ERP</text>
+  <text x="515" y="260" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Active Directory</text>
+
+  <rect x="600" y="218" width="130" height="58" rx="4" fill="#d4edda" stroke="#276749" stroke-width="1"/>
+  <text x="665" y="250" text-anchor="middle" fill="#276749" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">Mittel–Hoch</text>
+
+  <!-- Row 4: ABAC -->
+  <rect x="20" y="284" width="100" height="58" rx="6" fill="#e8a520"/>
+  <text x="70" y="310" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">ABAC</text>
+  <text x="70" y="328" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Segoe UI, Arial, sans-serif" font-size="8">Attribute-Based</text>
+
+  <rect x="130" y="284" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="202" y="308" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Policy Engine</text>
+  <text x="202" y="326" text-anchor="middle" fill="#888" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-style="italic">IF/THEN-Regeln, XACML</text>
+
+  <rect x="285" y="284" width="145" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="357" y="308" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Attribut-Kombination</text>
+  <text x="357" y="326" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">(Zeit, Ort, Rolle ...)</text>
+
+  <rect x="440" y="284" width="150" height="58" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="515" y="308" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Cloud, APIs</text>
+  <text x="515" y="326" text-anchor="middle" fill="#555" font-family="Segoe UI, Arial, sans-serif" font-size="10">Zero Trust, Dynamic</text>
+
+  <rect x="600" y="284" width="130" height="58" rx="4" fill="#d4edda" stroke="#276749" stroke-width="1"/>
+  <text x="665" y="316" text-anchor="middle" fill="#276749" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold">Hoch</text>
+
+  <!-- Bottom note -->
+  <rect x="100" y="354" width="550" height="22" rx="11" fill="#2d3748"/>
+  <text x="375" y="369" text-anchor="middle" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold">Praxis: Oft Mischformen – z. B. RBAC als Basis + ABAC für Feinsteuerung</text>
+</svg>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 750 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <rect x="10" y="5" width="730" height="410" style="fill:none;stroke:rgb(226,0,26);stroke-width:2px;stroke-dasharray:10,5;"/>
+    <g transform="matrix(1,0,0,1,375,25)">
+        <text x="-114.34px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(226,0,26);">TRUST BOUNDAR<tspan x="-10.125px -2.338px 0.996px " y="0px 0px 0px ">Y —</tspan> Internet / Intranet</text>
+    </g>
+    <rect x="310" y="35" width="420" height="370" style="fill:none;stroke:rgb(28,63,110);stroke-width:1.5px;stroke-dasharray:8,4;"/>
+    <g transform="matrix(1,0,0,1,520,53)">
+        <text x="-108.797px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(28,63,110);">TRUST BOUNDAR<tspan x="-13.267px -6.128px -3.072px " y="0px 0px 0px ">Y —</tspan> Backend-Netzwerk</text>
+    </g>
+    <path d="M160,124L160,176C160,178.208 158.208,180 156,180L34,180C31.792,180 30,178.208 30,176L30,124C30,121.792 31.792,120 34,120L156,120C158.208,120 160,121.792 160,124Z" style="fill:rgb(45,55,72);stroke:rgb(45,55,72);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,95,146)">
+        <text x="-38.54px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:13px;fill:white;">👤</text>
+        <text x="-17.078px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Benutzer</text>
+    </g>
+    <g transform="matrix(1,0,0,1,95,164)">
+        <text x="-32.795px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.7;">Externe Entität</text>
+    </g>
+    <path d="M160,294L160,346C160,348.208 158.208,350 156,350L34,350C31.792,350 30,348.208 30,346L30,294C30,291.792 31.792,290 34,290L156,290C158.208,290 160,291.792 160,294Z" style="fill:rgb(45,55,72);stroke:rgb(45,55,72);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,95,316)">
+        <text x="-50.226px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:13px;fill:white;">🔗</text>
+        <text x="-28.764px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Payment <tspan x="28.555px 37.943px " y="0px 0px ">AP</tspan>I</text>
+    </g>
+    <g transform="matrix(1,0,0,1,95,334)">
+        <text x="-32.795px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.7;">Externe Entität</text>
+    </g>
+    <circle cx="370" cy="150" r="50" style="fill:rgb(226,0,26);"/>
+    <g transform="matrix(1,0,0,1,370,145)">
+        <text x="-15.768px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">W<tspan x="-3.732px 3.498px " y="0px 0px ">eb</tspan>-</text>
+    </g>
+    <g transform="matrix(1,0,0,1,370,162)">
+        <text x="-20.24px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">Server</text>
+    </g>
+    <g transform="matrix(1,0,0,1,370,178)">
+        <text x="-16.255px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:white;fill-opacity:0.7;">Prozess</text>
+    </g>
+    <circle cx="370" cy="320" r="45" style="fill:rgb(226,0,26);"/>
+    <g transform="matrix(1,0,0,1,370,315)">
+        <text x="-15.659px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">Auth-</text>
+    </g>
+    <g transform="matrix(1,0,0,1,370,332)">
+        <text x="-21.352px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">Service</text>
+    </g>
+    <g transform="matrix(1,0,0,1,370,348)">
+        <text x="-16.255px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:white;fill-opacity:0.7;">Prozess</text>
+    </g>
+    <path d="M575,118L700,118" style="fill:none;fill-rule:nonzero;stroke:rgb(39,103,73);stroke-width:2px;"/>
+    <path d="M575,178L700,178" style="fill:none;fill-rule:nonzero;stroke:rgb(39,103,73);stroke-width:2px;"/>
+    <rect x="575" y="118" width="125" height="60" style="fill:rgb(39,103,73);fill-opacity:0.1;"/>
+    <g transform="matrix(1,0,0,1,637,145)">
+        <text x="-36.737px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:13px;fill:rgb(39,103,73);">🗄</text>
+        <text x="-15.276px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(39,103,73);">User-DB</text>
+    </g>
+    <g transform="matrix(1,0,0,1,637,163)">
+        <text x="-32.241px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(39,103,73);">Datenspeicher</text>
+    </g>
+    <path d="M575,288L700,288" style="fill:none;fill-rule:nonzero;stroke:rgb(39,103,73);stroke-width:2px;"/>
+    <path d="M575,348L700,348" style="fill:none;fill-rule:nonzero;stroke:rgb(39,103,73);stroke-width:2px;"/>
+    <rect x="575" y="288" width="125" height="60" style="fill:rgb(39,103,73);fill-opacity:0.1;"/>
+    <g transform="matrix(1,0,0,1,637,315)">
+        <text x="-39.273px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:13px;fill:rgb(39,103,73);">🔑</text>
+        <text x="-17.812px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(39,103,73);">Sessions</text>
+    </g>
+    <g transform="matrix(1,0,0,1,637,333)">
+        <text x="-32.241px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(39,103,73);">Datenspeicher</text>
+    </g>
+    <path d="M160,140L316,145" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    <path d="M270,129C270,133.967 265.967,138 261,138L199,138C194.033,138 190,133.967 190,129C190,124.033 194.033,120 199,120L261,120C265.967,120 270,124.033 270,129Z" style="fill:rgb(240,240,240);stroke:rgb(204,204,204);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,230,133)">
+        <text x="-28.252px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">HTTPS POST</text>
+    </g>
+    <path d="M420,148L572,148" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    <path d="M525,137C525,141.967 520.967,146 516,146L469,146C464.033,146 460,141.967 460,137C460,132.033 464.033,128 469,128L516,128C520.967,128 525,132.033 525,137Z" style="fill:rgb(240,240,240);stroke:rgb(204,204,204);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,492,141)">
+        <text x="-22.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">SQL<tspan x="-4.667px -2.167px " y="0px 0px "> Q</tspan>uery</text>
+    </g>
+    <path d="M370,200L370,272" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    <path d="M453,231C453,235.967 448.967,240 444,240L387,240C382.033,240 378,235.967 378,231C378,226.033 382.033,222 387,222L444,222C448.967,222 453,226.033 453,231Z" style="fill:rgb(240,240,240);stroke:rgb(204,204,204);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,415,235)">
+        <text x="-22.761px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Credentials</text>
+    </g>
+    <path d="M415,320L572,318" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    <path d="M530,307C530,311.967 525.967,316 521,316L454,316C449.033,316 445,311.967 445,307C445,302.033 449.033,298 454,298L521,298C525.967,298 530,302.033 530,307Z" style="fill:rgb(240,240,240);stroke:rgb(204,204,204);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,487,311)">
+        <text x="-29.516px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Session-T<tspan x="10px 15.005px " y="0px 0px ">ok</tspan>en</text>
+    </g>
+    <path d="M160,320L322,320" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    <path d="M270,309C270,313.967 265.967,318 261,318L204,318C199.033,318 195,313.967 195,309C195,304.033 199.033,300 204,300L261,300C265.967,300 270,304.033 270,309Z" style="fill:rgb(240,240,240);stroke:rgb(204,204,204);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,232,313)">
+        <text x="-16.504px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">API-Call</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-1.998208,-0.633051)">
+        <path d="M42,387L42,395C42,396.104 41.104,397 40,397L32,397C30.896,397 30,396.104 30,395L30,387C30,385.896 30.896,385 32,385L40,385C41.104,385 42,385.896 42,387Z" style="fill:rgb(45,55,72);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,46.001792,395.366949)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Externe Entität</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-14.487073,0.249762)">
+        <circle cx="146" cy="391" r="6" style="fill:rgb(226,0,26);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,143.512927,396.249762)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Prozess</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.727037,0.235602)">
+        <path d="M220,387L250,387" style="fill:none;fill-rule:nonzero;stroke:rgb(39,103,73);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.727037,0.235602)">
+        <path d="M220,397L250,397" style="fill:none;fill-rule:nonzero;stroke:rgb(39,103,73);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,232.272963,396.235602)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(85,85,85);">Datenspeicher</text>
+    </g>
+</svg>

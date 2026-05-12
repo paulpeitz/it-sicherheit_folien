@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800" role="img" aria-label="Angriffsflaechen KI-System">
+  <defs>
+    <style>
+      .box{fill:#fff;stroke:#222;stroke-width:3;rx:16}
+      .core{fill:#ffe9e9;stroke:#c5001a;stroke-width:4;rx:18}
+      .txt{font-family:Arial,sans-serif;font-size:30px;fill:#111;font-weight:600}
+      .small{font-family:Arial,sans-serif;font-size:24px;fill:#333}
+      .arrow{stroke:#444;stroke-width:4;fill:none;marker-end:url(#m)}
+      .threat{fill:#c5001a;font-family:Arial,sans-serif;font-size:22px;font-weight:700}
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <rect x="525" y="315" width="350" height="170" class="core"/>
+  <text x="700" y="390" text-anchor="middle" class="txt">LLM / KI-Modell</text>
+  <text x="700" y="430" text-anchor="middle" class="small">Inferenz + Policies</text>
+
+  <rect x="90" y="120" width="310" height="130" class="box"/>
+  <text x="245" y="185" text-anchor="middle" class="txt">Trainingsdaten</text>
+  <text x="245" y="220" text-anchor="middle" class="small">Poisoning, Bias</text>
+
+  <rect x="90" y="520" width="310" height="130" class="box"/>
+  <text x="245" y="585" text-anchor="middle" class="txt">Prompts / Input</text>
+  <text x="245" y="620" text-anchor="middle" class="small">Injection, Jailbreak</text>
+
+  <rect x="980" y="120" width="320" height="130" class="box"/>
+  <text x="1140" y="185" text-anchor="middle" class="txt">Tools / Plugins</text>
+  <text x="1140" y="220" text-anchor="middle" class="small">Rechte, Missbrauch</text>
+
+  <rect x="980" y="520" width="320" height="130" class="box"/>
+  <text x="1140" y="585" text-anchor="middle" class="txt">Ausgaben / APIs</text>
+  <text x="1140" y="620" text-anchor="middle" class="small">Leakage, Code-Injektion</text>
+
+  <rect x="525" y="80" width="350" height="130" class="box"/>
+  <text x="700" y="145" text-anchor="middle" class="txt">Lieferkette</text>
+  <text x="700" y="180" text-anchor="middle" class="small">Modelle, Pakete, Gewichte</text>
+
+  <rect x="525" y="590" width="350" height="130" class="box"/>
+  <text x="700" y="655" text-anchor="middle" class="txt">Betrieb / Monitoring</text>
+  <text x="700" y="690" text-anchor="middle" class="small">Kosten, Drift, DoS</text>
+
+  <path d="M400 185 L525 345" class="arrow"/>
+  <path d="M400 585 L525 455" class="arrow"/>
+  <path d="M980 185 L875 345" class="arrow"/>
+  <path d="M980 585 L875 455" class="arrow"/>
+  <path d="M700 210 L700 315" class="arrow"/>
+  <path d="M700 590 L700 485" class="arrow"/>
+
+  <text x="430" y="340" class="threat">Manipulation</text>
+  <text x="410" y="500" class="threat">Steuerung</text>
+  <text x="910" y="345" class="threat">Privilegien</text>
+  <text x="900" y="500" class="threat">Exfiltration</text>
+</svg>

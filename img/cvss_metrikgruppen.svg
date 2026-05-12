@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="400" viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- ===== BASE SCORE ===== -->
+  <g filter="url(#shadow)">
+    <rect x="240" y="10" width="220" height="44" rx="8" fill="#e2001a"/>
+    <text x="350" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">CVSS Score (0.0 – 10.0)</text>
+  </g>
+
+  <!-- Lines from CVSS to 3 groups -->
+  <line x1="230" y1="54" x2="120" y2="85" stroke="#444" stroke-width="2"/>
+  <line x1="350" y1="54" x2="350" y2="85" stroke="#444" stroke-width="2"/>
+  <line x1="470" y1="54" x2="580" y2="85" stroke="#444" stroke-width="2"/>
+
+  <!-- Base Score -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="85" width="200" height="40" rx="8" fill="#1c3f6e"/>
+    <text x="120" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">Base Score</text>
+  </g>
+
+  <!-- Temporal Score -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="85" width="200" height="40" rx="8" fill="#555"/>
+    <text x="350" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">Temporal Score</text>
+  </g>
+
+  <!-- Environmental Score -->
+  <g filter="url(#shadow)">
+    <rect x="480" y="85" width="200" height="40" rx="8" fill="#555"/>
+    <text x="580" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">Environmental Score</text>
+  </g>
+
+  <!-- Subtitle labels -->
+  <text x="120" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Technische Eigenschaften</text>
+  <text x="120" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Unveränderlich</text>
+
+  <text x="350" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Zeitabhängig</text>
+  <text x="350" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Exploit-Reifegrad</text>
+
+  <text x="580" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Unternehmenskontext</text>
+  <text x="580" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Asset-Kritikalität</text>
+
+  <!-- ===== BASE SCORE DETAILS ===== -->
+  <!-- Lines from Base to sub-groups -->
+  <line x1="75" y1="125" x2="75" y2="175" stroke="#1c3f6e" stroke-width="2"/>
+  <line x1="165" y1="125" x2="165" y2="175" stroke="#1c3f6e" stroke-width="2"/>
+
+  <!-- Exploitability Metrics -->
+  <g filter="url(#shadow)">
+    <rect x="5" y="175" width="140" height="30" rx="6" fill="#1565c0"/>
+    <text x="75" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Exploitability</text>
+  </g>
+
+  <!-- Impact Metrics -->
+  <g filter="url(#shadow)">
+    <rect x="155" y="175" width="110" height="30" rx="6" fill="#c62828"/>
+    <text x="210" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Impact</text>
+  </g>
+
+  <!-- Exploitability detail items -->
+  <rect x="10" y="218" width="130" height="22" rx="4" fill="#e3f2fd"/>
+  <text x="75" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1565c0">Attack Vector (AV)</text>
+
+  <rect x="10" y="245" width="130" height="22" rx="4" fill="#e3f2fd"/>
+  <text x="75" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1565c0">Attack Complexity (AC)</text>
+
+  <rect x="10" y="272" width="130" height="22" rx="4" fill="#e3f2fd"/>
+  <text x="75" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1565c0">Privileges Req. (PR)</text>
+
+  <rect x="10" y="299" width="130" height="22" rx="4" fill="#e3f2fd"/>
+  <text x="75" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1565c0">User Interaction (UI)</text>
+
+  <!-- Impact detail items -->
+  <rect x="155" y="218" width="110" height="22" rx="4" fill="#ffebee"/>
+  <text x="210" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c62828">Confidentiality (C)</text>
+
+  <rect x="155" y="245" width="110" height="22" rx="4" fill="#ffebee"/>
+  <text x="210" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c62828">Integrity (I)</text>
+
+  <rect x="155" y="272" width="110" height="22" rx="4" fill="#ffebee"/>
+  <text x="210" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c62828">Availability (A)</text>
+
+  <rect x="155" y="299" width="110" height="22" rx="4" fill="#ffebee"/>
+  <text x="210" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c62828">Scope (S)</text>
+
+  <!-- Temporal detail items -->
+  <line x1="350" y1="125" x2="350" y2="175" stroke="#555" stroke-width="1.5"/>
+
+  <rect x="290" y="178" width="120" height="22" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+  <text x="350" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Exploit Maturity (E)</text>
+
+  <rect x="290" y="205" width="120" height="22" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+  <text x="350" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Remediation Level (RL)</text>
+
+  <rect x="290" y="232" width="120" height="22" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+  <text x="350" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Report Confidence (RC)</text>
+
+  <!-- Environmental detail items -->
+  <line x1="580" y1="125" x2="580" y2="175" stroke="#555" stroke-width="1.5"/>
+
+  <rect x="515" y="178" width="130" height="22" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+  <text x="580" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Modified Base Metrics</text>
+
+  <rect x="515" y="205" width="130" height="22" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+  <text x="580" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Conf. Requirement (CR)</text>
+
+  <rect x="515" y="232" width="130" height="22" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+  <text x="580" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Integ. Requirement (IR)</text>
+
+  <rect x="515" y="259" width="130" height="22" rx="4" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/>
+  <text x="580" y="274" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Avail. Requirement (AR)</text>
+
+  <!-- Legend -->
+  <rect x="300" y="350" width="12" height="12" rx="2" fill="#1c3f6e"/>
+  <text x="318" y="361" font-family="Arial, sans-serif" font-size="10" fill="#333">Am häufigsten verwendet</text>
+
+  <rect x="470" y="350" width="12" height="12" rx="2" fill="#555"/>
+  <text x="488" y="361" font-family="Arial, sans-serif" font-size="10" fill="#333">Selten genutzt in Praxis</text>
+</svg>

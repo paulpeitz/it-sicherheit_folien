@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="Arial, Helvetica, sans-serif">
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Dauer eines Brute-Force-Angriffs</text>
+  <text x="450" y="52" text-anchor="middle" font-size="13" fill="#777">Annahme: 10 Milliarden Versuche / Sekunde (moderne GPU, MD5)</text>
+
+  <!-- Table -->
+  <g transform="translate(30, 68)">
+    <!-- Header row background -->
+    <rect x="0" y="0" width="840" height="40" rx="6" ry="6" fill="#e2001a"/>
+
+    <!-- Header texts -->
+    <text x="130" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Zeichenvorrat</text>
+    <text x="300" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">R</text>
+    <text x="390" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">L = 6</text>
+    <text x="480" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">L = 8</text>
+    <text x="570" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">L = 10</text>
+    <text x="660" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">L = 12</text>
+    <text x="750" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">L = 16</text>
+
+    <!-- Row 1: Ziffern (R=10) -->
+    <!-- 10^6 = 1e6 → 0.0001s | 10^8 = 1e8 → 0.01s | 10^10 → 1s | 10^12 → 100s | 10^16 → 11.6 Tage -->
+    <rect x="0" y="44" width="840" height="42" fill="#fef2f2"/>
+    <text x="130" y="70" text-anchor="middle" font-size="13" fill="#333">Ziffern (0–9)</text>
+    <text x="300" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">10</text>
+    <text x="390" y="70" text-anchor="middle" font-size="13" fill="#b91c1c">&lt; 1 ms</text>
+    <text x="480" y="70" text-anchor="middle" font-size="13" fill="#b91c1c">0,01 Sek.</text>
+    <text x="570" y="70" text-anchor="middle" font-size="13" fill="#b91c1c">1 Sek.</text>
+    <text x="660" y="70" text-anchor="middle" font-size="13" fill="#b91c1c">1,7 Min.</text>
+    <text x="750" y="70" text-anchor="middle" font-size="13" fill="#ea580c">11,6 Tage</text>
+
+    <!-- Row 2: Kleinbuchstaben (R=26) -->
+    <!-- 26^6 ≈ 3.1e8 → 0.031s | 26^8 ≈ 2.1e11 → 21s | 26^10 ≈ 1.4e14 → 3.9h | 26^12 ≈ 9.5e16 → 110 Tage | 26^16 ≈ 4.4e22 → 139k Jahre -->
+    <rect x="0" y="88" width="840" height="42" fill="#fff"/>
+    <text x="130" y="114" text-anchor="middle" font-size="13" fill="#333">Kleinbuchstaben (a–z)</text>
+    <text x="300" y="114" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">26</text>
+    <text x="390" y="114" text-anchor="middle" font-size="13" fill="#b91c1c">0,03 Sek.</text>
+    <text x="480" y="114" text-anchor="middle" font-size="13" fill="#b91c1c">21 Sek.</text>
+    <text x="570" y="114" text-anchor="middle" font-size="13" fill="#ea580c">3,9 Std.</text>
+    <text x="660" y="114" text-anchor="middle" font-size="13" fill="#ea580c">110 Tage</text>
+    <text x="750" y="114" text-anchor="middle" font-size="13" fill="#16a34a">139.000 J.</text>
+
+    <!-- Row 3: Klein + Großbuchstaben (R=52) -->
+    <!-- 52^6 ≈ 2.0e10 → 2s | 52^8 ≈ 5.3e13 → 1.5h | 52^10 ≈ 1.4e17 → 167 Tage | 52^12 ≈ 3.9e20 → 1.228 Jahre | 52^16 ≈ 2.8e27 → unzählige -->
+    <rect x="0" y="132" width="840" height="42" fill="#fef2f2"/>
+    <text x="130" y="158" text-anchor="middle" font-size="13" fill="#333">Klein- + Großbuchstaben</text>
+    <text x="300" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">52</text>
+    <text x="390" y="158" text-anchor="middle" font-size="13" fill="#b91c1c">2 Sek.</text>
+    <text x="480" y="158" text-anchor="middle" font-size="13" fill="#ea580c">1,5 Std.</text>
+    <text x="570" y="158" text-anchor="middle" font-size="13" fill="#ea580c">167 Tage</text>
+    <text x="660" y="158" text-anchor="middle" font-size="13" fill="#16a34a">1.228 J.</text>
+    <text x="750" y="158" text-anchor="middle" font-size="13" fill="#16a34a">&gt; 10⁹ J.</text>
+
+    <!-- Row 4: Alphanumerisch (R=62) -->
+    <!-- 62^6 ≈ 5.7e10 → 5.7s | 62^8 ≈ 2.2e14 → 6.1h | 62^10 ≈ 8.4e17 → 2.7 Jahre | 62^12 ≈ 3.2e21 → 10.200 Jahre | 62^16 → huge -->
+    <rect x="0" y="176" width="840" height="42" fill="#fff"/>
+    <text x="130" y="202" text-anchor="middle" font-size="13" fill="#333">Alphanumerisch</text>
+    <text x="300" y="202" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">62</text>
+    <text x="390" y="202" text-anchor="middle" font-size="13" fill="#b91c1c">5,7 Sek.</text>
+    <text x="480" y="202" text-anchor="middle" font-size="13" fill="#ea580c">6,1 Std.</text>
+    <text x="570" y="202" text-anchor="middle" font-size="13" fill="#16a34a">2,7 J.</text>
+    <text x="660" y="202" text-anchor="middle" font-size="13" fill="#16a34a">10.200 J.</text>
+    <text x="750" y="202" text-anchor="middle" font-size="13" fill="#16a34a">&gt; 10¹² J.</text>
+
+    <!-- Row 5: Alle druckbaren Zeichen (R=94) -->
+    <!-- 94^6 ≈ 6.9e11 → 69s | 94^8 ≈ 6.1e15 → 7.1 Tage | 94^10 ≈ 5.4e19 → 171 Jahre | 94^12 ≈ 4.8e23 → 1.5 Mio J. | 94^16 → huge -->
+    <rect x="0" y="220" width="840" height="42" fill="#fef2f2"/>
+    <text x="130" y="246" text-anchor="middle" font-size="13" fill="#333">Alle druckbaren Zeichen</text>
+    <text x="300" y="246" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">94</text>
+    <text x="390" y="246" text-anchor="middle" font-size="13" fill="#ea580c">69 Sek.</text>
+    <text x="480" y="246" text-anchor="middle" font-size="13" fill="#ea580c">7,1 Tage</text>
+    <text x="570" y="246" text-anchor="middle" font-size="13" fill="#16a34a">171 J.</text>
+    <text x="660" y="246" text-anchor="middle" font-size="13" fill="#16a34a">1,5 Mio. J.</text>
+    <text x="750" y="246" text-anchor="middle" font-size="13" fill="#16a34a">&gt; 10¹⁵ J.</text>
+
+    <!-- Table border -->
+    <rect x="0" y="0" width="840" height="262" rx="6" ry="6" fill="none" stroke="#ccc" stroke-width="1.5"/>
+
+    <!-- Column separators -->
+    <line x1="260" y1="0" x2="260" y2="262" stroke="#ddd" stroke-width="1"/>
+    <line x1="340" y1="0" x2="340" y2="262" stroke="#ddd" stroke-width="1"/>
+    <line x1="430" y1="0" x2="430" y2="262" stroke="#ddd" stroke-width="1"/>
+    <line x1="520" y1="0" x2="520" y2="262" stroke="#ddd" stroke-width="1"/>
+    <line x1="610" y1="0" x2="610" y2="262" stroke="#ddd" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="262" stroke="#ddd" stroke-width="1"/>
+
+    <!-- Row separators -->
+    <line x1="0" y1="40" x2="840" y2="40" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="86" x2="840" y2="86" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="130" x2="840" y2="130" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="174" x2="840" y2="174" stroke="#ddd" stroke-width="1"/>
+    <line x1="0" y1="218" x2="840" y2="218" stroke="#ddd" stroke-width="1"/>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 365)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Bewertung der Cracking-Dauer:</text>
+
+    <rect x="0" y="12" width="16" height="16" rx="3" fill="#b91c1c"/>
+    <text x="22" y="25" font-size="12" fill="#333">Sofort knackbar (&lt; 1 Stunde)</text>
+
+    <rect x="260" y="12" width="16" height="16" rx="3" fill="#ea580c"/>
+    <text x="282" y="25" font-size="12" fill="#333">Unsicher (Stunden – Monate)</text>
+
+    <rect x="520" y="12" width="16" height="16" rx="3" fill="#16a34a"/>
+    <text x="542" y="25" font-size="12" fill="#333">Sicher (≥ 1 Jahr)</text>
+  </g>
+
+  <!-- Annotations -->
+  <g transform="translate(30, 410)">
+    <text x="0" y="0" font-size="12" fill="#777">R = Größe des Zeichenvorrats | L = Passwortlänge | Kombinationen = R^L</text>
+    <text x="0" y="20" font-size="12" fill="#777">Angriffsszenario: Offline-Angriff auf unsalted MD5-Hashes mit moderner GPU (z. B. RTX 4090)</text>
+    <text x="0" y="40" font-size="12" fill="#777">Bei bcrypt (cost=12) sind die Zeiten um den Faktor ~10⁷ länger.</text>
+  </g>
+</svg>

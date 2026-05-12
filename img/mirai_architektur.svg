@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 530" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="mArr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#555"/>
+    </marker>
+    <marker id="mArrRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e2001a"/>
+    </marker>
+    <marker id="mArrOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#FF9800"/>
+    </marker>
+    <marker id="mArrPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7B1FA2"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#333">Mirai Botnet – Architektur &amp; Angriffspfad</text>
+
+  <!-- 1. Angreifer -->
+  <rect x="30" y="60" width="140" height="70" rx="10" fill="#FCE4EC" stroke="#e2001a" stroke-width="2"/>
+  <text x="100" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">👤 Angreifer</text>
+  <text x="100" y="108" text-anchor="middle" font-size="10" fill="#666">Steuerung &amp; Befehle</text>
+
+  <!-- 2. C2-Server -->
+  <rect x="250" y="60" width="170" height="70" rx="10" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+  <text x="335" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#4A148C">🖥️ C2-Server</text>
+  <text x="335" y="108" text-anchor="middle" font-size="10" fill="#666">Command &amp; Control</text>
+
+  <!-- 3. Loader-Server -->
+  <rect x="500" y="60" width="170" height="70" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="585" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">📦 Loader-Server</text>
+  <text x="585" y="108" text-anchor="middle" font-size="10" fill="#666">Binär-Distribution</text>
+
+  <!-- Arrow: Angreifer → C2 -->
+  <line x1="170" y1="95" x2="248" y2="95" stroke="#e2001a" stroke-width="2" marker-end="url(#mArrRed)"/>
+  <text x="210" y="88" text-anchor="middle" font-size="9" fill="#c62828">Befehle</text>
+
+  <!-- Arrow: C2 → Loader -->
+  <line x1="420" y1="80" x2="498" y2="80" stroke="#7B1FA2" stroke-width="1.5" marker-end="url(#mArrPurple)"/>
+  <text x="460" y="73" text-anchor="middle" font-size="9" fill="#7B1FA2">Neue Opfer-IPs</text>
+
+  <!-- Bot-Armee (Mitte) -->
+  <rect x="170" y="200" width="510" height="170" rx="14" fill="#E8EAF6" stroke="#3F51B5" stroke-width="2"/>
+  <text x="425" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#283593">Bot-Armee (Infizierte IoT-Geräte)</text>
+
+  <!-- Bot Devices -->
+  <rect x="195" y="245" width="100" height="50" rx="6" fill="#fff" stroke="#3F51B5" stroke-width="1.5"/>
+  <text x="245" y="266" text-anchor="middle" font-size="11" fill="#333">📷 IP-Kameras</text>
+  <text x="245" y="282" text-anchor="middle" font-size="9" fill="#777">Port 23 offen</text>
+
+  <rect x="315" y="245" width="100" height="50" rx="6" fill="#fff" stroke="#3F51B5" stroke-width="1.5"/>
+  <text x="365" y="266" text-anchor="middle" font-size="11" fill="#333">📹 DVRs</text>
+  <text x="365" y="282" text-anchor="middle" font-size="9" fill="#777">admin:admin</text>
+
+  <rect x="435" y="245" width="100" height="50" rx="6" fill="#fff" stroke="#3F51B5" stroke-width="1.5"/>
+  <text x="485" y="266" text-anchor="middle" font-size="11" fill="#333">🌐 Router</text>
+  <text x="485" y="282" text-anchor="middle" font-size="9" fill="#777">root:12345</text>
+
+  <rect x="555" y="245" width="100" height="50" rx="6" fill="#fff" stroke="#3F51B5" stroke-width="1.5"/>
+  <text x="605" y="266" text-anchor="middle" font-size="11" fill="#333">🏠 NAS</text>
+  <text x="605" y="282" text-anchor="middle" font-size="9" fill="#777">Standardpasswort</text>
+
+  <text x="425" y="330" text-anchor="middle" font-size="10" fill="#3F51B5">~600.000 Geräte auf dem Höhepunkt · ARM, MIPS, x86 Binaries · Nur im RAM</text>
+  <text x="425" y="350" text-anchor="middle" font-size="10" fill="#3F51B5">Asynchrone Scans auf Port 23/22 · ~60 Standard-Credentials · Cross-Compilation</text>
+
+  <!-- Arrow: C2 → Bots -->
+  <line x1="335" y1="130" x2="335" y2="198" stroke="#7B1FA2" stroke-width="2" marker-end="url(#mArrPurple)"/>
+  <text x="310" y="170" font-size="9" fill="#7B1FA2">Angriffsbefehle</text>
+
+  <!-- Arrow: Loader → Bots -->
+  <line x1="585" y1="130" x2="585" y2="198" stroke="#FF9800" stroke-width="2" marker-end="url(#mArrOrange)"/>
+  <text x="620" y="170" font-size="9" fill="#E65100">Malware-Binary</text>
+
+  <!-- Scan-Zyklus: Bots scannen neue Opfer -->
+  <rect x="30" y="235" width="120" height="60" rx="8" fill="#EFEBE9" stroke="#795548" stroke-width="1.5"/>
+  <text x="90" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#4E342E">🔍 Scan-Ziele</text>
+  <text x="90" y="278" text-anchor="middle" font-size="9" fill="#666">Neue Geräte im Internet</text>
+
+  <line x1="170" y1="285" x2="152" y2="272" stroke="#795548" stroke-width="1.5" marker-end="url(#mArr)"/>
+  <text x="135" y="300" font-size="9" fill="#795548">Telnet-Scan</text>
+
+  <!-- Pfeil: Scan-Ziele liefern Credentials an Loader -->
+  <path d="M90,235 Q90,180 250,95" stroke="#FF9800" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <text x="140" y="155" font-size="9" fill="#FF9800">IP + Credentials melden</text>
+
+  <!-- DDoS-Ziel -->
+  <rect x="250" y="430" width="350" height="80" rx="12" fill="#FFEBEE" stroke="#e2001a" stroke-width="2.5"/>
+  <text x="425" y="460" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">🎯 DDoS-Ziel</text>
+  <text x="425" y="480" text-anchor="middle" font-size="11" fill="#666">z. B. Dyn DNS (21.10.2016)</text>
+  <text x="425" y="497" text-anchor="middle" font-size="10" fill="#888">→ Twitter, Netflix, GitHub, Reddit offline</text>
+
+  <!-- Arrows: Bots → DDoS -->
+  <line x1="300" y1="370" x2="340" y2="428" stroke="#e2001a" stroke-width="2.5" marker-end="url(#mArrRed)"/>
+  <line x1="425" y1="370" x2="425" y2="428" stroke="#e2001a" stroke-width="2.5" marker-end="url(#mArrRed)"/>
+  <line x1="550" y1="370" x2="510" y2="428" stroke="#e2001a" stroke-width="2.5" marker-end="url(#mArrRed)"/>
+
+  <text x="505" y="403" font-size="10" font-weight="bold" fill="#e2001a">SYN Flood</text>
+  <text x="355" y="403" font-size="10" font-weight="bold" fill="#e2001a">UDP Flood</text>
+  <text x="430" y="415" font-size="10" font-weight="bold" fill="#e2001a">HTTP GET Flood</text>
+
+  <!-- Legend -->
+  <rect x="700" y="430" width="185" height="80" rx="8" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="792" y="450" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Legende</text>
+  <line x1="715" y1="465" x2="745" y2="465" stroke="#e2001a" stroke-width="2"/>
+  <text x="753" y="469" font-size="10" fill="#555">Angriff / Steuerung</text>
+  <line x1="715" y1="482" x2="745" y2="482" stroke="#FF9800" stroke-width="2"/>
+  <text x="753" y="486" font-size="10" fill="#555">Malware-Verteilung</text>
+  <line x1="715" y1="499" x2="745" y2="499" stroke="#795548" stroke-width="1.5"/>
+  <text x="753" y="503" font-size="10" fill="#555">Scan nach Opfern</text>
+</svg>

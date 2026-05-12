@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 859 339" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M220,72L220,188C220,194.623 214.623,200 208,200L42,200C35.377,200 30,194.623 30,188L30,72C30,65.377 35.377,60 42,60L208,60C214.623,60 220,65.377 220,72Z" style="fill:rgb(227,242,253);stroke:rgb(21,101,192);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,99.123106,32.123106)">
+        <text x="-52.507px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(13,71,161);">Ciphertext-Only</text>
+    </g>
+    <g transform="matrix(1,0,0,1,99.123106,50.123106)">
+        <text x="-18.773px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(13,71,161);">(COA)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M50,115L200,115" style="fill:none;fill-rule:nonzero;stroke:rgb(21,101,192);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,99.123106,79.123106)">
+        <text x="-37.3px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">Angreifer kennt</text>
+    </g>
+    <g transform="matrix(1,0,0,1,99.123106,96.123106)">
+        <text x="-51.648px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(85,85,85);">nur den Geheimtext</text>
+    </g>
+    <g transform="matrix(1,0,0,1,99.123106,119.123106)">
+        <text x="-45.576px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(136,136,136);">Schwächstes Modell</text>
+    </g>
+    <g transform="matrix(1,0,0,1,99.123106,134.123106)">
+        <text x="-48.359px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(136,136,136);">z.B. Frequenzanalyse</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M225,130L255,130" style="fill:none;fill-rule:nonzero;stroke:rgb(85,85,85);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M450,72L450,188C450,194.623 444.623,200 438,200L272,200C265.377,200 260,194.623 260,188L260,72C260,65.377 265.377,60 272,60L438,60C444.623,60 450,65.377 450,72Z" style="fill:rgb(255,243,224);stroke:rgb(230,81,0);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,329.123106,32.123106)">
+        <text x="-54.834px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(230,81,0);">Known-Plaintext</text>
+    </g>
+    <g transform="matrix(1,0,0,1,329.123106,50.123106)">
+        <text x="-17.57px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(230,81,0);">(KP<tspan x="3.853px 13.241px " y="0px 0px ">A)</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M280,115L430,115" style="fill:none;fill-rule:nonzero;stroke:rgb(230,81,0);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,329.123106,79.123106)">
+        <text x="-37.3px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">Angreifer kennt</text>
+    </g>
+    <g transform="matrix(1,0,0,1,329.123106,96.123106)">
+        <text x="-69.083px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(85,85,85);">Klartext-Geheimtext-Paare</text>
+    </g>
+    <g transform="matrix(1,0,0,1,329.123106,119.123106)">
+        <g transform="matrix(10,0,0,10,37.62207,0)">
+        </g>
+        <g transform="matrix(10,0,0,10,40.292969,0)">
+        </g>
+        <text x="-42.964px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(136,136,136);">z.B. Enigma-Angriﬀ</text>
+    </g>
+    <g transform="matrix(1,0,0,1,329.123106,134.123106)">
+        <text x="-18.438px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(136,136,136);">(„Cribs&quot;)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M455,130L485,130" style="fill:none;fill-rule:nonzero;stroke:rgb(85,85,85);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M680,72L680,188C680,194.623 674.623,200 668,200L502,200C495.377,200 490,194.623 490,188L490,72C490,65.377 495.377,60 502,60L668,60C674.623,60 680,65.377 680,72Z" style="fill:rgb(252,228,236);stroke:rgb(198,40,40);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,559.123106,32.123106)">
+        <text x="-57.176px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(198,40,40);">Chosen-Plaintext</text>
+    </g>
+    <g transform="matrix(1,0,0,1,559.123106,50.123106)">
+        <text x="-17.57px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(198,40,40);">(CP<tspan x="3.853px 13.241px " y="0px 0px ">A)</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M510,115L660,115" style="fill:none;fill-rule:nonzero;stroke:rgb(198,40,40);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,559.123106,79.123106)">
+        <text x="-35.771px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">Angreifer kann</text>
+    </g>
+    <g transform="matrix(1,0,0,1,559.123106,96.123106)">
+        <text x="-71.127px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(85,85,85);">eigene T<tspan x="-27.32px -21.202px " y="0px 0px ">ex</tspan>te verschlüsseln</text>
+    </g>
+    <g transform="matrix(1,0,0,1,559.123106,119.123106)">
+        <g transform="matrix(10,0,0,10,10.383301,0)">
+        </g>
+        <g transform="matrix(10,0,0,10,13.054199,0)">
+        </g>
+        <text x="-32.405px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(136,136,136);">z.B. Zugriﬀ auf</text>
+    </g>
+    <g transform="matrix(1,0,0,1,559.123106,134.123106)">
+        <text x="-52.529px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(136,136,136);">V<tspan x="-46.411px -40.85px " y="0px 0px ">er</tspan>schlüsselungsorakel</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M685,130L715,130" style="fill:none;fill-rule:nonzero;stroke:rgb(85,85,85);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M880,72L880,188C880,194.623 874.623,200 868,200L732,200C725.377,200 720,194.623 720,188L720,72C720,65.377 725.377,60 732,60L868,60C874.623,60 880,65.377 880,72Z" style="fill:rgb(243,229,245);stroke:rgb(106,27,154);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,774.123106,32.123106)">
+        <text x="-62.617px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(106,27,154);">Chosen-Ciphertext</text>
+    </g>
+    <g transform="matrix(1,0,0,1,774.123106,50.123106)">
+        <text x="-18.411px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(106,27,154);">(CCA)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M740,115L860,115" style="fill:none;fill-rule:nonzero;stroke:rgb(106,27,154);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,774.123106,79.123106)">
+        <text x="-35.771px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:rgb(85,85,85);">Angreifer kann</text>
+    </g>
+    <g transform="matrix(1,0,0,1,774.123106,96.123106)">
+        <text x="-33.013px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(85,85,85);">Geheimtexte</text>
+    </g>
+    <g transform="matrix(1,0,0,1,774.123106,113.123106)">
+        <text x="-55.33px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:rgb(85,85,85);">entschlüsseln lassen</text>
+    </g>
+    <g transform="matrix(1,0,0,1,774.123106,136.123106)">
+        <text x="-36.958px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:rgb(136,136,136);">Stärkstes Modell</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M80,240L830,240" style="fill:none;fill-rule:nonzero;stroke:rgb(198,40,40);stroke-width:2.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,424.123106,209.123106)">
+        <text x="-104.14px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:rgb(198,40,40);">Steigende <tspan x="-38.886px -29.498px " y="0px 0px ">An</tspan>greiferfähigkeiten →</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.876894,-55.876894)">
+        <path d="M750,302L750,378C750,384.623 744.623,390 738,390L162,390C155.377,390 150,384.623 150,378L150,302C150,295.377 155.377,290 162,290L738,290C744.623,290 750,295.377 750,302Z" style="fill:rgb(232,245,233);stroke:rgb(46,125,50);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,424.123106,262.123106)">
+        <text x="-127.364px" y="0px" style="font-family:'SegoeUIEmoji', 'Segoe UI Emoji', sans-serif;font-size:14px;fill:rgb(27,94,32);">🛡️</text>
+        <text x="-85.029px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:rgb(27,94,32);">Design-Ziel moderner V<tspan x="71.343px 79.129px " y="0px 0px ">er</tspan>fahren</text>
+    </g>
+    <g transform="matrix(1,0,0,1,424.123106,286.123106)">
+        <text x="-144.076px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:rgb(85,85,85);">Ein V<tspan x="-116.057px -109.383px " y="0px 0px ">er</tspan>fahren gilt als sicher<tspan x="0.668px 4.002px " y="0px 0px ">, </tspan>wenn es selbst unter dem</text>
+    </g>
+    <g transform="matrix(1,0,0,1,424.123106,304.123106)">
+        <g transform="matrix(12,0,0,12,-36.5625,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,-33.357422,0)">
+        </g>
+        <text x="-175.307px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:rgb(85,85,85);">stärksten relevanten <tspan x="-64.576px -56.572px " y="0px 0px ">An</tspan>griﬀsmodell nicht gebrochen werden kann.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,424.123106,324.123106)">
+        <text x="-119.895px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:rgb(46,125,50);">AES ist CP<tspan x="-58.77px -50.104px " y="0px 0px ">A-</tspan> und CCA-sicher (IND-CCA2).</text>
+    </g>
+</svg>

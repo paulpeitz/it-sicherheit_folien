@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="280" viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Timeline bar -->
+  <rect x="40" y="100" width="650" height="6" rx="3" fill="#ddd"/>
+
+  <!-- Risk window highlight -->
+  <rect x="195" y="94" width="310" height="18" rx="4" fill="#e2001a" fill-opacity="0.15"/>
+  <text x="350" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#e2001a">Risikofenster: 2 Monate unentdeckt</text>
+
+  <!-- Event 1: März 2017 – Patch verfügbar -->
+  <circle cx="60" cy="103" r="8" fill="#2e7d32"/>
+  <line x1="60" y1="111" x2="60" y2="145" stroke="#2e7d32" stroke-width="1.5"/>
+  <g filter="url(#shadow)">
+    <rect x="5" y="145" width="110" height="50" rx="6" fill="#2e7d32"/>
+    <text x="60" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">7. März 2017</text>
+    <text x="60" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Patch für Struts</text>
+    <text x="60" y="191" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">verfügbar</text>
+  </g>
+
+  <!-- Event 2: Mai 2017 – Angriff beginnt -->
+  <circle cx="195" cy="103" r="8" fill="#e2001a"/>
+  <line x1="195" y1="95" x2="195" y2="40" stroke="#e2001a" stroke-width="1.5"/>
+  <g filter="url(#shadow)">
+    <rect x="135" y="5" width="120" height="38" rx="6" fill="#e2001a"/>
+    <text x="195" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">13. Mai 2017</text>
+    <text x="195" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Angriff beginnt</text>
+  </g>
+
+  <!-- Event 3: Juli 2017 – Intern entdeckt -->
+  <circle cx="380" cy="103" r="8" fill="#ef6c00"/>
+  <line x1="380" y1="111" x2="380" y2="145" stroke="#ef6c00" stroke-width="1.5"/>
+  <g filter="url(#shadow)">
+    <rect x="320" y="145" width="120" height="50" rx="6" fill="#ef6c00"/>
+    <text x="380" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">29. Juli 2017</text>
+    <text x="380" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Intern entdeckt</text>
+    <text x="380" y="191" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">(SSL-Zertifikat)</text>
+  </g>
+
+  <!-- Event 4: Aug 2017 – Insider-Trades -->
+  <circle cx="505" cy="103" r="8" fill="#555"/>
+  <line x1="505" y1="95" x2="505" y2="40" stroke="#555" stroke-width="1.5"/>
+  <g filter="url(#shadow)">
+    <rect x="445" y="5" width="120" height="38" rx="6" fill="#555"/>
+    <text x="505" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">August 2017</text>
+    <text x="505" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Insider-Aktienverkäufe</text>
+  </g>
+
+  <!-- Event 5: Sept 2017 – Bekanntgabe -->
+  <circle cx="630" cy="103" r="8" fill="#1c3f6e"/>
+  <line x1="630" y1="111" x2="630" y2="145" stroke="#1c3f6e" stroke-width="1.5"/>
+  <g filter="url(#shadow)">
+    <rect x="570" y="145" width="120" height="50" rx="6" fill="#1c3f6e"/>
+    <text x="630" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">7. Sept. 2017</text>
+    <text x="630" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Öffentliche</text>
+    <text x="630" y="191" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.85">Bekanntgabe</text>
+  </g>
+
+  <!-- Bottom summary -->
+  <rect x="100" y="230" width="520" height="36" rx="6" fill="#ffebee" stroke="#e2001a" stroke-width="1"/>
+  <text x="360" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#b71c1c">CVE-2017-5638 · Apache Struts · Patch war 2 Monate vor Angriff verfügbar</text>
+  <text x="360" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#b71c1c">147,9 Mio. Betroffene · 1,38 Mrd. USD Schaden</text>
+</svg>

@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="kcArr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#666"/>
+    </marker>
+    <marker id="kcArrW" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#fff"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#333">Stuxnet – Kill Chain (Gesamtübersicht)</text>
+
+  <!-- Domain Labels -->
+  <rect x="20" y="48" width="505" height="25" rx="4" fill="#1565C0"/>
+  <text x="272" y="65" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">IT-Domäne (Windows / Büro-Netzwerk)</text>
+  <rect x="535" y="48" width="405" height="25" rx="4" fill="#c62828"/>
+  <text x="737" y="65" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">OT-Domäne (ICS / Steuerungstechnik)</text>
+
+  <!-- Phase 1: Initial Access -->
+  <rect x="25" y="90" width="120" height="140" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+  <text x="85" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565C0">1. Initial Access</text>
+  <line x1="40" y1="120" x2="130" y2="120" stroke="#1565C0" stroke-width="0.5"/>
+  <text x="85" y="138" text-anchor="middle" font-size="10" fill="#333">USB-Stick</text>
+  <text x="85" y="155" text-anchor="middle" font-size="10" fill="#333">überspringt</text>
+  <text x="85" y="172" text-anchor="middle" font-size="10" fill="#333">Air Gap</text>
+  <rect x="38" y="185" width="94" height="30" rx="4" fill="#BBDEFB"/>
+  <text x="85" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#1565C0">LNK-Exploit</text>
+  <text x="85" y="213" text-anchor="middle" font-size="8" fill="#555">CVE-2010-2568</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="145" y1="160" x2="158" y2="160" stroke="#666" stroke-width="2" marker-end="url(#kcArr)"/>
+
+  <!-- Phase 2: Privilege Escalation -->
+  <rect x="165" y="90" width="120" height="140" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+  <text x="225" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565C0">2. Priv. Escalation</text>
+  <line x1="180" y1="120" x2="270" y2="120" stroke="#1565C0" stroke-width="0.5"/>
+  <text x="225" y="138" text-anchor="middle" font-size="10" fill="#333">Kernel-Exploits</text>
+  <text x="225" y="155" text-anchor="middle" font-size="10" fill="#333">win32k.sys</text>
+  <text x="225" y="172" text-anchor="middle" font-size="10" fill="#333">Task Scheduler</text>
+  <rect x="178" y="185" width="94" height="30" rx="4" fill="#BBDEFB"/>
+  <text x="225" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#1565C0">Rootkit</text>
+  <text x="225" y="213" text-anchor="middle" font-size="8" fill="#555">mrxcls.sys (signiert)</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="285" y1="160" x2="298" y2="160" stroke="#666" stroke-width="2" marker-end="url(#kcArr)"/>
+
+  <!-- Phase 3: Lateral Movement -->
+  <rect x="305" y="90" width="120" height="140" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+  <text x="365" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565C0">3. Lateral Movem.</text>
+  <line x1="320" y1="120" x2="410" y2="120" stroke="#1565C0" stroke-width="0.5"/>
+  <text x="365" y="138" text-anchor="middle" font-size="10" fill="#333">Print Spooler</text>
+  <text x="365" y="155" text-anchor="middle" font-size="10" fill="#333">MS08-067</text>
+  <text x="365" y="172" text-anchor="middle" font-size="10" fill="#333">P2P-Update</text>
+  <rect x="318" y="185" width="94" height="30" rx="4" fill="#BBDEFB"/>
+  <text x="365" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#1565C0">→ STEP 7 WS</text>
+  <text x="365" y="213" text-anchor="middle" font-size="8" fill="#555">Ziel gefunden</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="425" y1="160" x2="438" y2="160" stroke="#666" stroke-width="2" marker-end="url(#kcArr)"/>
+
+  <!-- Phase 4: IT→OT Bridge -->
+  <rect x="445" y="90" width="120" height="140" rx="8" fill="#EDE7F6" stroke="#7B1FA2" stroke-width="2.5"/>
+  <text x="505" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B1FA2">4. IT→OT Brücke</text>
+  <line x1="460" y1="120" x2="550" y2="120" stroke="#7B1FA2" stroke-width="0.5"/>
+  <text x="505" y="138" text-anchor="middle" font-size="10" fill="#333">DLL Hijacking</text>
+  <text x="505" y="155" text-anchor="middle" font-size="10" fill="#333">s7otbxdx.dll</text>
+  <text x="505" y="172" text-anchor="middle" font-size="10" fill="#333">MitM auf STEP 7</text>
+  <rect x="458" y="185" width="94" height="30" rx="4" fill="#D1C4E9"/>
+  <text x="505" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#4A148C">Write: Inject</text>
+  <text x="505" y="213" text-anchor="middle" font-size="8" fill="#555">Read: Clean Code</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="565" y1="160" x2="578" y2="160" stroke="#666" stroke-width="2" marker-end="url(#kcArr)"/>
+
+  <!-- Phase 5: SPS-Infektion -->
+  <rect x="585" y="90" width="120" height="140" rx="8" fill="#FFEBEE" stroke="#c62828" stroke-width="2"/>
+  <text x="645" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">5. SPS-Infektion</text>
+  <line x1="600" y1="120" x2="690" y2="120" stroke="#c62828" stroke-width="0.5"/>
+  <text x="645" y="138" text-anchor="middle" font-size="10" fill="#333">OB1 / OB35</text>
+  <text x="645" y="155" text-anchor="middle" font-size="10" fill="#333">Hardware-</text>
+  <text x="645" y="172" text-anchor="middle" font-size="10" fill="#333">Fingerprinting</text>
+  <rect x="598" y="185" width="94" height="30" rx="4" fill="#FFCDD2"/>
+  <text x="645" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#c62828">Vendor-ID Check</text>
+  <text x="645" y="213" text-anchor="middle" font-size="8" fill="#555">Vacon / Fararo Paya</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="705" y1="160" x2="718" y2="160" stroke="#666" stroke-width="2" marker-end="url(#kcArr)"/>
+
+  <!-- Phase 6: Sabotage -->
+  <rect x="725" y="90" width="120" height="140" rx="8" fill="#FFEBEE" stroke="#c62828" stroke-width="2"/>
+  <text x="785" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">6. Sabotage</text>
+  <line x1="740" y1="120" x2="830" y2="120" stroke="#c62828" stroke-width="0.5"/>
+  <text x="785" y="138" text-anchor="middle" font-size="10" fill="#333">Overspeed</text>
+  <text x="785" y="155" text-anchor="middle" font-size="10" fill="#333">1.410 Hz → 2 Hz</text>
+  <text x="785" y="172" text-anchor="middle" font-size="10" fill="#333">Resonanz-Zerstörung</text>
+  <rect x="738" y="185" width="94" height="30" rx="4" fill="#FFCDD2"/>
+  <text x="785" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#c62828">~1.000 Zentrifugen</text>
+  <text x="785" y="213" text-anchor="middle" font-size="8" fill="#555">zerstört</text>
+
+  <!-- Phase 7: Stealth (below the chain) -->
+  <rect x="540" y="260" width="310" height="80" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="695" y="283" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">7. Tarnung (parallel zu 5+6)</text>
+  <line x1="555" y1="290" x2="835" y2="290" stroke="#FF9800" stroke-width="0.5"/>
+  <text x="695" y="308" text-anchor="middle" font-size="10" fill="#333">Replay-Attacke: DP_RECV abgefangen</text>
+  <text x="695" y="325" text-anchor="middle" font-size="10" fill="#333">21-Sek.-Schleife mit Normalwerten → HMI zeigt „glatte Linie"</text>
+
+  <!-- Arrows from Phase 5/6 down to Stealth -->
+  <line x1="645" y1="230" x2="645" y2="258" stroke="#FF9800" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="785" y1="230" x2="785" y2="258" stroke="#FF9800" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Timeline -->
+  <rect x="25" y="365" width="915" height="60" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="40" y="385" font-size="11" font-weight="bold" fill="#333">Zeitlicher Ablauf:</text>
+  <text x="40" y="405" font-size="10" fill="#555">~2005–2007: Entwicklung &amp; Tests (echte IR-1 Zentrifugen zur Verfügung)</text>
+  <text x="40" y="420" font-size="10" fill="#555">~2007–2008: Erste Infektionen in Natanz · 2009–2010: Weltweite Entdeckung · Juni 2010: Analyse durch VirusBlokAda &amp; Symantec</text>
+
+  <!-- Key Insight Box -->
+  <rect x="25" y="430" width="915" height="3" rx="1" fill="#e2001a"/>
+</svg>

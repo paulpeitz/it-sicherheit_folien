@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <polygon points="0,1 10,5 0,9" fill="#555"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto">
+      <polygon points="0,1 10,5 0,9" fill="#2e7d32"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+  </style>
+
+  <!-- Divider -->
+  <line x1="450" y1="40" x2="450" y2="340" stroke="#ccc" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- LEFT: Signieren -->
+  <text x="225" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#0d47a1">✍️ Signieren (Alice)</text>
+
+  <!-- Nachricht -->
+  <rect x="30" y="60" width="110" height="45" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="85" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d47a1">📄 Nachricht M</text>
+  <text x="85" y="96" text-anchor="middle" font-size="10" fill="#888">Klartext</text>
+
+  <!-- Hash -->
+  <rect x="180" y="60" width="100" height="45" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b5e20">Hash H(M)</text>
+  <text x="230" y="96" text-anchor="middle" font-size="10" fill="#888">SHA-256</text>
+
+  <line x1="140" y1="82" x2="177" y2="82" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Hash-Wert -->
+  <rect x="180" y="135" width="100" height="40" rx="8" fill="#fff" stroke="#888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="230" y="155" text-anchor="middle" font-size="10" fill="#555">h = H(M)</text>
+  <text x="230" y="168" text-anchor="middle" font-size="9" fill="#888">feste Länge</text>
+
+  <line x1="230" y1="105" x2="230" y2="132" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Private Key -->
+  <rect x="30" y="210" width="110" height="45" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="85" y="230" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">🔑 Private Key</text>
+  <text x="85" y="246" text-anchor="middle" font-size="10" fill="#888">Alices geheimer K</text>
+
+  <!-- Encrypt -->
+  <rect x="180" y="200" width="100" height="55" rx="8" fill="#bbdefb" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="222" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d47a1">Signatur-</text>
+  <text x="230" y="238" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d47a1">Algorithmus</text>
+  <text x="230" y="252" text-anchor="middle" font-size="9" fill="#888">Sign(h, Kpriv)</text>
+
+  <line x1="140" y1="232" x2="177" y2="228" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="230" y1="175" x2="230" y2="197" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Signatur S -->
+  <rect x="165" y="285" width="130" height="45" rx="10" fill="#e8eaf6" stroke="#283593" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="305" text-anchor="middle" font-size="12" font-weight="bold" fill="#283593">📝 Signatur S</text>
+  <text x="230" y="322" text-anchor="middle" font-size="10" fill="#888">wird mit M gesendet</text>
+
+  <line x1="230" y1="255" x2="230" y2="282" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- RIGHT: Verifizieren -->
+  <text x="675" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">✅ Verifizieren (Bob)</text>
+
+  <!-- Empfangene Nachricht -->
+  <rect x="490" y="60" width="110" height="45" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="545" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d47a1">📄 Nachricht M</text>
+  <text x="545" y="96" text-anchor="middle" font-size="10" fill="#888">empfangen</text>
+
+  <!-- Hash Bob -->
+  <rect x="640" y="60" width="100" height="45" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="690" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b5e20">Hash H(M)</text>
+  <text x="690" y="96" text-anchor="middle" font-size="10" fill="#888">SHA-256</text>
+
+  <line x1="600" y1="82" x2="637" y2="82" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Hash-Wert Bob -->
+  <rect x="640" y="135" width="100" height="40" rx="8" fill="#fff" stroke="#888" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="690" y="155" text-anchor="middle" font-size="10" fill="#555">h' = H(M)</text>
+  <text x="690" y="168" text-anchor="middle" font-size="9" fill="#888">eigene Berechnung</text>
+
+  <line x1="690" y1="105" x2="690" y2="132" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Public Key -->
+  <rect x="490" y="210" width="110" height="45" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="545" y="230" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b5e20">🔑 Public Key</text>
+  <text x="545" y="246" text-anchor="middle" font-size="10" fill="#888">Alices öffentlicher K</text>
+
+  <!-- Empfangene Signatur -->
+  <rect x="490" y="280" width="110" height="45" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2" filter="url(#shadow)"/>
+  <text x="545" y="300" text-anchor="middle" font-size="11" font-weight="bold" fill="#283593">📝 Signatur S</text>
+  <text x="545" y="316" text-anchor="middle" font-size="10" fill="#888">empfangen</text>
+
+  <!-- Verify -->
+  <rect x="640" y="210" width="100" height="55" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="690" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b5e20">Verifikation</text>
+  <text x="690" y="252" text-anchor="middle" font-size="9" fill="#888">Verify(S, Kpub)</text>
+
+  <line x1="600" y1="232" x2="637" y2="232" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="600" y1="300" x2="685" y2="268" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Vergleich -->
+  <rect x="780" y="180" width="100" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="830" y="205" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">h' == h?</text>
+  <text x="830" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">✅ Gültig!</text>
+
+  <line x1="690" y1="175" x2="790" y2="195" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <line x1="740" y1="237" x2="777" y2="220" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+</svg>

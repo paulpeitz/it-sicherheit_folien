@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 636 262" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M190,80L190,120C190,125.519 185.519,130 180,130L40,130C34.481,130 30,125.519 30,120L30,80C30,74.481 34.481,70 40,70L180,70C185.519,70 190,74.481 190,80Z" style="fill:rgb(28,63,110);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,82.061553,26)">
+        <text x="-50.35px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">Shared Secret (K)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,82.061553,46)">
+        <text x="-46.274px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:white;fill-opacity:0.8;">via QR-Code bei Setup</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M190,170L190,210C190,215.519 185.519,220 180,220L40,220C34.481,220 30,215.519 30,210L30,170C30,164.481 34.481,160 40,160L180,160C185.519,160 190,164.481 190,170Z" style="fill:rgb(39,103,73);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,82.061553,116)">
+        <text x="-42.671px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:white;">Zeitstempel (T)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,82.061553,136)">
+        <text x="-37.013px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:white;fill-opacity:0.8;">Unix-Zeit / 30 Sek.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M193,100L270,140" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M193,190L270,155" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M445,127L445,173C445,179.623 439.623,185 433,185L287,185C280.377,185 275,179.623 275,173L275,127C275,120.377 280.377,115 287,115L433,115C439.623,115 445,120.377 445,127Z" style="fill:rgb(232,165,32);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,332.061553,77)">
+        <text x="-42px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:white;">HMAC-SHA1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,332.061553,100)">
+        <text x="-31.853px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.8;">HMAC(K, <tspan x="12.966px 19.075px " y="0px 0px ">T/</tspan>X)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M448,150L498,150" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M643,127L643,173C643,179.623 637.623,185 631,185L515,185C508.377,185 503,179.623 503,173L503,127C503,120.377 508.377,115 515,115L631,115C637.623,115 643,120.377 643,127Z" style="fill:rgb(197,48,48);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,545.061553,75)">
+        <text x="-33.224px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:white;">T<tspan x="-26px -20.941px " y="0px 0px ">ru</tspan>ncation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,545.061553,98)">
+        <g transform="matrix(10,0,0,10,15.385742,0)">
+        </g>
+        <g transform="matrix(10,0,0,10,18.056641,0)">
+        </g>
+        <text x="-34.067px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:white;fill-opacity:0.8;">Dynamic Oﬀset</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M573,188L573,228" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M658,247L658,278C658,284.623 652.623,290 646,290L500,290C493.377,290 488,284.623 488,278L488,247C488,240.377 493.377,235 500,235L646,235C652.623,235 658,240.377 658,247Z" style="fill:white;stroke:rgb(45,55,72);stroke-width:2.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,545.061553,188)">
+        <text x="-43.062px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:rgb(45,55,72);">Einmalcode (OTP)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,545.061553,210)">
+        <text x="-47.261px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:20px;fill:rgb(226,0,26);">4 8 3 9 2 7</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M250,256L250,282C250,286.415 246.415,290 242,290L38,290C33.585,290 30,286.415 30,282L30,256C30,251.585 33.585,248 38,248L242,248C246.415,248 250,251.585 250,256Z" style="fill:rgb(245,245,245);stroke:rgb(221,221,221);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,112.061553,196)">
+        <text x="-84.052px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Gültigkeitsdauer: 30 Sekunden (Standard)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,112.061553,212)">
+        <text x="-75.241px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9px;fill:rgb(85,85,85);">Server akzeptiert ±1 Zeitfenster (Drift)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-27.938447,-70)">
+        <path d="M620,321C620,327.071 615.071,332 609,332L111,332C104.929,332 100,327.071 100,321C100,314.929 104.929,310 111,310L609,310C615.071,310 620,314.929 620,321Z" style="fill:rgb(45,55,72);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,332.061553,255)">
+        <text x="-168.918px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:white;">Client und Server berechnen denselben Code unabhängig voneinander</text>
+    </g>
+</svg>
